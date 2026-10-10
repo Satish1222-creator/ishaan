@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ishaan Interiors | Panels &amp; Louvers</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root {
+
+    --ink: #231b17;
+    --espresso: #39291f;
+    --sand: #f5efe7;
+    --cream: #fcfaf7;
+    --gold: #c49a5a;
+    --gold-light: #e0bd7a;
+
+    --transition:
+        800ms cubic-bezier(.22,.61,.36,1);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    background:
+        var(--sand);
+
+    color:
+        var(--ink);
+
+    overflow-x:
+        hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   MAIN SECTION
+===================================================== */
+
+.interior-products {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background:
+        var(--sand);
+
+}
+
+
+/* =====================================================
+   TOP BANNER
+===================================================== */
+
+.products-banner {
+
+    width: 100%;
+
+    min-height: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+
+        linear-gradient(
+            rgba(35,27,23,.58),
+            rgba(35,27,23,.58)
+        ),
+
+        url("https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1920&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.products-banner h1 {
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(40px,6vw,75px);
+
+    letter-spacing:
+        2px;
+
+    font-weight:
+        600;
+
+}
+
+
+/* =====================================================
+   EACH PRODUCT SECTION
+===================================================== */
+
+.product-section {
+
+    position: relative;
+
+    min-height: 780px;
+
+    padding:
+        100px 20px 80px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(196,154,90,.12),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--cream),
+            var(--sand)
+        );
+
+}
+
+
+/* =====================================================
+   DECORATIVE CIRCLES
+===================================================== */
+
+.product-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+
+    height: 650px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(196,154,90,.10);
+
+    top: 52%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    pointer-events:
+        none;
+
+}
+
+
+.product-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 900px;
+
+    height: 900px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(196,154,90,.06);
+
+    top: 52%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.product-header {
+
+    max-width:
+        1300px;
+
+    margin:
+        auto;
+
+    position:
+        relative;
+
+    z-index:
+        10;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+/* =====================================================
+   SECTION TAG
+===================================================== */
+
+.section-tag {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        var(--gold);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        3px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.section-tag::before,
+.section-tag::after {
+
+    content: "";
+
+    width:
+        35px;
+
+    height:
+        1px;
+
+    background:
+        var(--gold);
+
+}
+
+
+/* =====================================================
+   PRODUCT TITLE
+===================================================== */
+
+.product-title {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(40px,5vw,70px);
+
+    font-weight:
+        600;
+
+    line-height:
+        1.05;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.product-title span {
+
+    color:
+        var(--gold);
+
+    font-style:
+        italic;
+
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.product-description {
+
+    max-width:
+        600px;
+
+    margin:
+        18px auto 0;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+
+    color:
+        rgba(35,27,23,.60);
+
+}
+
+
+/* =====================================================
+   SLIDER WRAPPER
+===================================================== */
+
+.slider-wrapper {
+
+    width:
+        100%;
+
+    height:
+        570px;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    perspective:
+        2000px;
+
+    perspective-origin:
+        center center;
+
+    transform-style:
+        preserve-3d;
+
+    touch-action:
+        pan-y;
+
+    z-index:
+        5;
+
+}
+
+
+/* =====================================================
+   PROJECT CARD
+===================================================== */
+
+.project-card {
+
+    position:
+        absolute;
+
+    width:
+        360px;
+
+    height:
+        475px;
+
+    background:
+        var(--cream);
+
+    border-radius:
+        32px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 25px 60px
+        rgba(35,27,23,.16);
+
+    cursor:
+        pointer;
+
+    transition:
+
+        transform
+        var(--transition),
+
+        opacity
+        var(--transition),
+
+        filter
+        var(--transition);
+
+    transform-style:
+        preserve-3d;
+
+    will-change:
+        transform;
+
+    user-select:
+        none;
+
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.project-image {
+
+    width:
+        100%;
+
+    height:
+        340px;
+
+    overflow:
+        hidden;
+
+    position:
+        relative;
+
+}
+
+
+.project-image::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.20),
+            transparent 45%
+        );
+
+}
+
+
+.project-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform
+        900ms
+        cubic-bezier(.22,.61,.36,1);
+
+}
+
+
+.project-card.active:hover
+.project-image img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.project-content {
+
+    height:
+        135px;
+
+    padding:
+        19px 22px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.project-category {
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        2px;
+
+    font-weight:
+        700;
+
+    text-transform:
+        uppercase;
+
+    color:
+        var(--gold);
+
+    margin-bottom:
+        5px;
+
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.project-title-card {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--ink);
+
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.project-bottom {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-top:
+        8px;
+
+}
+
+
+.project-location {
+
+    font-size:
+        12px;
+
+    color:
+        rgba(35,27,23,.55);
+
+}
+
+
+/* =====================================================
+   VIEW BUTTON
+===================================================== */
+
+.view-project {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    border-radius:
+        50%;
+
+    border:
+        1px solid
+        rgba(35,27,23,.15);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-decoration:
+        none;
+
+    font-size:
+        19px;
+
+    color:
+        var(--ink);
+
+    transition:
+        .35s ease;
+
+}
+
+
+.view-project:hover {
+
+    background:
+        var(--gold);
+
+    color:
+        white;
+
+    border-color:
+        var(--gold);
+
+    transform:
+        rotate(-45deg);
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.slider-navigation {
+
+    position:
+        relative;
+
+    z-index:
+        100;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    margin-top:
+        -10px;
+
+}
+
+
+.nav-button {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    border-radius:
+        50%;
+
+    border:
+        1px solid
+        rgba(35,27,23,.14);
+
+    background:
+        rgba(252,250,247,.85);
+
+    backdrop-filter:
+        blur(10px);
+
+    color:
+        var(--ink);
+
+    font-size:
+        24px;
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    transition:
+        .35s ease;
+
+}
+
+
+.nav-button:hover {
+
+    background:
+        var(--espresso);
+
+    color:
+        white;
+
+    border-color:
+        var(--espresso);
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.nav-button:active {
+
+    transform:
+        scale(.95);
+
+}
+
+
+/* =====================================================
+   SECTION DIVIDER
+===================================================== */
+
+.section-divider {
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    background:
+        rgba(196,154,90,.20);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:1100px) {
+
+    .project-card {
+
+        width:
+            310px;
+
+        height:
+            440px;
+
+    }
+
+    .project-image {
+
+        height:
+            310px;
+
+    }
+
+    .slider-wrapper {
+
+        height:
+            530px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:700px) {
+
+    .products-banner {
+
+        min-height:
+            240px;
+
+    }
+
+
+    .product-section {
+
+        padding:
+            70px 15px 55px;
+
+        min-height:
+            650px;
+
+    }
+
+
+    .product-title {
+
+        font-size:
+            42px;
+
+        letter-spacing:
+            -1px;
+
+    }
+
+
+    .product-description {
+
+        font-size:
+            13px;
+
+        max-width:
+            330px;
+
+    }
+
+
+    .slider-wrapper {
+
+        height:
+            460px;
+
+        perspective:
+            1000px;
+
+    }
+
+
+    .project-card {
+
+        width:
+            min(84vw,330px);
+
+        height:
+            410px;
+
+        border-radius:
+            25px;
+
+    }
+
+
+    .project-image {
+
+        height:
+            285px;
+
+    }
+
+
+    .project-content {
+
+        height:
+            125px;
+
+        padding:
+            17px 18px;
+
+    }
+
+
+    .project-title-card {
+
+        font-size:
+            22px;
+
+    }
+
+
+    .nav-button {
+
+        width:
+            52px;
+
+        height:
+            52px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width:380px) {
+
+    .product-title {
+
+        font-size:
+            35px;
+
+    }
+
+
+    .project-card {
+
+        width:
+            88vw;
+
+        height:
+            390px;
+
+    }
+
+
+    .project-image {
+
+        height:
+            270px;
+
+    }
+
+}
+
+.contact-cta{
+    padding:70px 8%;
+    background:linear-gradient(135deg,#231b17,#39291f);
+    border-radius:24px;
+    margin:40px auto;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-cta::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:radial-gradient(circle,
+        rgba(196,154,90,.25),
+        transparent 70%);
+    top:-100px;
+    right:-80px;
+}
+
+.cta-content{
+    max-width:700px;
+    position:relative;
+    z-index:2;
+}
+
+.cta-tag{
+    display:inline-block;
+    color:#c49a5a;
+    letter-spacing:2px;
+    font-size:.8rem;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.contact-cta h2{
+    color:#fff;
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.2;
+    margin-bottom:15px;
+    font-family:"Playfair Display",serif;
+}
+
+.contact-cta p{
+    color:rgba(255,255,255,.75);
+    line-height:1.7;
+    margin-bottom:25px;
+    max-width:550px;
+}
+
+.cta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 30px;
+    background:#c49a5a;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.cta-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(196,154,90,.35);
+}
+
+.cta-btn span{
+    transition:.35s ease;
+}
+
+.cta-btn:hover span{
+    transform:translateX(4px);
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main class="interior-products">
+
+
+<!-- ===================================================
+     TOP BANNER
+=================================================== -->
+
+<section class="products-banner">
+
+    <h1>
+        Panels & Louvers
+    </h1>
+
+</section>
+
+
+
+<!-- ===================================================
+     PVC PANELS SLIDER
+=================================================== -->
+
+<section class="product-section">
+
+
+    <div class="product-header">
+
+        <div class="section-tag">
+            Interior Collection
+        </div>
+
+        <h2 class="product-title">
+            <span>PVC</span> Panels
+        </h2>
+
+        <p class="product-description">
+            Elegant PVC panel solutions designed to
+            bring texture, depth and contemporary
+            character to your interiors.
+        </p>
+
+    </div>
+
+
+
+    <div
+        class="slider-wrapper"
+        id="pvcSlider"
+    >
+
+
+        <!-- PVC CARD 1 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/736x/83/c8/97/83c897d4d162cc555abdf011a33ae411.jpg"
+                    alt="PVC Panel Interior"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        PVC Panels
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Modern Wall Panel
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Living Spaces
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PVC CARD 2 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/736x/3f/06/69/3f0669e272721f94f44b9f54051ad35d.jpg"
+                    alt="Luxury PVC Panel"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        PVC Panels
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Luxury Panel Finish
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Bedroom
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PVC CARD 3 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/736x/44/f2/94/44f294477e6aa7861b58c2bf6b9a2419.jpg"
+                    alt="PVC Decorative Wall"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        PVC Panels
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Decorative Wall
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Lounge
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PVC CARD 4 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/736x/c2/7d/d1/c27dd10ffcda58bba9d1ced9d684117d.jpg"
+                    alt="PVC Interior Design"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        PVC Panels
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Contemporary Texture
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Residential
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PVC CARD 5 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/1200x/ac/e3/83/ace383f9d7fbfa9bd99f0426622ddf7b.jpg"
+                    alt="Premium PVC Interior"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        PVC Panels
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Premium Interior
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Villa Interior
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+
+    <div class="slider-navigation">
+
+        <button
+            class="nav-button pvc-prev"
+            aria-label="Previous PVC Panel"
+        >
+            ←
+        </button>
+
+        <button
+            class="nav-button pvc-next"
+            aria-label="Next PVC Panel"
+        >
+            →
+        </button>
+
+    </div>
+
+
+</section>
+
+
+
+<div class="section-divider"></div>
+
+
+
+<!-- ===================================================
+     LOUVERS SLIDER
+=================================================== -->
+
+<section class="product-section">
+
+
+    <div class="product-header">
+
+        <div class="section-tag">
+            Interior Collection
+        </div>
+
+        <h2 class="product-title">
+            <span>Louvers</span>
+        </h2>
+
+        <p class="product-description">
+            Refined louver designs that create beautiful
+            vertical rhythm, warmth and architectural
+            depth across modern interiors.
+        </p>
+
+    </div>
+
+
+
+    <div
+        class="slider-wrapper"
+        id="louverSlider"
+    >
+
+
+        <!-- LOUVER CARD 1 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/736x/c5/84/9f/c5849fcd2eda478bbfc0617a2e426750.jpg"
+                    alt="Wooden Louvers"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        Louvers
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Wooden Louvers
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Living Room
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LOUVER CARD 2 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/736x/d0/6d/38/d06d385f0b91ea3762daa99e6638d5c9.jpg"
+                    alt="Modern Louvers"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        Louvers
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Modern Vertical Louvers
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Bedroom
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LOUVER CARD 3 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/736x/59/5c/6b/595c6bc3c792d67e1e76b90bdf84d277.jpg"
+                    alt="Luxury Louvers"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        Louvers
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Luxury Louver Wall
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Lounge
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LOUVER CARD 4 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/1200x/81/bd/7a/81bd7a0ee5cb62a541f20ff0407cea5f.jpg"
+                    alt="Designer Louvers"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        Louvers
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Designer Louvers
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        TV Unit
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LOUVER CARD 5 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="https://i.pinimg.com/736x/e5/6f/be/e56fbeb756cda72e3babf7dcab164ac3.jpg"
+                    alt="Premium Louvers"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <div>
+
+                    <div class="project-category">
+                        Louvers
+                    </div>
+
+                    <h3 class="project-title-card">
+                        Premium Wood Finish
+                    </h3>
+
+                </div>
+
+                <div class="project-bottom">
+
+                    <span class="project-location">
+                        Villa Interior
+                    </span>
+
+                    <a
+                        href="#"
+                        class="view-project"
+                        aria-label="View project"
+                    >
+                        →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+
+    <div class="slider-navigation">
+
+        <button
+            class="nav-button louver-prev"
+            aria-label="Previous Louver"
+        >
+            ←
+        </button>
+
+        <button
+            class="nav-button louver-next"
+            aria-label="Next Louver"
+        >
+            →
+        </button>
+
+    </div>
+
+
+</section>
+
+
+</main>
+<!-- Luxury Contact CTA Block -->
+<section class="contact-cta">
+    <div class="cta-content">
+        <span class="cta-tag">Let's Design Your Dream Space</span>
+        <h2>Transform Your Interior Into a Timeless Masterpiece</h2>
+        <p>
+            From luxury residences to modern commercial spaces,
+            we create interiors that blend elegance, comfort, and functionality.
+        </p>
+
+        <a href="#contact" class="cta-btn">
+            Contact Us
+            <span>→</span>
+        </a>
+    </div>
+</section>
+
+
+
+
+
+<script>
+
+/* =====================================================
+   CURVED 3D SLIDER
+===================================================== */
+
+class CurvedSlider {
+
+    constructor(slider, prevButton, nextButton) {
+
+        this.slider =
+            document.querySelector(slider);
+
+        this.cards =
+            this.slider.querySelectorAll(
+                ".project-card"
+            );
+
+        this.prevButton =
+            document.querySelector(prevButton);
+
+        this.nextButton =
+            document.querySelector(nextButton);
+
+        this.activeIndex = 0;
+
+        this.totalCards =
+            this.cards.length;
+
+        this.autoSlide = null;
+
+        this.touchStartX = 0;
+
+        this.touchEndX = 0;
+
+        this.init();
+
+    }
+
+
+    /* =================================================
+       INITIALIZE
+    ================================================= */
+
+    init() {
+
+        this.updateSlider();
+
+        this.startAutoSlide();
+
+        this.setupButtons();
+
+        this.setupTouch();
+
+        this.setupMouse();
+
+        this.setupKeyboard();
+
+        window.addEventListener(
+            "resize",
+            () => this.updateSlider()
+        );
+
+    }
+
+
+    /* =================================================
+       UPDATE SLIDER
+    ================================================= */
+
+    updateSlider() {
+
+        this.cards.forEach(
+            (card, index) => {
+
+                let difference =
+                    index - this.activeIndex;
+
+
+                /* Infinite loop */
+
+                if (
+                    difference >
+                    this.totalCards / 2
+                ) {
+
+                    difference -=
+                        this.totalCards;
+
+                }
+
+
+                if (
+                    difference <
+                    -this.totalCards / 2
+                ) {
+
+                    difference +=
+                        this.totalCards;
+
+                }
+
+
+                const distance =
+                    Math.abs(difference);
+
+
+                const isMobile =
+                    window.innerWidth <= 700;
+
+
+                /* Horizontal spacing */
+
+                const xPosition =
+                    isMobile
+                        ? difference * 240
+                        : difference * 300;
+
+
+                /* Curve */
+
+                const curveAmount =
+                    isMobile
+                        ? 18
+                        : 22;
+
+
+                const yPosition =
+                    distance *
+                    distance *
+                    curveAmount;
+
+
+                /* Depth */
+
+                const zPosition =
+                    -(distance *
+                    distance *
+                    100);
+
+
+                /* 3D rotation */
+
+                const rotationY =
+                    difference * -15;
+
+
+                const rotationZ =
+                    difference * 3;
+
+
+                /* Scale */
+
+                let scale =
+                    1.08 -
+                    distance * 0.14;
+
+
+                scale =
+                    Math.max(
+                        scale,
+                        0.55
+                    );
+
+
+                /* Opacity */
+
+                let opacity =
+                    1 -
+                    distance * 0.20;
+
+
+                opacity =
+                    Math.max(
+                        opacity,
+                        0
+                    );
+
+
+                /* Brightness */
+
+                let brightness =
+                    1 -
+                    distance * 0.08;
+
+
+                brightness =
+                    Math.max(
+                        brightness,
+                        0.65
+                    );
+
+
+                /* Apply */
+
+                card.style.transform = `
+
+                    translateX(${xPosition}px)
+
+                    translateY(${yPosition - 25}px)
+
+                    translateZ(${zPosition}px)
+
+                    rotateY(${rotationY}deg)
+
+                    rotateZ(${rotationZ}deg)
+
+                    scale(${scale})
+
+                `;
+
+
+                card.style.opacity =
+                    String(opacity);
+
+
+                card.style.filter =
+                    `brightness(${brightness})`;
+
+
+                card.style.zIndex =
+                    String(
+                        100 - distance
+                    );
+
+
+                card.classList.toggle(
+                    "active",
+                    difference === 0
+                );
+
+
+                card.style.pointerEvents =
+                    distance > 3
+                        ? "none"
+                        : "auto";
+
+            }
+        );
+
+    }
+
+
+    /* =================================================
+       NEXT
+    ================================================= */
+
+    nextSlide() {
+
+        this.activeIndex =
+            (
+                this.activeIndex + 1
+            ) %
+            this.totalCards;
+
+        this.updateSlider();
+
+    }
+
+
+    /* =================================================
+       PREVIOUS
+    ================================================= */
+
+    previousSlide() {
+
+        this.activeIndex =
+            (
+                this.activeIndex -
+                1 +
+                this.totalCards
+            ) %
+            this.totalCards;
+
+        this.updateSlider();
+
+    }
+
+
+    /* =================================================
+       BUTTONS
+    ================================================= */
+
+    setupButtons() {
+
+        this.nextButton.addEventListener(
+            "click",
+            () => {
+
+                this.nextSlide();
+
+                this.restartAutoSlide();
+
+            }
+        );
+
+
+        this.prevButton.addEventListener(
+            "click",
+            () => {
+
+                this.previousSlide();
+
+                this.restartAutoSlide();
+
+            }
+        );
+
+    }
+
+
+    /* =================================================
+       TOUCH
+    ================================================= */
+
+    setupTouch() {
+
+        this.slider.addEventListener(
+            "touchstart",
+            event => {
+
+                this.touchStartX =
+                    event.changedTouches[0]
+                    .screenX;
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        this.slider.addEventListener(
+            "touchend",
+            event => {
+
+                this.touchEndX =
+                    event.changedTouches[0]
+                    .screenX;
+
+
+                const distance =
+                    this.touchEndX -
+                    this.touchStartX;
+
+
+                if (
+                    distance < -50
+                ) {
+
+                    this.nextSlide();
+
+                    this.restartAutoSlide();
+
+                }
+
+
+                if (
+                    distance > 50
+                ) {
+
+                    this.previousSlide();
+
+                    this.restartAutoSlide();
+
+                }
+
+            },
+            {
+                passive: true
+            }
+        );
+
+    }
+
+
+    /* =================================================
+       MOUSE
+    ================================================= */
+
+    setupMouse() {
+
+        let startX = 0;
+
+        let dragging = false;
+
+
+        this.slider.addEventListener(
+            "mousedown",
+            event => {
+
+                dragging = true;
+
+                startX =
+                    event.clientX;
+
+            }
+        );
+
+
+        window.addEventListener(
+            "mouseup",
+            event => {
+
+                if (!dragging)
+                    return;
+
+
+                dragging = false;
+
+
+                const distance =
+                    event.clientX -
+                    startX;
+
+
+                if (
+                    distance < -60
+                ) {
+
+                    this.nextSlide();
+
+                    this.restartAutoSlide();
+
+                }
+
+
+                if (
+                    distance > 60
+                ) {
+
+                    this.previousSlide();
+
+                    this.restartAutoSlide();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =================================================
+       KEYBOARD
+    ================================================= */
+
+    setupKeyboard() {
+
+        this.slider.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    this.nextSlide();
+
+                    this.restartAutoSlide();
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    this.previousSlide();
+
+                    this.restartAutoSlide();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =================================================
+       AUTOPLAY
+    ================================================= */
+
+    startAutoSlide() {
+
+        this.autoSlide =
+            setInterval(
+                () => {
+
+                    this.nextSlide();
+
+                },
+                5000
+            );
+
+    }
+
+
+    /* =================================================
+       RESTART AUTOPLAY
+    ================================================= */
+
+    restartAutoSlide() {
+
+        clearInterval(
+            this.autoSlide
+        );
+
+        this.startAutoSlide();
+
+    }
+
+}
+
+
+
+/* =====================================================
+   PVC SLIDER
+===================================================== */
+
+new CurvedSlider(
+    "#pvcSlider",
+    ".pvc-prev",
+    ".pvc-next"
+);
+
+
+/* =====================================================
+   LOUVER SLIDER
+===================================================== */
+
+new CurvedSlider(
+    "#louverSlider",
+    ".louver-prev",
+    ".louver-next"
+);
+
+</script>
+
+
+  <script src="site-shell.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,823 @@
+
+/* =====================================================
+   ISHAAN INTERIORS — SINGLE PREMIUM FOOTER
+===================================================== */
+
+.ii-single-footer{
+
+  --cream:#f5f1ea;
+  --cream-light:#ebe4d9;
+  --brown:#211d19;
+  --dark:#171411;
+  --gold:#a4774f;
+  --taupe:#9d8a76;
+  --line:rgba(245,241,234,.15);
+
+  position:relative;
+  overflow:hidden;
+
+  background:var(--brown);
+  color:var(--cream);
+
+  font-family:"DM Sans",Arial,sans-serif;
+
+}
+
+
+/* ================================================
+   INNER
+================================================ */
+
+.ii-footer-inner{
+
+  width:100%;
+  max-width:1500px;
+
+  margin:auto;
+
+  padding:85px clamp(30px,7vw,105px) 25px;
+
+  box-sizing:border-box;
+
+}
+
+
+/* ================================================
+   TOP
+================================================ */
+
+.ii-footer-top{
+
+  display:grid;
+
+  grid-template-columns:1fr 1.2fr;
+
+  gap:80px;
+
+  padding-bottom:75px;
+
+  border-bottom:1px solid var(--line);
+
+}
+
+
+/* ================================================
+   BRAND
+================================================ */
+
+.ii-footer-brand{
+
+  max-width:380px;
+
+}
+
+
+.ii-brand-logo{
+
+  display:flex;
+  align-items:center;
+
+  margin-bottom:32px;
+
+}
+
+.ii-footer-logo{
+
+  display:block;
+
+  width:min(100%, 230px);
+
+  height:auto;
+
+  max-height:75px;
+
+  object-fit:contain;
+
+  object-position:left center;
+
+}
+
+.ii-footer-brand .ii-brand-logo{
+
+  width:100%;
+
+}
+
+.ii-single-footer a:focus-visible,
+.ii-single-footer button:focus-visible,
+.ii-single-footer input:focus-visible{
+
+  outline:2px solid #d8b36a;
+
+  outline-offset:4px;
+
+}
+
+
+/* LOGO SYMBOL */
+
+.ii-logo-symbol{
+
+  position:relative;
+
+  width:55px;
+  height:55px;
+
+  border:1px solid #b99b7c;
+
+  transform:rotate(45deg);
+
+}
+
+
+.ii-logo-symbol span{
+
+  position:absolute;
+
+  width:1px;
+  height:70px;
+
+  top:-8px;
+  left:27px;
+
+  background:#b99b7c;
+
+  transform:rotate(45deg);
+
+}
+
+
+.ii-logo-symbol span:last-child{
+
+  transform:rotate(-45deg);
+
+}
+
+
+/* LOGO TEXT */
+
+.ii-logo-text strong{
+
+  display:block;
+
+  font-family:"Playfair Display",Georgia,serif;
+
+  font-size:30px;
+
+  font-weight:400;
+
+  letter-spacing:5px;
+
+}
+
+
+.ii-logo-text small{
+
+  display:block;
+
+  margin-top:2px;
+
+  color:#b99b7c;
+
+  font-size:8px;
+
+  letter-spacing:5px;
+
+}
+
+
+.ii-footer-brand p{
+
+  margin:0;
+
+  max-width:350px;
+
+  color:rgba(245,241,234,.58);
+
+  font-size:15px;
+
+  line-height:1.9;
+
+}
+
+
+/* ================================================
+   BIG HEADING
+================================================ */
+
+.ii-footer-heading{
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+}
+
+
+.ii-footer-heading span{
+
+  margin-bottom:15px;
+
+  color:#b99b7c;
+
+  font-size:10px;
+
+  font-weight:600;
+
+  letter-spacing:4px;
+
+}
+
+
+.ii-footer-heading h2{
+
+  margin:0;
+
+  font-family:"Playfair Display",Georgia,serif;
+
+  font-size:clamp(65px,8vw,125px);
+
+  line-height:.82;
+
+  font-weight:400;
+
+  letter-spacing:-5px;
+
+}
+
+
+.ii-footer-heading h2 i{
+
+  color:#b99b7c;
+
+  font-weight:400;
+
+}
+
+
+/* ================================================
+   LINKS
+================================================ */
+
+.ii-footer-links{
+
+  display:grid;
+
+  grid-template-columns:.8fr .95fr 1.2fr 1.4fr;
+
+  gap:45px;
+
+  padding:55px 0;
+
+  border-bottom:1px solid var(--line);
+
+}
+
+
+.ii-link-group{
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+
+.ii-label{
+
+  display:block;
+
+  margin-bottom:25px;
+
+  color:#b99b7c;
+
+  font-size:10px;
+
+  font-weight:600;
+
+  letter-spacing:3px;
+
+}
+
+
+.ii-link-group a{
+
+  position:relative;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  width:100%;
+
+  margin-bottom:17px;
+
+  color:rgba(245,241,234,.72);
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  transition:.35s ease;
+
+}
+
+
+.ii-link-group a b{
+
+  color:transparent;
+
+  font-size:17px;
+
+  font-weight:400;
+
+  transform:translateX(-8px);
+
+  transition:.35s ease;
+
+}
+
+
+.ii-link-group a:hover{
+
+  color:#fff;
+
+  transform:translateX(5px);
+
+}
+
+
+.ii-link-group a:hover b{
+
+  color:#b99b7c;
+
+  transform:translateX(0);
+
+}
+
+
+/* ================================================
+   CONTACT
+================================================ */
+
+.ii-contact-group a{
+
+  justify-content:flex-start;
+
+  color:var(--cream);
+
+  font-family:"Playfair Display",Georgia,serif;
+
+  font-size:18px;
+
+  margin-bottom:13px;
+
+}
+
+
+.ii-contact-group a:hover{
+
+  color:#c3a486;
+
+  transform:none;
+
+}
+
+
+.ii-contact-group p{
+
+  margin:12px 0 0;
+
+  color:rgba(245,241,234,.5);
+
+  font-size:13px;
+
+  line-height:1.8;
+
+}
+
+
+/* ================================================
+   NEWSLETTER
+================================================ */
+
+.ii-newsletter h3{
+
+  margin:0 0 25px;
+
+  font-family:"Playfair Display",Georgia,serif;
+
+  font-size:25px;
+
+  line-height:1.25;
+
+  font-weight:400;
+
+}
+
+
+.ii-newsletter form{
+
+  display:flex;
+
+  width:100%;
+
+  border-bottom:1px solid rgba(245,241,234,.35);
+
+}
+
+
+.ii-newsletter input{
+
+  flex:1;
+
+  min-width:0;
+
+  height:50px;
+
+  padding:0;
+
+  border:0;
+
+  outline:none;
+
+  background:transparent;
+
+  color:#fff;
+
+  font-family:inherit;
+
+  font-size:13px;
+
+}
+
+
+.ii-newsletter input::placeholder{
+
+  color:rgba(245,241,234,.4);
+
+}
+
+
+.ii-newsletter button{
+
+  width:50px;
+  height:50px;
+
+  border:0;
+
+  background:transparent;
+
+  color:#c3a486;
+
+  cursor:pointer;
+
+  font-size:27px;
+
+  transition:.35s ease;
+
+}
+
+
+.ii-newsletter button:hover{
+
+  color:#fff;
+
+  transform:translateX(6px);
+
+}
+
+
+/* ================================================
+   SOCIAL + GIANT TEXT
+================================================ */
+
+.ii-footer-bottom-area{
+
+  position:relative;
+
+  padding-top:40px;
+
+}
+
+
+.ii-social-row{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:25px;
+
+}
+
+
+.ii-social-row span{
+
+  color:#b99b7c;
+
+  font-size:9px;
+
+  letter-spacing:3px;
+
+}
+
+
+.ii-social-row a{
+
+  color:rgba(245,241,234,.6);
+
+  text-decoration:none;
+
+  font-size:12px;
+
+  transition:.3s ease;
+
+}
+
+
+.ii-social-row a:hover{
+
+  color:#fff;
+
+}
+
+
+/* ================================================
+   GIANT ISHAAN
+================================================ */
+
+.ii-giant-word{
+
+  margin-top:35px;
+
+  font-family:"Playfair Display",Georgia,serif;
+
+  font-size:clamp(100px,19vw,285px);
+
+  line-height:.7;
+
+  letter-spacing:-12px;
+
+  color:transparent;
+
+  -webkit-text-stroke:1px rgba(245,241,234,.22);
+
+  white-space:nowrap;
+
+  user-select:none;
+
+  transition:.6s ease;
+
+}
+
+
+.ii-single-footer:hover .ii-giant-word{
+
+  -webkit-text-stroke-color:rgba(195,164,134,.45);
+
+}
+
+
+/* ================================================
+   LAST BAR
+================================================ */
+
+.ii-footer-last{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:20px;
+
+  padding-top:25px;
+
+  margin-top:25px;
+
+  border-top:1px solid var(--line);
+
+  color:rgba(245,241,234,.35);
+
+  font-size:10px;
+
+}
+
+
+.ii-footer-last a{
+
+  color:#b99b7c;
+
+  text-decoration:none;
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  transition:.3s ease;
+
+}
+
+
+.ii-footer-last a:hover{
+
+  color:#fff;
+
+}
+
+
+/* ================================================
+   SUBTLE ANIMATION
+================================================ */
+
+.ii-footer-brand,
+.ii-footer-heading,
+.ii-footer-links,
+.ii-footer-bottom-area{
+
+  animation:iiFooterReveal 1s ease both;
+
+}
+
+
+@keyframes iiFooterReveal{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+
+/* ================================================
+   TABLET
+================================================ */
+
+@media(max-width:950px){
+
+  .ii-footer-top{
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+  }
+
+
+  .ii-footer-links{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+
+  .ii-footer-heading h2{
+
+    font-size:80px;
+
+  }
+
+}
+
+
+/* ================================================
+   MOBILE
+================================================ */
+
+@media(max-width:600px){
+
+  .ii-footer-inner{
+
+    padding:60px 24px 22px;
+
+  }
+
+
+  .ii-footer-top{
+
+    padding-bottom:50px;
+
+  }
+
+
+  .ii-logo-text strong{
+
+    font-size:24px;
+
+  }
+
+
+  .ii-logo-symbol{
+
+    width:45px;
+    height:45px;
+
+  }
+
+
+  .ii-logo-symbol span{
+
+    height:58px;
+
+    left:22px;
+
+  }
+
+
+  .ii-footer-brand p{
+
+    font-size:13px;
+
+  }
+
+
+  .ii-footer-heading h2{
+
+    font-size:60px;
+
+    letter-spacing:-3px;
+
+  }
+
+
+  .ii-footer-links{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+    padding:45px 0;
+
+  }
+
+
+  .ii-link-group a{
+
+    font-size:14px;
+
+  }
+
+
+  .ii-contact-group a{
+
+    font-size:19px;
+
+  }
+
+
+  .ii-social-row{
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+  }
+
+
+  .ii-giant-word{
+
+    font-size:25vw;
+
+    letter-spacing:-4px;
+
+    margin-top:35px;
+
+  }
+
+
+  .ii-footer-last{
+
+    display:block;
+
+    line-height:1.8;
+
+  }
+
+
+  .ii-footer-last a{
+
+    display:block;
+
+    margin-top:10px;
+
+  }
+
+}

@@ -1,0 +1,5172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#191916" />
+    <meta
+      name="description"
+      content="Ishaan Interiors — premium interior products, thoughtful design and expert installation in Visakhapatnam since 2015."
+    />
+    <title>Ishaan Interiors — Spaces That Stay With You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link id="shared-nav-css" rel="stylesheet" href="nav.css" />
+    <style>
+      :root {
+        --ink: #191916;
+        --cream: #f5efe6;
+        --paper: #fbf9f5;
+        --sand: #f3eee6;
+        --espresso: #30271f;
+        --brown: #6b4f3a;
+        --gold: #d8b36a;
+        --gold-light: #e3cb9b;
+        --muted: #77736c;
+        --line: rgba(25, 25, 22, 0.15);
+        --serif: "Playfair Display", Georgia, serif;
+        --sans: "DM Sans", Arial, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scrollbar-gutter: stable;
+      }
+      html.shop-scroll-locked {
+        overflow: hidden;
+      }
+      body {
+        margin: 0;
+        width: 100%;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 15px;
+        -webkit-font-smoothing: antialiased;
+      }
+      .slider {
+        position: relative;
+        height: 100svh;
+        min-height: 620px;
+        overflow: hidden;
+        background: #39332d;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .slide:first-child {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .slide-image {
+        position: absolute;
+        inset: -2%;
+        background-position: center;
+        background-size: cover;
+        transform: scale(1.08);
+        will-change: transform;
+      }
+
+      .slide-image:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(15, 14, 13, 0.65), rgba(15, 14, 13, 0.08) 80%),
+          linear-gradient(0deg, rgba(15, 14, 13, 0.35), transparent 60%);
+      }
+
+      .slide-1 .slide-image {
+        background-image: url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2400&q=88");
+      }
+
+      .slide-2 .slide-image {
+        background-image: url("https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=2400&q=88");
+      }
+
+      .slide-3 .slide-image {
+        background-image: url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2400&q=88");
+      }
+
+      .slide-4 .slide-image {
+        background-image: url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=88");
+      }
+
+      .copy {
+        position: absolute;
+        z-index: 1;
+        left: 10vw;
+        bottom: 17vh;
+        max-width: 760px;
+        padding-right: 8vw;
+      }
+
+      .kicker {
+        color: var(--gold);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2 {
+        font: 400 clamp(46px, 7.5vw, 98px) / 1.02 var(--serif);
+        letter-spacing: -0.04em;
+        margin: 22px 0;
+      }
+
+      h1 {
+        max-width: 780px;
+      }
+
+      .slider h1,
+      .slider h2 {
+        color: var(--cream);
+      }
+
+      h1 em {
+        color: #e5d4b3;
+        font-weight: 400;
+      }
+
+      .copy h2 {
+        max-width: 680px;
+      }
+
+      .copy p {
+        font-size: 14px;
+        line-height: 1.8;
+        max-width: 410px;
+        color: #f4eee4e8;
+        margin: 0;
+      }
+
+      .scroll-hint {
+        position: absolute;
+        z-index: 2;
+        left: 10vw;
+        bottom: 5vh;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #fff9;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .scroll-hint:before {
+        content: "";
+        height: 34px;
+        width: 1px;
+        background: var(--gold);
+      }
+
+      .counter {
+        position: fixed;
+        z-index: 5;
+        right: 5vw;
+        bottom: 5vh;
+        color: #fff;
+        font: 400 12px var(--serif);
+        letter-spacing: 0.18em;
+        text-shadow: 0 1px 12px #0008;
+      }
+
+      .counter span {
+        color: var(--gold);
+      }
+
+      @media (max-width: 700px) {
+        .slider {
+          min-height: 580px;
+        }
+
+        .copy {
+          left: 7vw;
+          right: 7vw;
+          bottom: 17vh;
+          padding-right: 4vw;
+        }
+
+        h1,
+        h2 {
+          font-size: clamp(44px, 12vw, 70px);
+        }
+
+        .copy p {
+          font-size: 13px;
+        }
+
+        .scroll-hint {
+          left: 7vw;
+          bottom: 5vh;
+        }
+
+        .counter {
+          right: 7vw;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+        }
+      }
+
+
+      /*ABOUT PAGE STYLES*/
+      .about {
+        position: relative;
+        padding: 140px clamp(24px, 9vw, 144px) 110px;
+        overflow: hidden;
+        background: var(--paper);
+      }
+      .about:before {
+        content: "II";
+        position: absolute;
+        right: 4%;
+        top: 22px;
+        font: 300 clamp(220px, 32vw, 480px)/1 var(--serif);
+        color: rgba(107, 79, 58, 0.035);
+        pointer-events: none;
+      }
+      .about-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 10%;
+        align-items: start;
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      .about-visual {
+        position: relative;
+        min-height: 570px;
+      }
+      .about-photo {
+        position: absolute;
+        inset: 0 12% 10% 0;
+        overflow: hidden;
+        border: 1px solid rgba(216, 179, 106, 0.75);
+      }
+      .about-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .about-photo:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(25, 25, 22, 0.15),
+          transparent 45%
+        );
+      }
+      .about-copy {
+        padding-top: 20px;
+      }
+      .about-copy .eyebrow {
+        color: var(--brown);
+      }
+      .about h2 {
+        font: 400 clamp(38px, 4vw, 58px)/1.16 var(--serif);
+        letter-spacing: -0.03em;
+        max-width: 650px;
+        margin: 25px 0;
+        color: var(--ink);
+      }
+      .about h2 em {
+        color: var(--brown);
+        font-weight: 400;
+      }
+      .about-lead {
+        font-size: 15px;
+        line-height: 1.9;
+        color: #57534d;
+        max-width: 620px;
+      }
+      .about-body {
+        font-size: 13px;
+        line-height: 1.9;
+        color: #77736c;
+        max-width: 620px;
+        margin: 16px 0 30px;
+      }
+      .text-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--brown);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--gold);
+      }
+      .text-link span {
+        font-size: 17px;
+        transition: transform 0.2s;
+      }
+      .text-link:hover span {
+        transform: translateX(5px);
+      }
+      .features {
+        position: relative;
+        z-index: 1;
+        max-width: 1300px;
+        margin: 60px auto 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .feature {
+        position: relative;
+        padding: 30px 25px 32px 0;
+        min-height: 206px;
+        border-right: 1px solid var(--line);
+        transition:
+          background 0.35s,
+          transform 0.35s;
+      }
+      .feature:not(:first-child) {
+        padding-left: 24px;
+      }
+      .feature:last-child {
+        border: 0;
+      }
+      .feature:hover {
+        background: rgba(216, 179, 106, 0.08);
+        transform: translateY(-5px);
+      }
+      .feature-icon {
+        width: 42px;
+        height: 42px;
+        color: var(--brown);
+        margin-bottom: 20px;
+        transition:
+          transform 0.4s,
+          color 0.3s;
+      }
+      .feature:hover .feature-icon {
+        transform: rotate(-8deg) scale(1.08);
+        color: #b48949;
+      }
+      .feature h3 {
+        font: 500 20px var(--serif);
+        margin: 0 0 10px;
+        color: var(--ink);
+      }
+      .feature p {
+        font-size: 11px;
+        line-height: 1.7;
+        color: #57534d;
+        margin: 0;
+        max-width: 240px;
+      }
+      .stats {
+        background: var(--ink);
+        color: white;
+        padding: 74px clamp(24px, 9vw, 144px) 82px;
+        position: relative;
+        overflow: hidden;
+      }
+      .stats:after {
+        content: "";
+        position: absolute;
+        width: 560px;
+        height: 560px;
+        border: 1px solid rgba(216, 179, 106, 0.12);
+        border-radius: 50%;
+        right: -180px;
+        top: -300px;
+        box-shadow:
+          0 0 0 48px rgba(216, 179, 106, 0.025),
+          0 0 0 100px rgba(216, 179, 106, 0.02);
+      }
+      .stats-inner {
+        max-width: 1300px;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        gap: 6%;
+      }
+      .stats-heading .eyebrow {
+        color: var(--gold);
+      }
+      .stats-heading h2 {
+        font: 400 34px/1.2 var(--serif);
+        margin: 19px 0 0;
+      }
+      .stat-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .stat {
+        padding: 5px 20px;
+        border-left: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      .stat-num {
+        font: 400 clamp(38px, 4vw, 58px)/1 var(--serif);
+        color: var(--gold);
+        margin-bottom: 13px;
+        white-space: nowrap;
+      }
+      .stat-label {
+        font-size: 10px;
+        line-height: 1.6;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.63);
+        max-width: 140px;
+      }
+      .footer {
+        padding: 23px clamp(24px, 6.2vw, 100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.55);
+        background: #121310;
+        font-size: 9px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .footer strong {
+        color: white;
+        font-weight: 500;
+      }
+      .footer a {
+        color: var(--gold);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+      }
+      .slide.active .hero-kicker,
+      .slide.active h1,
+      .slide.active .hero-desc,
+      .slide.active .actions {
+        animation: copy-in 0.8s both;
+      }
+      .slide.active h1 {
+        animation-delay: 0.12s;
+      }
+      .slide.active .hero-desc {
+        animation-delay: 0.23s;
+      }
+      .slide.active .actions {
+        animation-delay: 0.32s;
+      }
+      @keyframes copy-in {
+        from {
+          opacity: 0;
+          transform: translateY(26px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 900px) {
+        .nav {
+          gap: 22px;
+        }
+        .about-grid {
+          gap: 7%;
+        }
+        .about-visual {
+          min-height: 480px;
+        }
+        .features {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .feature:nth-child(2) {
+          border-right: 0;
+        }
+        .feature:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--line);
+        }
+        .feature:nth-child(3) {
+          padding-left: 0;
+        }
+        .stats-inner {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+        .stat-list {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .hero {
+          min-height: 720px;
+          height: 100svh;
+        }
+        .topbar {
+          height: 78px;
+          padding: 0 22px;
+        }
+        .brand-mark {
+          width: 32px;
+          height: 32px;
+          font-size: 17px;
+        }
+        .brand-name {
+          font-size: 13px;
+        }
+        .nav {
+          display: none;
+          position: absolute;
+          top: 78px;
+          left: 0;
+          right: 0;
+          background: rgba(25, 25, 22, 0.96);
+          padding: 24px;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 23px;
+          border-bottom: 1px solid rgba(216, 179, 106, 0.3);
+        }
+        .nav.open {
+          display: flex;
+        }
+        .nav .nav-cta {
+          text-align: center;
+        }
+        .menu-toggle {
+          display: block;
+        }
+        .hero-inner {
+          padding: 108px 25px 150px;
+          align-items: center;
+        }
+        .hero h1 {
+          font-size: clamp(45px, 12vw, 64px);
+        }
+        .hero-desc {
+          font-size: 13px;
+          max-width: 390px;
+        }
+        .actions {
+          align-items: stretch;
+          flex-direction: column;
+          max-width: 255px;
+        }
+        .btn {
+          padding: 15px 18px;
+        }
+        .hero-meta {
+          bottom: 28px;
+          left: 24px;
+          font-size: 8px;
+          max-width: 110px;
+          line-height: 1.7;
+        }
+        .hero-controls {
+          right: 20px;
+          bottom: 25px;
+          gap: 10px;
+        }
+        .progress {
+          width: 45px;
+        }
+        .control {
+          width: 36px;
+          height: 36px;
+        }
+        .slide-count {
+          font-size: 14px;
+          min-width: 48px;
+        }
+        .vertical-note {
+          display: none;
+        }
+        .about {
+          padding: 85px 24px 70px;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .about-visual {
+          min-height: 400px;
+          margin-right: 10px;
+        }
+        .about-copy {
+          padding: 0;
+        }
+        .about h2 {
+          font-size: 42px;
+          margin: 20px 0;
+        }
+        .about-lead {
+          font-size: 14px;
+        }
+        .features {
+          margin-top: 55px;
+        }
+        .feature {
+          min-height: 210px;
+          padding: 22px 14px 22px 0;
+        }
+        .feature:not(:first-child) {
+          padding-left: 14px;
+        }
+        .feature:nth-child(3) {
+          padding-left: 0;
+        }
+        .feature h3 {
+          font-size: 18px;
+        }
+        .feature p {
+          font-size: 10px;
+        }
+        .feature-icon {
+          width: 36px;
+          height: 36px;
+          margin-bottom: 15px;
+        }
+        .stats {
+          padding: 58px 24px;
+        }
+        .stats-heading h2 {
+          font-size: 30px;
+        }
+        .stat-list {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 25px 0;
+        }
+        .stat {
+          padding: 5px 12px;
+        }
+        .stat:nth-child(odd) {
+          border-left: 0;
+          padding-left: 0;
+        }
+        .stat-num {
+          font-size: 42px;
+        }
+        .stat-label {
+          font-size: 9px;
+        }
+        .footer {
+          padding: 20px 24px;
+          gap: 15px;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* ONE STOP SOLUTION SECTION */
+      #ii-solutions {
+        --ii-bg: #f3eee6;
+        --ii-cream: #faf8f4;
+        --ii-ink: #211d19;
+        --ii-muted: #70675e;
+        --ii-brown: #6b4f3a;
+        --ii-deep: #38291f;
+        --ii-gold: #c8a66a;
+        --ii-line: rgba(76, 59, 44, 0.16);
+        --ii-serif: "Playfair Display", Georgia, serif;
+        --ii-sans: "DM Sans", Arial, sans-serif;
+        position: relative;
+        isolation: isolate;
+        width: 100%;
+        overflow: hidden;
+        background: var(--ii-bg);
+        color: var(--ii-ink);
+        font-family: var(--ii-sans);
+        -webkit-font-smoothing: antialiased;
+      }
+      #ii-solutions *,
+      #ii-solutions *::before,
+      #ii-solutions *::after {
+        box-sizing: border-box;
+      }
+      #ii-solutions img {
+        display: block;
+        max-width: 100%;
+      }
+      #ii-solutions a {
+        color: inherit;
+        text-decoration: none;
+      }
+      #ii-solutions h2,
+      #ii-solutions h3,
+      #ii-solutions p {
+        margin-top: 0;
+      }
+      #ii-solutions .ii-container {
+        width: min(1180px, calc(100% - 64px));
+        margin: 0 auto;
+      }
+
+      /* Hero: editorial copy paired with a layered interior photograph. */
+      #ii-solutions .ii-hero {
+        position: relative;
+        padding: clamp(58px, 8vw, 106px) 0;
+      }
+      #ii-solutions .ii-hero::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: min(54vw, 620px);
+        aspect-ratio: 1;
+        border: 1px solid rgba(200, 166, 106, 0.28);
+        border-radius: 50%;
+        right: -18%;
+        top: 7%;
+        pointer-events: none;
+      }
+      #ii-solutions .ii-hero-grid {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        align-items: center;
+        gap: clamp(38px, 7vw, 100px);
+      }
+      #ii-solutions .ii-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin: 0 0 21px;
+        color: var(--ii-brown);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+      #ii-solutions .ii-eyebrow::before {
+        content: "";
+        width: 32px;
+        height: 1px;
+        background: var(--ii-gold);
+      }
+      #ii-solutions .ii-copy h2 {
+        max-width: 590px;
+        margin: 0 0 23px;
+        font: 500 clamp(43px, 5.3vw, 73px)/1.08 var(--ii-serif);
+        letter-spacing: -0.04em;
+      }
+      #ii-solutions .ii-copy h2 em {
+        color: var(--ii-brown);
+        font-weight: 500;
+      }
+      #ii-solutions .ii-lede {
+        max-width: 490px;
+        margin: 0 0 25px;
+        color: var(--ii-muted);
+        font-size: 14px;
+        line-height: 1.9;
+      }
+      #ii-solutions .ii-promise {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin: 0 0 30px;
+        color: var(--ii-deep);
+        font-size: 11px;
+        letter-spacing: 0.04em;
+      }
+      #ii-solutions .ii-promise-mark {
+        display: grid;
+        place-items: center;
+        width: 29px;
+        height: 29px;
+        border: 1px solid var(--ii-gold);
+        border-radius: 50%;
+        color: var(--ii-brown);
+      }
+      #ii-solutions .ii-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 22px;
+      }
+      #ii-solutions .ii-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        min-height: 52px;
+        padding: 0 21px;
+        border: 1px solid var(--ii-deep);
+        background: var(--ii-deep);
+        color: #fff;
+        font: 600 10px var(--ii-sans);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: all 0.25s ease;
+      }
+      #ii-solutions .ii-button:hover {
+        border-color: var(--ii-gold);
+        background: transparent;
+        color: var(--ii-deep);
+      }
+      #ii-solutions .ii-button span {
+        font-size: 16px;
+        transition: transform 0.25s ease;
+      }
+      #ii-solutions .ii-button:hover span {
+        transform: translateX(4px);
+      }
+      #ii-solutions .ii-text-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--ii-deep);
+        font-size: 11px;
+        font-weight: 600;
+      }
+      #ii-solutions .ii-text-link span {
+        color: var(--ii-gold);
+        font-size: 17px;
+      }
+
+      #ii-solutions .ii-visual {
+        min-width: 0;
+        position: relative;
+        padding: 19px 17px 20px 38px;
+      }
+      #ii-solutions .ii-photo {
+        width: 100%;
+        height: clamp(350px, 43vw, 490px);
+        border: 1px solid var(--ii-gold);
+        object-fit: cover;
+        object-position: center;
+        background: #c9b9a4;
+        box-shadow: 0 25px 55px rgba(47, 34, 23, 0.18);
+      }
+      #ii-solutions .ii-shade {
+        position: absolute;
+        inset: 19px 17px 20px 38px;
+        background: linear-gradient(
+          180deg,
+          transparent 45%,
+          rgba(29, 25, 21, 0.52)
+        );
+        pointer-events: none;
+      }
+      #ii-solutions .ii-caption {
+        position: absolute;
+        left: 60px;
+        bottom: 43px;
+        color: white;
+      }
+      #ii-solutions .ii-caption small {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      #ii-solutions .ii-caption strong {
+        font: 500 24px var(--ii-serif);
+      }
+      #ii-solutions .ii-glass {
+        position: absolute;
+        z-index: 2;
+        padding: 15px 17px;
+        background: rgba(250, 248, 244, 0.86);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        box-shadow: 0 12px 35px rgba(39, 31, 24, 0.13);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+      #ii-solutions .ii-product {
+        top: 48px;
+        right: 0;
+        width: 180px;
+      }
+      #ii-solutions .ii-kicker {
+        margin: 0 0 7px;
+        color: var(--ii-muted);
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      #ii-solutions .ii-product-title {
+        margin: 0 0 10px;
+        font: 500 15px var(--ii-serif);
+      }
+      #ii-solutions .ii-swatches {
+        display: flex;
+        gap: 6px;
+      }
+      #ii-solutions .ii-swatches i {
+        width: 21px;
+        height: 21px;
+        border: 2px solid white;
+        border-radius: 50%;
+        box-shadow: 0 1px 5px #0003;
+      }
+      #ii-solutions .ii-swatches i:nth-child(1) {
+        background: #92765a;
+      }
+      #ii-solutions .ii-swatches i:nth-child(2) {
+        background: #c7b49a;
+      }
+      #ii-solutions .ii-swatches i:nth-child(3) {
+        background: #d4c8b5;
+      }
+      #ii-solutions .ii-swatches i:nth-child(4) {
+        background: #44413a;
+      }
+      #ii-solutions .ii-install {
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        min-width: 210px;
+      }
+      #ii-solutions .ii-check {
+        display: grid;
+        place-items: center;
+        flex: none;
+        width: 34px;
+        height: 34px;
+        border: 1px solid var(--ii-gold);
+        border-radius: 50%;
+        color: var(--ii-brown);
+      }
+      #ii-solutions .ii-install b {
+        display: block;
+        margin-bottom: 3px;
+        font: 500 13px var(--ii-serif);
+      }
+      #ii-solutions .ii-install small {
+        color: var(--ii-muted);
+        font-size: 9px;
+      }
+
+      /* Four-stage customer journey. */
+      #ii-solutions .ii-journey {
+        padding: clamp(75px, 9vw, 115px) 0;
+        background: var(--ii-cream);
+      }
+      #ii-solutions .ii-heading {
+        max-width: 680px;
+        margin: 0 auto 57px;
+        text-align: center;
+      }
+      #ii-solutions .ii-heading .ii-eyebrow {
+        justify-content: center;
+      }
+      #ii-solutions .ii-heading h3 {
+        margin: 0 0 14px;
+        font: 500 clamp(36px, 4.4vw, 57px)/1.12 var(--ii-serif);
+        letter-spacing: -0.03em;
+      }
+      #ii-solutions .ii-heading h3 em {
+        color: var(--ii-brown);
+      }
+      #ii-solutions .ii-heading > p:last-child {
+        max-width: 540px;
+        margin: 0 auto;
+        color: var(--ii-muted);
+        font-size: 13px;
+        line-height: 1.8;
+      }
+      #ii-solutions .ii-timeline {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+      #ii-solutions .ii-timeline::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 7%;
+        right: 7%;
+        height: 1px;
+        background: var(--ii-line);
+      }
+      #ii-solutions .ii-step {
+        position: relative;
+      }
+      #ii-solutions .ii-number {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        margin: 0 0 24px;
+        border: 1px solid var(--ii-gold);
+        border-radius: 50%;
+        background: var(--ii-cream);
+        color: var(--ii-brown);
+        font: 500 13px var(--ii-serif);
+      }
+      #ii-solutions .ii-step h4 {
+        margin: 0 0 9px;
+        font: 500 21px var(--ii-serif);
+      }
+      #ii-solutions .ii-step p {
+        max-width: 240px;
+        min-height: 65px;
+        margin: 0 0 14px;
+        color: var(--ii-muted);
+        font-size: 11px;
+        line-height: 1.8;
+      }
+      #ii-solutions .ii-tag {
+        color: var(--ii-brown);
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      /* Compact service cards reinforce that products and expert installation belong together. */
+      #ii-solutions .ii-services {
+        padding: clamp(75px, 9vw, 112px) 0;
+      }
+      #ii-solutions .ii-service-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: center;
+        gap: 65px;
+      }
+      #ii-solutions .ii-intro h3 {
+        margin: 0 0 17px;
+        font: 500 clamp(36px, 4.2vw, 54px)/1.12 var(--ii-serif);
+        letter-spacing: -0.03em;
+      }
+      #ii-solutions .ii-intro h3 em {
+        color: var(--ii-brown);
+      }
+      #ii-solutions .ii-intro > p:not(.ii-eyebrow) {
+        max-width: 400px;
+        color: var(--ii-muted);
+        font-size: 12px;
+        line-height: 1.9;
+      }
+      #ii-solutions .ii-intro .ii-text-link {
+        margin-top: 7px;
+      }
+      #ii-solutions .ii-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+      }
+      #ii-solutions .ii-card {
+        position: relative;
+        min-height: 225px;
+        padding: 24px 21px;
+        overflow: hidden;
+        border: 1px solid rgba(107, 79, 58, 0.16);
+        background: rgba(250, 248, 244, 0.7);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      #ii-solutions .ii-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 35px rgba(50, 37, 25, 0.1);
+      }
+      #ii-solutions .ii-card::after {
+        content: attr(data-n);
+        position: absolute;
+        right: 12px;
+        bottom: -30px;
+        color: rgba(200, 166, 106, 0.14);
+        font: 500 105px/0.9 var(--ii-serif);
+      }
+      #ii-solutions .ii-icon {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 20px;
+        border: 1px solid var(--ii-gold);
+        color: var(--ii-brown);
+      }
+      #ii-solutions .ii-card h4 {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 8px;
+        font: 500 18px var(--ii-serif);
+      }
+      #ii-solutions .ii-card p {
+        position: relative;
+        z-index: 1;
+        max-width: 230px;
+        margin: 0;
+        color: var(--ii-muted);
+        font-size: 10px;
+        line-height: 1.75;
+      }
+
+      /* Closing trust statement. */
+      #ii-solutions .ii-trust {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(58px, 7vw, 88px) 0;
+        background: var(--ii-deep);
+        color: white;
+      }
+      #ii-solutions .ii-trust::after {
+        content: "";
+        position: absolute;
+        width: 490px;
+        aspect-ratio: 1;
+        right: -200px;
+        bottom: -360px;
+        border: 1px solid #e3cb9b44;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      #ii-solutions .ii-trust-inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+      }
+      #ii-solutions .ii-trust .ii-eyebrow {
+        color: #e3cb9b;
+      }
+      #ii-solutions .ii-trust h3 {
+        max-width: 720px;
+        margin: 0;
+        font: 500 clamp(33px, 4.2vw, 54px)/1.13 var(--ii-serif);
+        letter-spacing: -0.025em;
+      }
+      #ii-solutions .ii-trust h3 em {
+        color: #e3cb9b;
+      }
+      #ii-solutions .ii-trust .ii-button {
+        flex: none;
+        border-color: #e3cb9b;
+        background: #e3cb9b;
+        color: var(--ii-deep);
+      }
+      #ii-solutions .ii-trust .ii-button:hover {
+        background: transparent;
+        color: white;
+      }
+
+      /* Entry animation only runs when GSAP is present; hidden styles are never required. */
+      #ii-solutions .ii-float {
+        animation: ii-float 6s ease-in-out infinite;
+      }
+      #ii-solutions .ii-install.ii-float {
+        animation-delay: -2s;
+      }
+      @keyframes ii-float {
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      #ii-solutions.ii-motion .ii-reveal {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      #ii-solutions.ii-motion .ii-reveal-left {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      @media (max-width: 900px) {
+        #ii-solutions .ii-container {
+          width: calc(100% - 48px);
+        }
+        #ii-solutions .ii-hero-grid {
+          grid-template-columns: 1fr 0.92fr;
+          gap: 30px;
+        }
+        #ii-solutions .ii-photo {
+          height: 390px;
+        }
+        #ii-solutions .ii-product {
+          width: 160px;
+        }
+        #ii-solutions .ii-timeline {
+          gap: 14px;
+        }
+        #ii-solutions .ii-service-grid {
+          gap: 32px;
+        }
+        #ii-solutions .ii-card {
+          padding: 20px 16px;
+        }
+      }
+      @media (max-width: 650px) {
+        #ii-solutions .ii-container {
+          width: calc(100% - 36px);
+        }
+        #ii-solutions .ii-hero {
+          padding: 55px 0 60px;
+        }
+        #ii-solutions .ii-hero-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        #ii-solutions .ii-copy h2 {
+          font-size: clamp(43px, 11vw, 60px);
+        }
+        #ii-solutions .ii-lede {
+          font-size: 13px;
+        }
+        #ii-solutions .ii-visual {
+          min-height: 390px;
+          padding: 13px 10px 18px 23px;
+        }
+        #ii-solutions .ii-photo {
+          height: min(88vw, 410px);
+        }
+        #ii-solutions .ii-shade {
+          inset: 13px 10px 18px 23px;
+        }
+        #ii-solutions .ii-product {
+          top: 34px;
+          right: -2px;
+          width: 147px;
+          padding: 12px;
+        }
+        #ii-solutions .ii-caption {
+          left: 40px;
+          bottom: 38px;
+        }
+        #ii-solutions .ii-caption strong {
+          font-size: 21px;
+        }
+        #ii-solutions .ii-install {
+          min-width: 190px;
+          padding: 12px;
+        }
+        #ii-solutions .ii-journey,
+        #ii-solutions .ii-services {
+          padding: 74px 0;
+        }
+        #ii-solutions .ii-heading {
+          margin-bottom: 38px;
+        }
+        #ii-solutions .ii-heading h3 {
+          font-size: 39px;
+        }
+        #ii-solutions .ii-timeline {
+          display: block;
+          padding-left: 8px;
+        }
+        #ii-solutions .ii-timeline::before {
+          top: 15px;
+          bottom: 30px;
+          left: 28px;
+          right: auto;
+          width: 1px;
+          height: auto;
+        }
+        #ii-solutions .ii-step {
+          display: grid;
+          grid-template-columns: 42px 1fr;
+          column-gap: 16px;
+          margin-bottom: 26px;
+        }
+        #ii-solutions .ii-number {
+          grid-row: span 3;
+          margin: 0;
+        }
+        #ii-solutions .ii-step h4 {
+          padding-top: 4px;
+        }
+        #ii-solutions .ii-step p {
+          min-height: 0;
+          margin-bottom: 9px;
+        }
+        #ii-solutions .ii-service-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        #ii-solutions .ii-intro h3 {
+          font-size: 39px;
+        }
+        #ii-solutions .ii-card {
+          min-height: 210px;
+          padding: 19px 14px;
+        }
+        #ii-solutions .ii-card h4 {
+          font-size: 16px;
+        }
+        #ii-solutions .ii-trust-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        #ii-solutions .ii-trust h3 {
+          font-size: 38px;
+        }
+      }
+      @media (max-width: 370px) {
+        #ii-solutions .ii-container {
+          width: calc(100% - 28px);
+        }
+        #ii-solutions .ii-actions {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        #ii-solutions .ii-cards {
+          grid-template-columns: 1fr;
+        }
+        #ii-solutions .ii-card {
+          min-height: 185px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #ii-solutions *,
+        #ii-solutions *::before,
+        #ii-solutions *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        #ii-solutions.ii-motion .ii-reveal,
+        #ii-solutions.ii-motion .ii-reveal-left {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* Ishaan Interiors PRODUCT SECTION */
+
+      
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+      }
+
+      body.locked {
+        overflow: hidden;
+      }
+
+      button {
+        font: inherit;
+        cursor: pointer;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site-header {
+        background: #fff;
+        color: #292821;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .cart-trigger,
+      .menu-cart {
+        border: 1px solid #ffffff42;
+        background: transparent;
+        color: white;
+        padding: 11px 16px;
+        border-radius: 3px;
+      }
+
+      .count {
+        display: inline-grid;
+        place-items: center;
+        min-width: 21px;
+        height: 21px;
+        padding: 0 5px;
+        margin-left: 8px;
+        background: var(--gold);
+        border-radius: 99px;
+        font-size: 11px;
+        color: #fff;
+      }
+
+      .hero {
+        padding: clamp(54px, 9vw, 112px) 22px 54px;
+        text-align: center;
+        background: linear-gradient(120deg, #ede5d8, #f8f5ef 55%, #e9e0d1);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        color: var(--gold-dark);
+        font-size: 11px;
+        font-weight: bold;
+      }
+
+      .hero h1 {
+        font: 400 clamp(38px, 6vw, 68px) / 1.05 var(--serif);
+        margin: 16px auto;
+        max-width: 850px;
+      }
+
+      .hero p {
+        max-width: 600px;
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .collection {
+        width: min(1200px, calc(100% - 44px));
+        margin: 64px auto 100px;
+      }
+
+      .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 20px;
+        margin-bottom: 25px;
+      }
+
+      .section-heading h2 {
+        font: 400 34px var(--serif);
+        margin: 0;
+      }
+
+      .section-heading p {
+        margin: 5px 0 0;
+        color: var(--muted);
+      }
+
+      .product-count {
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 26px;
+      }
+
+      .product-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        min-width: 0;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+      }
+
+      .card-image {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        background: #e8e0d4;
+        overflow: hidden;
+      }
+
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s;
+      }
+
+      .product-card:hover .card-image img {
+        transform: scale(1.035);
+      }
+
+      .badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: #f7f4eeed;
+        color: var(--ink);
+        padding: 6px 10px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .category {
+        color: var(--gold-dark);
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .card-body h3 {
+        font: 400 25px var(--serif);
+        margin: 6px 0;
+      }
+
+      .card-body p {
+        color: var(--muted);
+        margin: 0 0 18px;
+        min-height: 44px;
+      }
+
+      .card-footer {
+        border-top: 1px solid var(--line);
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .swatch-preview {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .swatch-dot {
+        width: 15px;
+        height: 15px;
+        border: 1px solid #0002;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .swatch-label {
+        font-size: 11px;
+        color: var(--muted);
+        margin-left: 3px;
+      }
+
+      .card-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 17px;
+      }
+
+      .btn {
+        border: 1px solid var(--ink);
+        padding: 11px 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        font-size: 10px;
+        transition: 0.2s;
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .btn-outline:hover {
+        background: var(--ink);
+        color: white;
+      }
+
+      .btn-gold {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #fff;
+      }
+
+      .btn-gold:hover {
+        background: var(--gold-dark);
+        border-color: var(--gold-dark);
+      }
+
+      .card-actions .btn {
+        flex: 1;
+      }
+
+      .site-footer {
+        background: var(--ink);
+        color: #d8d0c3;
+        text-align: center;
+        padding: 32px 20px;
+        font-size: 12px;
+        letter-spacing: 0.07em;
+      }
+
+      .site-footer strong {
+        color: #d7b978;
+        font: 20px var(--serif);
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: #171512b8;
+        z-index: 20;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 22px;
+      }
+
+      .overlay.open {
+        display: flex;
+      }
+
+      .modal {
+        position: relative;
+        background: var(--paper);
+        width: min(900px, 100%);
+        max-height: min(90vh, 760px);
+        overflow: auto;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        box-shadow: 0 25px 90px #0005;
+      }
+
+      .modal-photo {
+        min-height: 440px;
+        background: #e6ded2;
+      }
+
+      .modal-photo img {
+        width: 100%;
+        height: 100%;
+        min-height: 440px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .modal-info {
+        padding: clamp(25px, 4vw, 48px);
+        align-self: center;
+      }
+
+      .close {
+        position: absolute;
+        z-index: 2;
+        right: 13px;
+        top: 13px;
+        width: 38px;
+        height: 38px;
+        border: 0;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--ink);
+        font-size: 24px;
+      }
+
+      .modal-info h2 {
+        font: 400 clamp(32px, 4vw, 45px) / 1.1 var(--serif);
+        margin: 9px 0 13px;
+      }
+
+      .modal-description {
+        color: var(--muted);
+        margin: 0 0 16px;
+      }
+
+      .product-dimensions {
+        font-size: 13px;
+        color: var(--ink);
+        padding: 11px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        margin: 0 0 20px;
+      }
+
+      .product-dimensions strong {
+        font-weight: 600;
+        color: var(--gold-dark);
+      }
+
+      .choice-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: bold;
+      }
+
+      .color-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin: 12px 0 23px;
+      }
+
+      .color-choice {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 11px;
+        background: transparent;
+        border: 1px solid var(--line);
+        color: var(--ink);
+        font-size: 12px;
+      }
+
+      .color-choice.selected {
+        border-color: var(--gold);
+        box-shadow: inset 0 0 0 1px var(--gold);
+      }
+
+      .color-choice .swatch-dot {
+        width: 18px;
+        height: 18px;
+      }
+
+      .modal-add {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .modal-note {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 12px;
+      }
+
+      .drawer-scrim {
+        position: fixed;
+        inset: 0;
+        background: #17151299;
+        z-index: 30;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.25s;
+      }
+
+      .drawer-scrim.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .drawer {
+        position: fixed;
+        z-index: 31;
+        right: 0;
+        top: 0;
+        height: 100dvh;
+        width: min(440px, 100%);
+        background: var(--paper);
+        transform: translateX(102%);
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+        box-shadow: -15px 0 55px #0002;
+      }
+
+      .drawer.open {
+        transform: translateX(0);
+      }
+
+      .drawer-head {
+        padding: 23px 25px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .drawer-head h2 {
+        font: 400 28px var(--serif);
+        margin: 0;
+      }
+
+      .drawer-close {
+        border: 0;
+        background: none;
+        font-size: 27px;
+        color: var(--ink);
+      }
+
+      .cart-items {
+        padding: 8px 25px;
+        overflow: auto;
+        flex: 1;
+      }
+
+      .empty-cart {
+        text-align: center;
+        color: var(--muted);
+        padding: 48px 10px;
+      }
+
+      .empty-cart strong {
+        display: block;
+        font: 26px var(--serif);
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+
+      .cart-row {
+        display: grid;
+        grid-template-columns: 76px 1fr auto;
+        gap: 13px;
+        padding: 17px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .cart-row img {
+        width: 76px;
+        height: 76px;
+        object-fit: cover;
+        background: var(--cream);
+      }
+
+      .cart-name {
+        font: 18px var(--serif);
+        margin: 2px 0;
+      }
+
+      .cart-variant {
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      .qty {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .qty button {
+        width: 25px;
+        height: 25px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .remove {
+        align-self: start;
+        background: none;
+        border: 0;
+        color: var(--muted);
+        font-size: 18px;
+        padding: 2px;
+      }
+
+      .drawer-foot {
+        padding: 20px 25px 25px;
+        border-top: 1px solid var(--line);
+        background: #f3efe8;
+      }
+
+      .drawer-foot p {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 0 0 15px;
+      }
+
+      .whatsapp {
+        width: 100%;
+        padding: 15px;
+        background: #344e3b;
+        border-color: #344e3b;
+        color: #fff;
+      }
+
+      .whatsapp:hover {
+        background: #273e2d;
+      }
+
+      .clear-cart {
+        display: block;
+        border: 0;
+        background: none;
+        color: var(--muted);
+        text-decoration: underline;
+        font-size: 11px;
+        margin: 12px auto 0;
+      }
+
+      .toast-region {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 50;
+        display: grid;
+        gap: 9px;
+      }
+
+      .toast {
+        background: var(--ink);
+        color: #fff;
+        padding: 13px 18px;
+        box-shadow: var(--shadow);
+        animation: toastin 0.25s ease;
+        max-width: min(360px, calc(100vw - 40px));
+        border-left: 3px solid var(--gold);
+      }
+
+      @keyframes toastin {
+        from {
+          transform: translateY(8px);
+          opacity: 0;
+        }
+
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .no-results {
+        text-align: center;
+        padding: 35px;
+        color: var(--muted);
+        grid-column: 1 / -1;
+      }
+
+      .shop-project-bar {
+        position: fixed;
+        z-index: 15;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        width: min(760px, calc(100% - 32px));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 15px 18px 15px 22px;
+        background: #29251f;
+        color: #fff;
+        border: 1px solid #b08a4a;
+        box-shadow: 0 12px 40px #17151245;
+      }
+
+      .shop-project-bar[hidden] {
+        display: none !important;
+      }
+
+      .shop-project-status {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+      }
+
+      .shop-project-count {
+        display: grid;
+        place-items: center;
+        flex: 0 0 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #b08a4a;
+        font:
+          18px Georgia,
+          serif;
+      }
+
+      .shop-project-text {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .shop-project-text strong {
+        font:
+          18px Georgia,
+          serif;
+        color: #fff;
+      }
+
+      .shop-project-items {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 50vw;
+        color: #d8d0c3;
+        font-size: 12px;
+      }
+
+      .shop-project-action {
+        flex: none;
+        background: #b08a4a;
+        border: 1px solid #b08a4a;
+        color: white;
+        padding: 12px 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 10px;
+      }
+
+      @media (max-width: 900px) {
+        .product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 18px;
+        }
+
+        .collection {
+          margin-top: 48px;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .site-header {
+          padding: 15px 18px;
+        }
+
+        .brand {
+          font-size: 19px;
+        }
+
+        .cart-trigger {
+          padding: 9px 11px;
+          font-size: 12px;
+        }
+
+        .hero {
+          padding: 55px 20px 43px;
+        }
+
+        .hero p {
+          font-size: 14px;
+        }
+
+        .collection {
+          width: calc(100% - 32px);
+          margin: 38px auto 65px;
+        }
+
+        .section-heading {
+          align-items: start;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .section-heading h2 {
+          font-size: 30px;
+        }
+
+        .product-grid {
+          grid-template-columns: 1fr;
+          gap: 17px;
+        }
+
+        .card-image {
+          aspect-ratio: 1.35;
+        }
+
+        .card-body {
+          padding: 17px;
+        }
+
+        .card-body p {
+          min-height: 0;
+        }
+
+        .modal {
+          grid-template-columns: 1fr;
+          max-height: 92dvh;
+        }
+
+        .modal-photo,
+        .modal-photo img {
+          min-height: 0;
+          height: min(36vh, 290px);
+        }
+
+        .modal-info {
+          padding: 23px;
+        }
+
+        .modal-info h2 {
+          font-size: 34px;
+        }
+
+        .overlay {
+          padding: 12px;
+        }
+
+        .close {
+          top: 9px;
+          right: 9px;
+        }
+
+        .drawer-head,
+        .cart-items {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .drawer-foot {
+          padding: 17px 20px 22px;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .shop-project-bar {
+          bottom: 10px;
+          padding: 12px;
+          gap: 10px;
+        }
+
+        .shop-project-status {
+          gap: 9px;
+        }
+
+        .shop-project-count {
+          flex-basis: 32px;
+          height: 32px;
+        }
+
+        .shop-project-text strong {
+          font-size: 15px;
+        }
+
+        .shop-project-items {
+          max-width: 39vw;
+          font-size: 11px;
+        }
+
+        .shop-project-action {
+          padding: 11px 10px;
+          font-size: 9px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+
+      /* Gallery section */
+
+      .interior-gallery {
+        width: 100%;
+        padding: clamp(72px, 9vw, 120px) 5%;
+        overflow: hidden;
+        background: #f5f1eb;
+      }
+
+      .interior-gallery .gallery-heading {
+        width: min(100%, 800px);
+        margin: 0 auto clamp(38px, 5vw, 70px);
+        text-align: center;
+      }
+
+      .interior-gallery .gallery-heading span {
+        color: #c8a86b;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 3px;
+      }
+
+      .interior-gallery .gallery-heading h2 {
+        margin: 20px 0;
+        color: #1f1a17;
+        font-size: clamp(36px, 5vw, 72px);
+      }
+
+      .interior-gallery .gallery-heading p {
+        color: #666;
+        font-size: clamp(15px, 1.5vw, 18px);
+        line-height: 1.8;
+      }
+
+      .interior-gallery .expand-gallery {
+        display: flex;
+        width: 100%;
+        height: clamp(380px, 45vw, 650px);
+        gap: clamp(8px, 1.2vw, 15px);
+      }
+
+      .interior-gallery .gallery-item {
+        position: relative;
+        min-width: 0;
+        flex: 1 1 0;
+        overflow: hidden;
+        border-radius: clamp(14px, 2.2vw, 32px);
+        cursor: pointer;
+        transition: flex 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .interior-gallery .gallery-item.active {
+        flex: 4 1 0;
+      }
+
+      .interior-gallery .gallery-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1s ease;
+      }
+
+      .interior-gallery .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .interior-gallery .overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        padding: clamp(16px, 3vw, 40px);
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.75),
+          rgba(0, 0, 0, 0.1)
+        );
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .interior-gallery .gallery-item.active .overlay {
+        opacity: 1;
+      }
+
+      .interior-gallery .overlay h3 {
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: clamp(20px, 2.3vw, 32px);
+      }
+
+      .interior-gallery .overlay p {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.85);
+        font-size: clamp(13px, 1.2vw, 16px);
+        line-height: 1.6;
+      }
+
+      .interior-gallery .gallery-item::before {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.15);
+        content: "";
+        pointer-events: none;
+      }
+
+      .interior-gallery .gallery-item.active::before {
+        background: transparent;
+      }
+
+      @media (max-width: 991px) {
+        .interior-gallery .expand-gallery {
+          height: auto;
+          flex-direction: column;
+        }
+
+        .interior-gallery .gallery-item {
+          height: clamp(150px, 24vw, 210px);
+          flex: none;
+        }
+
+        .interior-gallery .gallery-item.active {
+          height: clamp(320px, 58vw, 480px);
+          flex: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .interior-gallery {
+          padding-right: 18px;
+          padding-left: 18px;
+        }
+
+        .interior-gallery .gallery-heading h2 {
+          margin: 16px 0;
+        }
+
+        .interior-gallery .gallery-item {
+          height: 145px;
+        }
+
+        .interior-gallery .gallery-item.active {
+          height: clamp(290px, 88vw, 380px);
+        }
+
+        .interior-gallery .gallery-cta {
+          margin-top: 38px;
+        }
+
+        .interior-gallery .gallery-btn {
+          justify-content: center;
+          max-width: 100%;
+          padding: 16px 24px;
+          font-size: 13px;
+        }
+      }
+      /* GALLERY BUTTON */
+
+      .gallery-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+      }
+
+      .gallery-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 18px 42px;
+        border-radius: 60px;
+        text-decoration: none;
+        overflow: hidden;
+
+        background: linear-gradient(135deg, #c8a86b, #e7c98f);
+
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        box-shadow: 0 20px 40px rgba(200, 168, 107, 0.3);
+
+        transition: 0.5s ease;
+      }
+
+      /* Shine Effect */
+
+      .gallery-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -120%;
+
+        width: 70%;
+        height: 100%;
+
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+
+        transition: 0.8s;
+      }
+
+      .gallery-btn:hover::before {
+        left: 120%;
+      }
+
+      /* Hover */
+
+      .gallery-btn:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 60px rgba(200, 168, 107, 0.4);
+      }
+
+      .gallery-btn svg {
+        width: 20px;
+        height: 20px;
+        transition: 0.4s;
+      }
+
+      .gallery-btn:hover svg {
+        transform: translateX(6px);
+      }
+
+      /* Floating Animation */
+
+      .gallery-btn {
+        animation: galleryFloat 4s ease-in-out infinite;
+      }
+
+      @keyframes galleryFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+
+      /* Mobile */
+
+      @media (max-width: 768px) {
+        .gallery-btn {
+          padding: 16px 30px;
+          font-size: 14px;
+        }
+      }
+
+      /* =========================
+       CONTACT SECTION
+    ========================== */
+
+      .contact-section {
+        position: relative;
+        overflow: hidden;
+        padding: 110px 6%;
+        background:
+          radial-gradient(
+            circle at 10% 10%,
+            rgba(196, 154, 90, 0.12),
+            transparent 25%
+          ),
+          radial-gradient(
+            circle at 90% 90%,
+            rgba(196, 154, 90, 0.1),
+            transparent 25%
+          ),
+          var(--sand);
+      }
+
+      /* Decorative Lines */
+
+      .contact-section::before,
+      .contact-section::after {
+        content: "";
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        border: 1px solid rgba(196, 154, 90, 0.2);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .contact-section::before {
+        top: -250px;
+        left: -200px;
+      }
+
+      .contact-section::after {
+        right: -220px;
+        bottom: -250px;
+      }
+
+      .contact-container {
+        max-width: 1400px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* =========================
+       HEADER
+    ========================== */
+      /* =========================================
+   CENTER H2 + PARAGRAPH
+========================================= */
+
+      .contact-header {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto 70px;
+        z-index: 2;
+        text-align: center;
+      }
+
+      .section-tag {
+        justify-content: center;
+      }
+
+      .contact-header h2 {
+        text-align: center;
+      }
+
+      .contact-header p {
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .contact-header {
+        max-width: 750px;
+        margin-bottom: 70px;
+      }
+
+      .section-tag {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--gold);
+        font-size: 12px;
+        letter-spacing: 3px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .section-tag span {
+        width: 45px;
+        height: 1px;
+        background: var(--gold);
+      }
+
+      .contact-header h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3rem, 6vw, 6rem);
+        font-weight: 600;
+        line-height: 0.95;
+        letter-spacing: -2px;
+        color: var(--ink);
+        margin-bottom: 25px;
+      }
+
+      .contact-header p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #665b53;
+        max-width: 600px;
+      }
+
+      /* =========================
+       MAIN GRID
+    ========================== */
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.3fr;
+        gap: 70px;
+        align-items: stretch;
+      }
+
+      /* =========================
+       LEFT CONTACT PANEL
+    ========================== */
+
+      .contact-info {
+        background: var(--espresso);
+        padding: 55px;
+        color: var(--cream);
+        position: relative;
+        overflow: hidden;
+        min-height: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .contact-info::before {
+        content: "";
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        border: 1px solid rgba(196, 154, 90, 0.25);
+        border-radius: 50%;
+        top: -150px;
+        right: -120px;
+      }
+
+      .contact-info h3 {
+        position: relative;
+        z-index: 2;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 45px;
+      }
+
+      .contact-details {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .contact-item {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+      }
+
+      .contact-icon {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        border: 1px solid rgba(196, 154, 90, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        font-size: 18px;
+        transition: 0.4s ease;
+      }
+
+      .contact-item:hover .contact-icon {
+        background: var(--gold);
+        color: var(--ink);
+        transform: rotate(45deg);
+      }
+
+      .contact-text small {
+        display: block;
+        color: var(--gold-light);
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+      }
+
+      .contact-text p,
+      .contact-text a {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--cream);
+        text-decoration: none;
+      }
+
+      .contact-text a:hover {
+        color: var(--gold);
+      }
+
+      /* =========================
+       SOCIAL LINKS
+    ========================== */
+
+      .social-area {
+        position: relative;
+        z-index: 2;
+        margin-top: 50px;
+      }
+
+      .social-area p {
+        color: var(--gold-light);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 12px;
+      }
+
+      .social-links a {
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+        transition: 0.4s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--gold);
+        color: var(--ink);
+        border-color: var(--gold);
+        transform: translateY(-5px);
+      }
+
+      /* =========================
+       FORM PANEL
+    ========================== */
+
+      .contact-form-wrapper {
+        background: var(--cream);
+        padding: 60px;
+        box-shadow: 0 30px 80px rgba(35, 27, 23, 0.08);
+        position: relative;
+      }
+
+      .contact-form-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 2px;
+        background: var(--gold);
+      }
+
+      .form-heading {
+        margin-bottom: 40px;
+      }
+
+      .form-heading h3 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .form-heading p {
+        color: #756b63;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      /* =========================
+       FORM
+    ========================== */
+
+      .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .form-group {
+        position: relative;
+      }
+
+      .form-group.full {
+        grid-column: 1 / -1;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--espresso);
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #d7cfc7;
+        background: transparent;
+        padding: 13px 0;
+        outline: none;
+        font-family: "Manrope", sans-serif;
+        color: var(--ink);
+        font-size: 14px;
+        transition: 0.3s ease;
+      }
+
+      .form-group textarea {
+        resize: none;
+        min-height: 110px;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: var(--gold);
+      }
+
+      /* =========================
+       BUTTON
+    ========================== */
+
+      .submit-btn {
+        grid-column: 1 / -1;
+        border: none;
+        background: var(--ink);
+        color: var(--cream);
+        padding: 19px 30px;
+        cursor: pointer;
+        font-family: "Manrope", sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-top: 15px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.4s ease;
+      }
+
+      .submit-btn::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background: var(--gold);
+        left: 0;
+        top: 0;
+        transition: 0.5s ease;
+        z-index: 0;
+      }
+
+      .submit-btn span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .submit-btn:hover::before {
+        width: 100%;
+      }
+
+      .submit-btn:hover {
+        color: var(--ink);
+      }
+
+      /* =========================
+       SUCCESS MESSAGE
+    ========================== */
+
+      .success-message {
+        display: none;
+        grid-column: 1 / -1;
+        background: rgba(196, 154, 90, 0.15);
+        padding: 15px;
+        color: var(--espresso);
+        font-size: 14px;
+        border-left: 3px solid var(--gold);
+      }
+
+      /* =========================
+       WHATSAPP BUTTON
+    ========================== */
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 58px;
+        height: 58px;
+        background: var(--espresso);
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 50%;
+        font-size: 22px;
+        z-index: 1000;
+        transition: 0.4s ease;
+        animation: pulse 2.5s infinite;
+      }
+
+      .whatsapp-float:hover {
+        background: var(--gold);
+        color: var(--ink);
+        transform: scale(1.1);
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(196, 154, 90, 0.5);
+        }
+
+        70% {
+          box-shadow: 0 0 0 15px rgba(196, 154, 90, 0);
+        }
+
+        100% {
+          box-shadow: 0 0 0 0 rgba(196, 154, 90, 0);
+        }
+      }
+
+      /* =========================
+       SCROLL ANIMATION
+    ========================== */
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .contact-section .reveal {
+        opacity: 1;
+        transform: none;
+        transition:
+          opacity 1s ease,
+          transform 1s ease;
+      }
+
+      .contact-section.reveal-ready .reveal:not(.active) {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      .contact-section .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* =========================
+       RESPONSIVE
+    ========================== */
+
+      @media (max-width: 1100px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+
+        .contact-info {
+          min-height: auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .contact-section {
+          padding: 80px 20px;
+        }
+
+        .contact-header {
+          margin-bottom: 45px;
+        }
+
+        .contact-header h2 {
+          font-size: 3.5rem;
+        }
+
+        .contact-info {
+          padding: 40px 28px;
+        }
+
+        .contact-info h3 {
+          font-size: 40px;
+        }
+
+        .contact-form-wrapper {
+          padding: 40px 28px;
+        }
+
+        .form-heading h3 {
+          font-size: 38px;
+        }
+
+        .contact-form {
+          grid-template-columns: 1fr;
+        }
+
+        .form-group.full,
+        .submit-btn,
+        .success-message {
+          grid-column: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .contact-section {
+          padding: 65px 16px;
+        }
+
+        .contact-header h2 {
+          font-size: 3rem;
+        }
+
+        .contact-info,
+        .contact-form-wrapper {
+          padding: 30px 20px;
+        }
+
+        .contact-item {
+          gap: 12px;
+        }
+
+        .contact-icon {
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+        }
+
+        .whatsapp-float {
+          width: 52px;
+          height: 52px;
+          right: 18px;
+          bottom: 18px;
+        }
+      }
+      /* =========================================
+   SMALL HORIZONTAL MAP
+========================================= */
+
+      .contact-map {
+        position: relative;
+
+        max-width: 1400px;
+
+        height: 260px;
+
+        margin: 55px auto 0;
+
+        overflow: hidden;
+
+        border: 1px solid rgba(196, 154, 90, 0.25);
+
+        box-shadow: 0 20px 60px rgba(35, 27, 23, 0.08);
+
+        background: var(--espresso);
+      }
+
+      /* Google Map */
+
+      .contact-map iframe {
+        width: 100%;
+        height: 100%;
+
+        border: 0;
+
+        display: block;
+
+        filter: grayscale(100%) sepia(15%) contrast(90%);
+
+        opacity: 0.75;
+      }
+
+      /* Dark luxury overlay */
+
+      .map-overlay {
+        position: absolute;
+
+        z-index: 5;
+
+        left: 25px;
+        right: 25px;
+        bottom: 20px;
+
+        min-height: 82px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 18px;
+
+        padding: 15px 20px;
+
+        background: rgba(35, 27, 23, 0.94);
+
+        backdrop-filter: blur(12px);
+
+        color: var(--cream);
+
+        border-left: 3px solid var(--gold);
+      }
+
+      /* Map pin */
+
+      .map-pin {
+        width: 45px;
+        height: 45px;
+
+        flex-shrink: 0;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        color: var(--gold);
+
+        border: 1px solid rgba(196, 154, 90, 0.45);
+
+        font-size: 16px;
+      }
+
+      /* Map text */
+
+      .map-content {
+        flex: 1;
+      }
+
+      .map-content span {
+        display: block;
+
+        margin-bottom: 4px;
+
+        color: var(--gold-light);
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+        font-weight: 600;
+      }
+
+      .map-content h4 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 20px;
+
+        font-weight: 500;
+
+        color: var(--cream);
+      }
+
+      /* Map button */
+
+      .map-button {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 9px;
+
+        padding: 12px 18px;
+
+        border: 1px solid rgba(196, 154, 90, 0.55);
+
+        color: var(--cream);
+
+        text-decoration: none;
+
+        font-size: 10px;
+
+        letter-spacing: 1.3px;
+
+        text-transform: uppercase;
+
+        transition: var(--transition);
+      }
+
+      .map-button:hover {
+        background: var(--gold);
+
+        border-color: var(--gold);
+
+        color: var(--ink);
+
+        transform: translateY(-2px);
+      }
+
+      /* =========================================
+   TABLET
+========================================= */
+
+      @media (max-width: 700px) {
+        .contact-map {
+          height: 240px;
+
+          margin-top: 40px;
+        }
+
+        .map-overlay {
+          left: 12px;
+          right: 12px;
+          bottom: 12px;
+
+          padding: 12px;
+
+          gap: 12px;
+        }
+
+        .map-pin {
+          width: 40px;
+          height: 40px;
+        }
+
+        .map-content h4 {
+          font-size: 16px;
+        }
+
+        .map-button {
+          padding: 10px 12px;
+
+          font-size: 9px;
+        }
+      }
+
+      /* =========================================
+   MOBILE
+========================================= */
+
+      @media (max-width: 480px) {
+        .contact-map {
+          height: 220px;
+        }
+
+        .map-overlay {
+          flex-wrap: wrap;
+
+          padding: 12px 14px;
+        }
+
+        .map-content {
+          min-width: 0;
+        }
+
+        .map-content h4 {
+          font-size: 15px;
+        }
+
+        .map-button {
+          width: 100%;
+
+          justify-content: center;
+
+          margin-top: 2px;
+        }
+      }
+
+      /* =========================
+    FAQ SECTION
+    ========================== */
+
+      .faq-section {
+        position: relative;
+        padding: 120px 7%;
+        background: #231b17;
+        overflow: hidden;
+      }
+
+      .faq-section::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(196, 154, 90, 0.15),
+          transparent 70%
+        );
+        top: -200px;
+        right: -150px;
+      }
+
+      .faq-container {
+        max-width: 1000px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      .faq-heading {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .faq-label {
+        color: #c49a5a;
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      .faq-heading h2 {
+        color: #fcfaf7;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        margin: 15px 0;
+        font-weight: 600;
+      }
+
+      .faq-heading p {
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 600px;
+        margin: auto;
+        line-height: 1.8;
+      }
+
+      .faq-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .faq-item {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        overflow: hidden;
+        backdrop-filter: blur(12px);
+        transition: 0.45s ease;
+      }
+
+      .faq-item:hover {
+        transform: translateY(-8px);
+        border-color: #c49a5a;
+        box-shadow:
+          0 15px 40px rgba(0, 0, 0, 0.3),
+          0 0 30px rgba(196, 154, 90, 0.15);
+      }
+
+      .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        color: #fcfaf7;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-align: left;
+        padding: 26px 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      .faq-question::after {
+        content: "";
+        position: absolute;
+        left: 30px;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #c49a5a;
+        transition: 0.5s;
+      }
+
+      .faq-item:hover .faq-question::after {
+        width: 120px;
+      }
+
+      .faq-question span {
+        color: #c49a5a;
+        font-size: 1.8rem;
+        transition: 0.4s;
+      }
+
+      .faq-item.active .faq-question span {
+        transform: rotate(45deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s ease;
+      }
+
+      .faq-answer p {
+        padding: 0 30px 25px;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.8;
+      }
+
+      @media (max-width: 768px) {
+        .faq-section {
+          padding: 90px 20px;
+        }
+
+        .faq-question {
+          font-size: 1rem;
+          padding: 22px;
+        }
+
+        .faq-answer p {
+          padding: 0 22px 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+     <a class="brand" href="#top" aria-label="Ishaan Interiors home">
+       <img
+         class="brand-logo"
+         src="ishaan-logo.jpg"
+         alt="Ishaan Interiors"
+       />
+     </a>
+
+     <button
+       class="menu-toggle"
+       type="button"
+       aria-label="Toggle navigation"
+       aria-expanded="false"
+       aria-controls="primary-nav"
+     >
+       <span></span>
+       <span></span>
+     </button>
+
+     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+       <a class="nav-link active" href="#top">Home</a>
+       <a class="nav-link" href="#about">About Us</a>
+       <a class="nav-link" href="#ii-solutions">Products</a>
+       <a class="nav-link" href="#gallery">Gallery</a>
+       <a class="nav-link" href="#contact">Contact Us</a>
+     </nav>
+
+     <a class="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+
+<section class="slider" aria-label="Ishaan Interiors image slider">
+  <article class="slide slide-1">
+    <div class="slide-image"></div>
+    <div class="copy">
+      <div class="kicker">Spaces with a point of view</div>
+      <h1>Where Architecture Meets the <em>Art of Living.</em></h1>
+      <p>Thoughtful interiors shaped around the way you live.</p>
+    </div>
+  </article>
+  <article class="slide slide-2">
+    <div class="slide-image"></div>
+    <div class="copy">
+      <div class="kicker">01 — The Details</div>
+      <h2>Made tangible through material.</h2>
+      <p>Natural stone, warm timber and tactile finishes bring depth to a space.</p>
+    </div>
+  </article>
+  <article class="slide slide-3">
+    <div class="slide-image"></div>
+    <div class="copy">
+      <div class="kicker">02 — The Living</div>
+      <h2>Room to breathe. Space to belong.</h2>
+      <p>Comfort and character, considered together to make everyday life feel meaningful.</p>
+    </div>
+  </article>
+  <article class="slide slide-4">
+    <div class="slide-image"></div>
+    <div class="copy">
+      <div class="kicker">03 — The Ishaan point of view</div>
+      <h2>A home should feel like you, at your most at ease.</h2>
+      <p>Thoughtfully imagined. Carefully made. Entirely yours.</p>
+    </div>
+  </article>
+  <div class="counter" aria-live="polite">
+    <span id="current">01</span>
+    <span>/</span>
+    <span id="total">04</span>
+  </div>
+  <div class="scroll-hint">Scroll to explore</div>
+</section>
+     
+      <section class="about" id="about">
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-photo">
+              <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=88"
+                alt="A thoughtfully designed modern living room"
+              />
+            </div>
+          </div>
+          <div class="about-copy">
+            <div class="eyebrow reveal">About Ishaan Interiors</div>
+            <h2 class="reveal">
+              Your Trusted Partner for Interior Products &amp;
+              <em>Professional Installation</em>
+            </h2>
+            <p class="about-lead reveal">
+              At Ishaan Interiors, we go beyond interior design. As one of the
+              region's leading distributors of premium interior products, we
+              provide complete solutions from product selection to professional
+              installation.
+            </p>
+            <p class="about-body reveal">
+              Our experienced team ensures every ceiling panel, decorative
+              element, moulding, louver, sheet, and interior finish is supplied,
+              fitted, and executed with exceptional attention to detail. From
+              luxury residences to large-scale commercial developments, we
+              deliver quality, reliability, and craftsmanship at every stage of
+              the project.
+            </p>
+            <a class="text-link reveal" href="mailto:hello@ishaaninteriors.in"
+              >Discover our approach <span>→</span></a
+            >
+          </div>
+        </div>
+        <div class="features">
+          <article class="feature reveal">
+            <svg
+              class="feature-icon"
+              viewBox="0 0 48 48"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.35"
+            >
+              <path d="M7 39V19L24 8l17 11v20H7Z" />
+              <path d="M17 39V26h14v13M13 20h22M24 8v31" />
+              <path d="M4 42h40" />
+            </svg>
+            <h3>Largest Distributor</h3>
+            <p>
+              Leading supplier of premium interior products across residential
+              and commercial projects.
+            </p>
+          </article>
+          <article class="feature reveal">
+            <svg
+              class="feature-icon"
+              viewBox="0 0 48 48"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.35"
+            >
+              <circle cx="24" cy="24" r="17" />
+              <path
+                d="M15 24h18M24 15v18M10 10l5 5m23-5-5 5M10 38l5-5m23 5-5-5"
+              />
+            </svg>
+            <h3>End-to-End Solutions</h3>
+            <p>
+              From consultation and product supply to expert installation and
+              project completion.
+            </p>
+          </article>
+          <article class="feature reveal">
+            <svg
+              class="feature-icon"
+              viewBox="0 0 48 48"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.35"
+            >
+              <path
+                d="m24 5 15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11l15-6Z"
+              />
+              <path d="m17 24 5 5 10-11" />
+            </svg>
+            <h3>Expert Installation Team</h3>
+            <p>
+              Highly trained professionals ensuring precision fitting and
+              flawless execution.
+            </p>
+          </article>
+          <article class="feature reveal">
+            <svg
+              class="feature-icon"
+              viewBox="0 0 48 48"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.35"
+            >
+              <path
+                d="M9 8h30v32H9zM15 14h18v20H15zM9 18h6m18 0h6M9 30h6m18 0h6"
+              />
+              <path d="M19 18h10m-10 5h10m-10 5h7" />
+            </svg>
+            <h3>Premium Product Range</h3>
+            <p>
+              Panels, louvers, false ceilings, specialty sheets, French
+              mouldings, PU and exterior products.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="stats" id="recognition">
+        <div class="stats-inner">
+          <div class="stats-heading">
+            <div class="eyebrow">A record of excellence</div>
+            <h2>Trust, built<br />project by project.</h2>
+          </div>
+          <div class="stat-list">
+            <div class="stat">
+              <div class="stat-num" data-value="95" data-suffix="%">0</div>
+              <div class="stat-label">Client satisfaction</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" data-value="1210" data-suffix="+">0</div>
+              <div class="stat-label">Residential projects completed</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" data-value="505" data-suffix="+">0</div>
+              <div class="stat-label">Commercial spaces transformed</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" data-value="10" data-suffix="+">0</div>
+              <div class="stat-label">Years of design excellence</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- ISHAAN INTERIORS — EMBEDDABLE ONE-STOP SOLUTIONS SECTION
+     Paste this complete snippet where the section should appear.
+     Styles are scoped under #ii-solutions to avoid affecting other page sections.
+     GSAP and ScrollTrigger are optional enhancements; layout works without them. -->
+    <section id="ii-solutions" aria-labelledby="ii-title">
+      <div class="ii-hero">
+        <div class="ii-container ii-hero-grid">
+          <div class="ii-copy">
+            <p class="ii-eyebrow ii-reveal">One Stop Solution</p>
+            <h2 id="ii-title" class="ii-reveal">
+              From <em>Product Selection</em> to Perfect Installation
+            </h2>
+            <p class="ii-lede ii-reveal">
+              At Ishaan Interiors, every detail is handled with precision. From
+              helping you choose the right materials and finishes to expertly
+              installing them in your space, we provide a seamless experience
+              designed around quality, craftsmanship, and lasting elegance.
+            </p>
+            <p class="ii-promise ii-reveal">
+              <span class="ii-promise-mark" aria-hidden="true">✦</span>
+              Everything your space needs. Under one roof.
+            </p>
+            <div class="ii-actions ii-reveal">
+              <a class="ii-button ii-magnetic" href="#ii-services"
+                >Explore Our Solutions <span aria-hidden="true">→</span></a
+              >
+              <a class="ii-text-link" href="#ii-start"
+                >Start Your Project <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+          <div class="ii-visual ii-reveal" data-ii-parallax>
+            <!-- Replace with your licensed brand photograph. -->
+            <img
+              class="ii-photo"
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+              alt="Warm, refined contemporary living room with natural materials"
+              loading="lazy"
+            />
+            <div class="ii-shade" aria-hidden="true"></div>
+            <div class="ii-caption">
+              <small>Designed around you</small
+              ><strong>A considered finish.</strong>
+            </div>
+            <div class="ii-glass ii-product ii-float">
+              <p class="ii-kicker">The finishing touch</p>
+              <p class="ii-product-title">A palette, perfected.</p>
+              <div class="ii-swatches" aria-label="Warm neutral finish samples">
+                <i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="ii-glass ii-install ii-float">
+              <span class="ii-check" aria-hidden="true">✓</span
+              ><span
+                ><b>Beautifully installed</b
+                ><small>By people who care about detail</small></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ii-journey" aria-labelledby="ii-journey-title">
+        <div class="ii-container">
+          <div class="ii-heading ii-reveal">
+            <p class="ii-eyebrow">A seamless journey</p>
+            <h3 id="ii-journey-title">
+              From first idea to <em>final detail.</em>
+            </h3>
+            <p>
+              One considered process, guided by specialists who bring your
+              vision and every finishing touch together.
+            </p>
+          </div>
+          <div class="ii-timeline">
+            <article class="ii-step ii-reveal">
+              <span class="ii-number">01</span>
+              <h4>Discover</h4>
+              <p>
+                Explore premium materials, finishes and products chosen to bring
+                character to your space.
+              </p>
+              <span class="ii-tag">Find your inspiration</span>
+            </article>
+            <article class="ii-step ii-reveal">
+              <span class="ii-number">02</span>
+              <h4>Design</h4>
+              <p>
+                Get thoughtful guidance to coordinate details and make confident
+                choices for your home.
+              </p>
+              <span class="ii-tag">Shape the details</span>
+            </article>
+            <article class="ii-step ii-reveal">
+              <span class="ii-number">03</span>
+              <h4>Coordinate</h4>
+              <p>
+                We bring products and skilled specialists together, with care at
+                every handoff.
+              </p>
+              <span class="ii-tag">Every detail aligned</span>
+            </article>
+            <article class="ii-step ii-reveal">
+              <span class="ii-number">04</span>
+              <h4>Install</h4>
+              <p>
+                Enjoy a precise, professional installation and a beautifully
+                finished space.
+              </p>
+              <span class="ii-tag">Made complete</span>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="ii-services"
+        id="ii-services"
+        aria-labelledby="ii-services-title"
+      >
+        <div class="ii-container ii-service-grid">
+          <div class="ii-intro ii-reveal-left">
+            <p class="ii-eyebrow">Complete interior solutions</p>
+            <h3 id="ii-services-title">
+              Considered products. <em>Crafted to belong.</em>
+            </h3>
+            <p>
+              Beautiful materials deserve an expert finish. We bring product
+              discovery and professional installation into one thoughtful
+              experience—so every choice feels right, and every detail comes
+              together.
+            </p>
+            <a class="ii-text-link" href="#ii-start"
+              >Find your starting point <span aria-hidden="true">→</span></a
+            >
+          </div>
+          <div class="ii-cards">
+            <article class="ii-card ii-reveal" data-n="01">
+              <span class="ii-icon" aria-hidden="true">◇</span>
+              <h4>Premium products</h4>
+              <p>
+                Explore considered surfaces, furnishings and finishing details
+                for enduring interiors.
+              </p>
+            </article>
+            <article class="ii-card ii-reveal" data-n="02">
+              <span class="ii-icon" aria-hidden="true">⌕</span>
+              <h4>Expert guidance</h4>
+              <p>
+                Make selections with knowledgeable support, from inspiration to
+                final specification.
+              </p>
+            </article>
+            <article class="ii-card ii-reveal" data-n="03">
+              <span class="ii-icon" aria-hidden="true">✳</span>
+              <h4>Skilled installation</h4>
+              <p>
+                Have your chosen products fitted with precision by experienced
+                specialists.
+              </p>
+            </article>
+            <article class="ii-card ii-reveal" data-n="04">
+              <span class="ii-icon" aria-hidden="true">⌂</span>
+              <h4>One trusted partner</h4>
+              <p>
+                A connected experience that keeps quality and care present
+                through every stage.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="ii-trust" id="ii-start" aria-labelledby="ii-trust-title">
+        <div class="ii-container ii-trust-inner">
+          <div class="ii-reveal-left">
+            <p class="ii-eyebrow">Your space, thoughtfully finished</p>
+            <h3 id="ii-trust-title">
+              One trusted team. <em>A more beautiful way home.</em>
+            </h3>
+          </div>
+          <a
+            class="ii-button ii-magnetic ii-reveal"
+            href="mailto:hello@ishaaninteriors.com?subject=Start%20an%20interior%20project"
+            >Start Your Project <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+
+
+     <section class="hero">
+      <div class="eyebrow">Curated for your home</div>
+      <h1>Materials that make a space yours.</h1>
+      <p>
+        Explore considered finishes, textures, and details selected to bring
+        warmth and character to every room.
+      </p>
+    </section>
+    <main class="collection">
+      <div class="section-heading">
+        <div>
+          <h2>Product Collection</h2>
+          <p>Discover finishes made to live beautifully.</p>
+        </div>
+        <div class="product-count" id="productCount"></div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </main>
+    <footer class="site-footer">
+      <strong>Ishaan Interiors</strong>Designed around the way you live.
+    </footer>
+    <div class="shop-project-bar" id="projectBar" hidden aria-live="polite">
+      <div class="shop-project-status">
+        <span class="shop-project-count">0</span
+        ><span class="shop-project-text"
+          ><strong>Project enquiry list</strong
+          ><span class="shop-project-items"></span
+        ></span>
+      </div>
+      <button class="shop-project-action" id="projectBarOpen">
+        View selection
+      </button>
+    </div>
+    <div
+      class="overlay"
+      id="productOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal">
+        <button
+          class="close"
+          id="closeModal"
+          aria-label="Close product details"
+        >
+          ×
+        </button>
+        <div class="modal-photo"><img id="modalImage" src="" alt="" /></div>
+        <div class="modal-info">
+          <div class="category" id="modalCategory"></div>
+          <h2 id="modalTitle"></h2>
+          <p class="modal-description" id="modalDescription"></p>
+          <div class="choice-label">Select a size</div>
+          <div class="color-options" id="sizeOptions"></div>
+          <div class="choice-label">Select a finish</div>
+          <div class="color-options" id="colorOptions"></div>
+          <button class="btn btn-gold modal-add" id="modalAdd">
+            Add to Selection
+          </button>
+          <div class="modal-note">
+            Add your favourites to create a selection for your design enquiry.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-scrim" id="drawerScrim"></div>
+    <aside
+      class="drawer"
+      id="cartDrawer"
+      aria-label="Your selection"
+      aria-hidden="true"
+    >
+      <div class="drawer-head">
+        <h2>Your Selection <span class="count" id="drawerCount">0</span></h2>
+        <button
+          class="drawer-close"
+          id="closeCart"
+          aria-label="Close selection"
+        >
+          ×
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="drawer-foot">
+        <p>
+          Send your selected products to Ishaan Interiors to start an enquiry.
+        </p>
+        <button class="btn whatsapp" id="whatsappButton">
+          Enquire on WhatsApp</button
+        ><button class="clear-cart" id="clearCart">Clear selection</button>
+      </div>
+    </aside>
+    <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+
+
+
+    <section class="interior-gallery">
+      <div class="gallery-heading">
+        <span>PREMIUM PORTFOLIO</span>
+        <h2>Crafted Spaces That Inspire</h2>
+        <p>
+          Explore our luxury interior projects featuring bespoke furniture,
+          premium finishes, elegant lighting, and timeless craftsmanship.
+        </p>
+      </div>
+
+      <div class="expand-gallery">
+        <div class="gallery-item active">
+          <img
+            src="https://i.pinimg.com/1200x/85/95/cf/8595cfb145c0ad3d82c42e921c0d538f.jpg"
+          />
+          <div class="overlay">
+            <h3>Luxury Living Room</h3>
+            <p>Modern elegance with premium furnishings.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://i.pinimg.com/736x/71/a7/31/71a731d0a3df49a82fa5fbddc84db1ee.jpg"
+          />
+          <div class="overlay">
+            <h3>Designer Kitchen</h3>
+            <p>Functional beauty crafted to perfection.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://i.pinimg.com/736x/dc/c5/99/dcc599f760f02b7bd63a7794e0f4d559.jpg"
+          />
+          <div class="overlay">
+            <h3>Premium Bedroom</h3>
+            <p>Luxury comfort with timeless styling.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://i.pinimg.com/736x/b4/37/51/b43751d9cbb5696847083c919e25082f.jpg"
+          />
+          <div class="overlay">
+            <h3>Statement Lighting</h3>
+            <p>Architectural illumination solutions.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://i.pinimg.com/736x/6d/7b/21/6d7b21e981c2f4d4ac2827231ab91cd6.jpg"
+          />
+          <div class="overlay">
+            <h3>Luxury Decor</h3>
+            <p>Exclusive pieces for refined interiors.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cta">
+        <a
+          href="https://mediumpurple-monkey-395194.hostingersite.com/gallery-3/"
+          class="gallery-btn"
+        >
+          <span>Explore All Projects</span>
+
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M5 12H19M19 12L13 6M19 12L13 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================
+       CONTACT SECTION
+  ========================== -->
+
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <!-- HEADER -->
+
+        <div class="contact-header reveal">
+          <div class="section-tag">
+            <span></span>
+            Get In Touch
+          </div>
+
+          <h2>
+            Let's Create Something
+            <em>Extraordinary.</em>
+          </h2>
+
+          <p>
+            Every exceptional space begins with a conversation. Tell us about
+            your vision, and together we'll transform your ideas into an
+            unforgettable interior experience.
+          </p>
+        </div>
+
+        <!-- MAIN GRID -->
+
+        <div class="contact-grid">
+          <!-- LEFT CONTACT INFORMATION -->
+
+          <div class="contact-info reveal">
+            <div>
+              <h3>
+                Visit Our<br />
+                Design Studio.
+              </h3>
+
+              <div class="contact-details">
+                <!-- LOCATION -->
+
+                <div class="contact-item">
+                  <div class="contact-icon">⌖</div>
+
+                  <div class="contact-text">
+                    <small>Studio Location</small>
+
+                    <p>
+                      Visakhapatnam,<br />
+                      Andhra Pradesh, India
+                    </p>
+                  </div>
+                </div>
+
+                <!-- PHONE -->
+
+                <div class="contact-item">
+                  <div class="contact-icon">☎</div>
+
+                  <div class="contact-text">
+                    <small>Call Us</small>
+
+                    <a href="tel:+919000000000"> +91 90000 00000 </a>
+                  </div>
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="contact-item">
+                  <div class="contact-icon">✉</div>
+
+                  <div class="contact-text">
+                    <small>Email Us</small>
+
+                    <a href="mailto:hello@yourinteriors.com">
+                      hello@yourinteriors.com
+                    </a>
+                  </div>
+                </div>
+
+                <!-- HOURS -->
+
+                <div class="contact-item">
+                  <div class="contact-icon">◷</div>
+
+                  <div class="contact-text">
+                    <small>Working Hours</small>
+
+                    <p>
+                      Monday – Saturday<br />
+                      9:00 AM – 7:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+
+            <div class="social-area">
+              <p>Follow Our Journey</p>
+
+              <div class="social-links">
+                <a href="#">IG</a>
+
+                <a href="#">FB</a>
+
+                <a href="#">IN</a>
+
+                <a href="#">PT</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT FORM -->
+
+          <div class="contact-form-wrapper reveal">
+            <div class="form-heading">
+              <h3>Begin Your Journey</h3>
+
+              <p>
+                Share a few details about your project and our design team will
+                get in touch with you.
+              </p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <!-- NAME -->
+
+              <div class="form-group">
+                <label>Your Name</label>
+
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+              <!-- PHONE -->
+
+              <div class="form-group">
+                <label>Phone Number</label>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="+91 XXXXX XXXXX"
+                  required
+                />
+              </div>
+
+              <!-- EMAIL -->
+
+              <div class="form-group">
+                <label>Email Address</label>
+
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+
+              <!-- PROJECT TYPE -->
+
+              <div class="form-group">
+                <label>Project Type</label>
+
+                <select id="project" required>
+                  <option value="">Select Project</option>
+
+                  <option>Residential Interior</option>
+
+                  <option>Villa Design</option>
+
+                  <option>Apartment Interior</option>
+
+                  <option>Commercial Space</option>
+
+                  <option>Office Interior</option>
+
+                  <option>Renovation</option>
+                </select>
+              </div>
+
+              <!-- BUDGET -->
+
+              <div class="form-group full">
+                <label>Estimated Budget</label>
+
+                <select id="budget" required>
+                  <option value="">Select Budget Range</option>
+
+                  <option>₹5 – ₹10 Lakhs</option>
+
+                  <option>₹10 – ₹25 Lakhs</option>
+
+                  <option>₹25 – ₹50 Lakhs</option>
+
+                  <option>₹50 Lakhs – ₹1 Crore</option>
+
+                  <option>₹1 Crore+</option>
+                </select>
+              </div>
+
+              <!-- MESSAGE -->
+
+              <div class="form-group full">
+                <label>Tell Us About Your Dream Space</label>
+
+                <textarea
+                  id="message"
+                  placeholder="Tell us about your vision, space and requirements..."
+                ></textarea>
+              </div>
+
+              <!-- SUCCESS MESSAGE -->
+
+              <div class="success-message" id="successMessage">
+                ✨ Thank you! Your enquiry has been received. Our design team
+                will contact you shortly.
+              </div>
+
+              <!-- BUTTON -->
+
+              <button type="submit" class="submit-btn">
+                <span> Begin Your Design Journey → </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- =====================================
+     HORIZONTAL MAP
+====================================== -->
+
+      <div class="contact-map reveal">
+        <div class="map-overlay">
+          <div class="map-pin">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div class="map-content">
+            <span>OUR STUDIO</span>
+            <h4>Visakhapatnam, Andhra Pradesh</h4>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/place/Door+no,+Ishaan+Interiors+-+VOX,+PVC,+WPC,+CHARCOAL,+47-7-10,+4th+Ln,+Dondaparthy,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/data=!4m2!3m1!1s0x3a3943004a77219d:0xd73240aa9a10c33a?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjE0My4zMDQYACDXggMqfiw5NDI1NTQ0MSw5NDI0MjU0NCw5NDIyMzI5OSw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIxMjY2Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw0NzA4NDM5Myw5NDIxMzIwMEICSU4%3D&skid=21b55b60-40bb-4fc9-9d92-b1706a766d54&g_st=ac"
+            target="_blank"
+            rel="noopener"
+            class="map-button"
+          >
+            View on Map
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <iframe
+          src="https://maps.google.com/maps?q=17.728371,83.302544&z=16&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Our Studio Location"
+        ></iframe>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <div class="faq-heading">
+          <span class="faq-label">Frequently Asked Questions</span>
+          <h2>Everything You Need To Know</h2>
+          <p>
+            Discover answers about our design process, timelines, pricing, and
+            luxury interior solutions.
+          </p>
+        </div>
+
+        <div class="faq-wrapper">
+          <div class="faq-item">
+            <button class="faq-question">
+              How long does an interior project take?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Depending on project size, most residential projects are
+                completed within 6–16 weeks including planning, execution, and
+                final styling.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you provide turnkey solutions?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. We handle everything from concept design and material
+                selection to execution and handover.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Can you customize furniture designs?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely. Every furniture piece can be tailored to suit your
+                space, style, and functionality needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you work on commercial spaces?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. We design offices, retail stores, hospitality spaces, and
+                premium commercial interiors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </main>
+    <footer class="footer">
+      <span><strong>ISHAAN INTERIORS</strong> · Visakhapatnam</span
+      ><span>Crafting Luxury Spaces with Excellence</span
+      ><a href="mailto:hello@ishaaninteriors.in">Begin a conversation ↗</a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+      /* slider animations */
+     
+(() => {
+  const slides = gsap.utils.toArray('.slide');
+  const current = document.querySelector('#current');
+  const total = document.querySelector('#total');
+  gsap.registerPlugin(ScrollTrigger);
+
+  if (total) {
+    total.textContent = String(slides.length).padStart(2, '0');
+  }
+
+  const sequence = gsap.timeline({
+    scrollTrigger: {
+  trigger: '.slider',
+  start: 'top top',
+  end: '+=300%',
+  pin: true,
+  scrub: 1,
+  anticipatePin: 1,
+  onUpdate: self => {
+    if (!current) return;
+    const index = Math.min(
+      slides.length - 1,
+      Math.floor(self.progress * slides.length)
+    );
+    current.textContent = String(index + 1).padStart(2, '0');
+  }
+    }
+  });
+
+  slides.forEach((slide, index) => {
+    sequence.to(
+      slide.querySelector('.slide-image'),
+      { scale: 1, duration: 1, ease: 'none' },
+      index
+    );
+
+    if (index > 0) {
+      const previous = slides[index - 1];
+      const startAt = index - 0.35;
+
+      sequence.set(slide, { visibility: 'visible' }, startAt)
+        .to(previous, { autoAlpha: 0, duration: 0.45, ease: 'none' }, startAt)
+        .fromTo(
+          slide,
+          { autoAlpha: 0 },
+          { autoAlpha: 1, duration: 0.45, ease: 'none' },
+          startAt
+        );
+    }
+  });
+})();
+
+      /*
+            ONE STOP SOLUTIONS: GSAP MOTION INITIALIZER
+         */
+      (() => {
+        const initialize = () => {
+          const root = document.getElementById("ii-solutions");
+          if (
+            !root ||
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          )
+            return;
+          // If GSAP is not included by the host page, preserve visible content and skip effects.
+          if (!window.gsap || !window.ScrollTrigger) return;
+          root.classList.add("ii-motion");
+          gsap.registerPlugin(ScrollTrigger);
+          gsap.to(root.querySelectorAll(".ii-hero .ii-reveal"), {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power3.out",
+            delay: 0.1,
+          });
+          gsap.utils
+            .toArray(root.querySelectorAll(".ii-visual.ii-reveal"))
+            .forEach((el) =>
+              gsap.to(el, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out",
+                delay: 0.2,
+              }),
+            );
+          gsap.utils
+            .toArray(
+              root.querySelectorAll(
+                ".ii-journey .ii-reveal,.ii-card.ii-reveal,.ii-heading.ii-reveal",
+              ),
+            )
+            .forEach((el) =>
+              gsap.to(el, {
+                opacity: 1,
+                y: 0,
+                duration: 0.7,
+                ease: "power3.out",
+                scrollTrigger: { trigger: el, start: "top 88%", once: true },
+              }),
+            );
+          gsap.utils
+            .toArray(root.querySelectorAll(".ii-reveal-left"))
+            .forEach((el) =>
+              gsap.to(el, {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: "power3.out",
+                scrollTrigger: { trigger: el, start: "top 86%", once: true },
+              }),
+            );
+          if (!matchMedia("(max-width:650px)").matches)
+            gsap.to(root.querySelector(".ii-photo"), {
+              yPercent: 4,
+              ease: "none",
+              scrollTrigger: {
+                trigger: root.querySelector(".ii-hero"),
+                start: "top top",
+                end: "bottom top",
+                scrub: 0.7,
+              },
+            });
+          if (matchMedia("(pointer:fine)").matches)
+            root.querySelectorAll(".ii-magnetic").forEach((button) => {
+              button.addEventListener("pointermove", (event) => {
+                const r = button.getBoundingClientRect();
+                gsap.to(button, {
+                  x: (event.clientX - r.left - r.width / 2) * 0.1,
+                  y: (event.clientY - r.top - r.height / 2) * 0.15,
+                  duration: 0.3,
+                  ease: "power2.out",
+                });
+              });
+              button.addEventListener("pointerleave", () =>
+                gsap.to(button, {
+                  x: 0,
+                  y: 0,
+                  duration: 0.45,
+                  ease: "power2.out",
+                }),
+              );
+            });
+        };
+        // Let host-page scripts near the end of the document load before checking for GSAP.
+        if (document.readyState === "complete") initialize();
+        else window.addEventListener("load", initialize, { once: true });
+      })();
+
+      /* Ishaan Interiors PRODUCT SECTION */
+
+      
+
+        /* FUTURE PRODUCT EXPANSION: add products and color variants in this array. No card or modal markup changes are needed. */
+      const products = [
+        {
+          id: "vox-panels",
+          name: "VOX Decorative Panels",
+          category: "Wall Finishes",
+          description:
+            "Bring depth and warmth to your walls with beautifully detailed decorative panels, designed for refined modern interiors.",
+          sizes: [
+            "2400 × 160 × 12 mm",
+            "2700 × 160 × 12 mm",
+            "3000 × 160 × 12 mm",
+          ],
+          badge: "Bestseller",
+          colors: [
+            {
+              name: "Walnut",
+              hex: "#76513b",
+              image:
+                "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=85",
+            },
+            {
+              name: "Natural Oak",
+              hex: "#c69b62",
+              image:
+                "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85",
+            },
+            {
+              name: "Smoked Ash",
+              hex: "#77736a",
+              image:
+                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85",
+            },
+          ],
+        },
+        {
+          id: "heritage-doors",
+          name: "Heritage Veneer Doors",
+          category: "Doors & Joinery",
+          description:
+            "A timeless statement in natural grain. Each veneer finish brings its own character to an inviting entrance.",
+          sizes: [
+            "2000 × 800 × 40 mm",
+            "2100 × 900 × 40 mm",
+            "2400 × 1000 × 40 mm",
+          ],
+          badge: "New arrival",
+          colors: [
+            {
+              name: "Teak",
+              hex: "#a36c42",
+              image:
+                "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85",
+            },
+            {
+              name: "Dark Walnut",
+              hex: "#49372d",
+              image:
+                "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85",
+            },
+          ],
+        },
+        {
+          id: "signature-flooring",
+          name: "Signature Wood Flooring",
+          category: "Flooring",
+          description:
+            "Ground your interiors in the natural beauty of wood, with lasting finishes and a soft, considered palette.",
+          sizes: [
+            "1200 × 190 × 14 mm",
+            "1800 × 190 × 14 mm",
+            "2200 × 190 × 14 mm",
+          ],
+          badge: "",
+          colors: [
+            {
+              name: "Honey Oak",
+              hex: "#c69454",
+              image:
+                "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=1100&q=85",
+            },
+            {
+              name: "Natural Maple",
+              hex: "#d7bd91",
+              image:
+                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85",
+            },
+            {
+              name: "Espresso",
+              hex: "#514237",
+              image:
+                "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=85",
+            },
+          ],
+        },
+        {
+          id: "acoustic-slats",
+          name: "Acoustic Slat Panels",
+          category: "Wall Finishes",
+          description:
+            "Sculptural lines and a quieter room. A versatile feature finish that balances acoustic comfort with natural texture.",
+          sizes: [
+            "1200 × 600 × 21 mm",
+            "2400 × 600 × 21 mm",
+            "2700 × 600 × 21 mm",
+          ],
+          badge: "",
+          colors: [
+            {
+              name: "Warm Oak",
+              hex: "#bd8951",
+              image:
+                "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85",
+            },
+            {
+              name: "Charcoal",
+              hex: "#383633",
+              image:
+                "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85",
+            },
+          ],
+        },
+        {
+          id: "wallpaper-atelier",
+          name: "Atelier Wallcoverings",
+          category: "Wallcoverings",
+          description:
+            "Subtle pattern, tactile finishes, and a palette that layers effortlessly into the spaces you love.",
+          sizes: [
+            "Roll: 5 m × 0.52 m",
+            "Roll: 10 m × 0.52 m",
+            "Roll: 10 m × 0.70 m",
+          ],
+          badge: "",
+          colors: [
+            {
+              name: "Linen",
+              hex: "#d5cbb9",
+              image:
+                "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1100&q=85",
+            },
+            {
+              name: "Olive",
+              hex: "#77765b",
+              image:
+                "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1100&q=85",
+            },
+          ],
+        },
+        {
+          id: "architectural-hardware",
+          name: "Architectural Hardware",
+          category: "Finishing Details",
+          description:
+            "The finishing touch matters. Explore thoughtfully shaped hardware in enduring metals and understated tones.",
+          sizes: ["Small: 128 mm", "Medium: 185 mm", "Large: 254 mm"],
+          badge: "",
+          colors: [
+            {
+              name: "Brushed Brass",
+              hex: "#b08a4a",
+              image:
+                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85",
+            },
+            {
+              name: "Matte Black",
+              hex: "#292826",
+              image:
+                "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85",
+            },
+          ],
+        },
+      ];
+      /* Optional WhatsApp business number: country code + number, digits only, e.g. '919876543210'. */
+      const WHATSAPP_NUMBER = "";
+      const grid = document.getElementById("productGrid"),
+        overlay = document.getElementById("productOverlay"),
+        drawer = document.getElementById("cartDrawer");
+      let cart = JSON.parse(
+        localStorage.getItem("ishaanSelection") || "[]",
+      ).map((item) => ({ ...item, size: item.size || "Standard size" }));
+      let activeProduct = null,
+        activeColor = 0,
+        activeSize = 0;
+      function safeImage(src) {
+        return (
+          src ||
+          "https://placehold.co/900x650/eee8dc/777066?text=Ishaan+Interiors"
+        );
+      }
+      function renderProducts() {
+        document.getElementById("productCount").textContent =
+          `${products.length} considered designs`;
+        grid.innerHTML = products.length
+          ? products
+              .map((p) => {
+                const c = p.colors?.[0] || {};
+                return `<article class="product-card"><div class="card-image"><img loading="lazy" src="${safeImage(c.image)}" alt="${p.name} in ${c.name || "selected finish"}" onerror="this.src='https://placehold.co/900x650/eee8dc/777066?text=Ishaan+Interiors'">${p.badge ? `<span class="badge">${p.badge}</span>` : ""}</div><div class="card-body"><div class="category">${p.category || "Interiors"}</div><h3>${p.name}</h3><p>${p.description || ""}</p><div class="card-footer"><div class="swatch-preview">${(
+                  p.colors || []
+                )
+                  .slice(0, 4)
+                  .map(
+                    (x) =>
+                      `<span class="swatch-dot" title="${x.name}" style="background:${x.hex}"></span>`,
+                  )
+                  .join(
+                    "",
+                  )}<span class="swatch-label">${p.colors?.length || 0} finishes</span></div></div><div class="card-actions"><button class="btn btn-outline" data-view="${p.id}">View Product</button><button class="btn btn-gold" data-add="${p.id}">Add to Selection</button></div></div></article>`;
+              })
+              .join("")
+          : '<div class="no-results">Products will appear here when added to the products array.</div>';
+      }
+      function showToast(message) {
+        const el = document.createElement("div");
+        el.className = "toast";
+        el.textContent = message;
+        document.getElementById("toastRegion").append(el);
+        setTimeout(() => el.remove(), 3000);
+      }
+      function openProduct(id) {
+        activeProduct = products.find((p) => p.id === id);
+        if (!activeProduct) return;
+        activeColor = 0;
+        activeSize = 0;
+        document.getElementById("modalCategory").textContent =
+          activeProduct.category || "Interiors";
+        document.getElementById("modalTitle").textContent = activeProduct.name;
+        document.getElementById("modalDescription").textContent =
+          activeProduct.description || "";
+        renderSizeOptions();
+        renderModalColor();
+        overlay.classList.add("open");
+        document.body.classList.add("locked");
+        document.getElementById("closeModal").focus();
+      }
+      function renderSizeOptions() {
+        const sizes = activeProduct.sizes || [];
+        document.getElementById("sizeOptions").innerHTML =
+          sizes
+            .map(
+              (size, i) =>
+                `<button class="color-choice ${i === activeSize ? "selected" : ""}" data-size="${i}" aria-pressed="${i === activeSize}">${size}</button>`,
+            )
+            .join("") ||
+          '<span class="modal-note">Contact us for sizes.</span>';
+      }
+      function renderModalColor() {
+        const color = (activeProduct.colors || [])[activeColor] || {
+          name: "Standard",
+          hex: "#b08a4a",
+          image: "",
+        };
+        const img = document.getElementById("modalImage");
+        img.src = safeImage(color.image);
+        img.alt = `${activeProduct.name} — ${color.name}`;
+        img.onerror = () =>
+          (img.src =
+            "https://placehold.co/900x650/eee8dc/777066?text=Ishaan+Interiors");
+        document.getElementById("colorOptions").innerHTML =
+          (activeProduct.colors || [])
+            .map(
+              (c, i) =>
+                `<button class="color-choice ${i === activeColor ? "selected" : ""}" data-color="${i}" aria-pressed="${i === activeColor}"><span class="swatch-dot" style="background:${c.hex}" aria-hidden="true"></span>${c.name}</button>`,
+            )
+            .join("") ||
+          '<span class="modal-note">Contact us for finish options.</span>';
+      }
+      function closeProduct() {
+        overlay.classList.remove("open");
+        document.body.classList.remove("locked");
+      }
+      function saveCart() {
+        localStorage.setItem("ishaanSelection", JSON.stringify(cart));
+        renderCart();
+      }
+      function addToCart(id, colorIndex = 0, sizeIndex = 0) {
+        const p = products.find((x) => x.id === id);
+        if (!p) return;
+        const color = p.colors?.[colorIndex] || { name: "Standard", image: "" };
+        const size = p.sizes?.[sizeIndex] || "Standard size";
+        const key = `${id}::${color.name}::${size}`;
+        const item = cart.find((x) => x.key === key);
+        if (item) item.qty++;
+        else
+          cart.push({
+            key,
+            id,
+            color: color.name,
+            size,
+            image: color.image || p.colors?.[0]?.image || "",
+            qty: 1,
+          });
+        saveCart();
+        showToast(`${p.name} · ${size} added to your selection`);
+      }
+      function renderCart() {
+        const qty = cart.reduce((n, x) => n + x.qty, 0);
+        document.getElementById("drawerCount").textContent = qty;
+        const bar = document.getElementById("projectBar");
+        bar.hidden = qty === 0;
+        bar.querySelector(".shop-project-count").textContent = qty;
+        bar.querySelector(".shop-project-items").textContent = cart
+          .map((item) => {
+            const p = products.find((x) => x.id === item.id);
+            return p
+              ? p.name +
+                  " · " +
+                  item.size +
+                  " · " +
+                  item.color +
+                  " × " +
+                  item.qty
+              : "";
+          })
+          .filter(Boolean)
+          .join("  |  ");
+        const wrap = document.getElementById("cartItems");
+        if (!cart.length) {
+          wrap.innerHTML =
+            '<div class="empty-cart"><strong>Your selection is waiting.</strong>Explore the collection and add products you love.</div>';
+          return;
+        }
+        wrap.innerHTML = cart
+          .map((item) => {
+            const p = products.find((x) => x.id === item.id);
+            if (!p) return "";
+            return `<div class="cart-row"><img src="${safeImage(item.image)}" alt="" onerror="this.src='https://placehold.co/150x150/eee8dc/777066?text=Ishaan'"><div><div class="cart-name">${p.name}</div><div class="cart-variant">${item.size} · ${item.color}</div><div class="qty"><button data-qty="-1" data-key="${item.key}" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button data-qty="1" data-key="${item.key}" aria-label="Increase quantity">+</button></div></div><button class="remove" data-remove="${item.key}" aria-label="Remove ${p.name}">×</button></div>`;
+          })
+          .join("");
+      }
+      function openCart() {
+        document.getElementById("drawerScrim").classList.add("open");
+        drawer.classList.add("open");
+        drawer.setAttribute("aria-hidden", "false");
+        document.body.classList.add("locked");
+      }
+      function closeCart() {
+        document.getElementById("drawerScrim").classList.remove("open");
+        drawer.classList.remove("open");
+        drawer.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("locked");
+      }
+      grid.addEventListener("click", (e) => {
+        const v = e.target.closest("[data-view]"),
+          a = e.target.closest("[data-add]");
+        if (v) openProduct(v.dataset.view);
+        if (a) addToCart(a.dataset.add);
+      });
+      document.getElementById("colorOptions").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-color]");
+        if (b) {
+          activeColor = Number(b.dataset.color);
+          renderModalColor();
+        }
+      });
+      document.getElementById("sizeOptions").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-size]");
+        if (b) {
+          activeSize = Number(b.dataset.size);
+          renderSizeOptions();
+        }
+      });
+      document.getElementById("modalAdd").addEventListener("click", () => {
+        if (activeProduct) {
+          addToCart(activeProduct.id, activeColor, activeSize);
+          closeProduct();
+        }
+      });
+      document
+        .getElementById("closeModal")
+        .addEventListener("click", closeProduct);
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) closeProduct();
+      });
+      document
+        .getElementById("projectBarOpen")
+        .addEventListener("click", openCart);
+      document.getElementById("closeCart").addEventListener("click", closeCart);
+      document
+        .getElementById("drawerScrim")
+        .addEventListener("click", closeCart);
+      document.getElementById("cartItems").addEventListener("click", (e) => {
+        const q = e.target.closest("[data-qty]"),
+          r = e.target.closest("[data-remove]");
+        if (q) {
+          const item = cart.find((x) => x.key === q.dataset.key);
+          if (item) {
+            item.qty += Number(q.dataset.qty);
+            if (item.qty <= 0) cart = cart.filter((x) => x !== item);
+            saveCart();
+          }
+        }
+        if (r) {
+          cart = cart.filter((x) => x.key !== r.dataset.remove);
+          saveCart();
+          showToast("Product removed from your selection");
+        }
+      });
+      document.getElementById("clearCart").addEventListener("click", () => {
+        if (cart.length) {
+          cart = [];
+          saveCart();
+          showToast("Your selection has been cleared");
+        }
+      });
+      document
+        .getElementById("whatsappButton")
+        .addEventListener("click", () => {
+          if (!cart.length) {
+            showToast("Add a product to your selection first");
+            return;
+          }
+          const lines = cart.map((item) => {
+            const p = products.find((x) => x.id === item.id);
+            return `• ${p?.name || item.id} — ${item.size} — ${item.color} × ${item.qty}`;
+          });
+          const message = `Hello Ishaan Interiors, I would like to enquire about these selected products:\n\n${lines.join("\n")}\n\nPlease share more details.`;
+          const url = WHATSAPP_NUMBER
+            ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+            : `https://wa.me/?text=${encodeURIComponent(message)}`;
+          window.open(url, "_blank", "noopener,noreferrer");
+        });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeProduct();
+          closeCart();
+        }
+      });
+      renderProducts();
+      renderCart();
+
+
+
+      /* ==========================================
+   gallary section
+   ========================================== */
+
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          galleryItems.forEach((card) => card.classList.remove("active"));
+          item.classList.add("active");
+        });
+
+        item.addEventListener("mouseenter", () => {
+          galleryItems.forEach((card) => {
+            card.classList.remove("active");
+          });
+
+          item.classList.add("active");
+        });
+      });
+
+      /* ==========================
+      Contact Section Reveal
+    ========================== */
+
+      /* SCROLL REVEAL */
+
+      const revealElements = document.querySelectorAll(".reveal");
+      const contactSection = document.querySelector(".contact-section");
+      const contactRevealElements =
+        document.querySelectorAll("#contact .reveal");
+      const statsSection = document.querySelector("#recognition");
+      const statNumbers = statsSection?.querySelectorAll(".stat-num") ?? [];
+      let statsCounted = false;
+
+      function animateStatNumbers() {
+        if (statsCounted) return;
+        statsCounted = true;
+        const duration = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches
+          ? 0
+          : 1600;
+
+        statNumbers.forEach((element) => {
+          const target = Number(element.dataset.value);
+          const suffix = element.dataset.suffix ?? "";
+          if (!Number.isFinite(target)) return;
+
+          const format = (value) =>
+            Math.round(value).toLocaleString("en-IN") + suffix;
+          if (!duration) {
+            element.textContent = format(target);
+            return;
+          }
+
+          const start = performance.now();
+          const updateNumber = (now) => {
+            const progress = Math.min(1, (now - start) / duration);
+            const easedProgress = 1 - (1 - progress) ** 3;
+            element.textContent = format(target * easedProgress);
+            if (progress < 1) requestAnimationFrame(updateNumber);
+          };
+          requestAnimationFrame(updateNumber);
+        });
+      }
+
+      if (statsSection && "IntersectionObserver" in window) {
+        const statsObserver = new IntersectionObserver(
+          (entries, observer) => {
+            if (entries.some((entry) => entry.isIntersecting)) {
+              animateStatNumbers();
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.35 },
+        );
+        statsObserver.observe(statsSection);
+      } else if (statsSection) {
+        window.addEventListener("scroll", () => {
+          const bounds = statsSection.getBoundingClientRect();
+          if (bounds.top < window.innerHeight * 0.65 && bounds.bottom > 0) {
+            animateStatNumbers();
+          }
+        }, { passive: true });
+      }
+
+      if ("IntersectionObserver" in window) {
+        const contactObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0 },
+        );
+
+        contactRevealElements.forEach((element) =>
+          contactObserver.observe(element),
+        );
+      }
+
+      contactSection?.classList.add("reveal-ready");
+
+      function revealOnScroll() {
+        revealElements.forEach((element) => {
+          const windowHeight = window.innerHeight;
+
+          const elementTop = element.getBoundingClientRect().top;
+
+          const revealPoint = 100;
+
+          if (elementTop < windowHeight - revealPoint) {
+            element.classList.add("active");
+          }
+        });
+
+        contactRevealElements.forEach((element) => {
+          const bounds = element.getBoundingClientRect();
+          if (bounds.bottom > 0 && bounds.top < window.innerHeight) {
+            element.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+
+      revealOnScroll();
+
+      /* INPUT ANIMATION */
+
+      const formInputs = document.querySelectorAll(
+        ".form-group input, .form-group textarea, .form-group select",
+      );
+
+      formInputs.forEach((input) => {
+        input.addEventListener("focus", function () {
+          this.parentElement.style.transform = "translateY(-3px)";
+        });
+
+        input.addEventListener("blur", function () {
+          this.parentElement.style.transform = "translateY(0)";
+        });
+      });
+
+      /* =====================================
+   WHATSAPP CONTACT FORM
+===================================== */
+
+      const contactForm = document.getElementById("contactForm");
+
+      if (contactForm)
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          /* Get form values */
+
+          const name = contactForm.elements.name.value.trim();
+
+          const phone = contactForm.elements.phone.value.trim();
+
+          const email = contactForm.elements.email.value.trim();
+
+          const project = contactForm.elements.project.value;
+
+          const budget = contactForm.elements.budget.value;
+
+          const message = contactForm.elements.message.value.trim();
+
+          /* =====================================
+     YOUR WHATSAPP NUMBER
+     
+     IMPORTANT:
+     Enter country code without +
+     
+     Example:
+     919876543210
+  ====================================== */
+
+          const whatsappNumber = "919133249645";
+
+          /* Create WhatsApp message */
+
+          const whatsappMessage = `
+✨ NEW DESIGN ENQUIRY
+━━━━━━━━━━━━━━━━━━━━
+
+👤 Name:
+${name}
+
+📞 Phone:
+${phone}
+
+📧 Email:
+${email}
+
+🏠 Project Type:
+${project || "Not specified"}
+
+💰 Estimated Budget:
+${budget || "Not specified"}
+
+📝 Project Details:
+${message}
+
+━━━━━━━━━━━━━━━━━━━━
+Sent from your Interior Design Website
+  `.trim();
+
+          /* Encode message */
+
+          const encodedMessage = encodeURIComponent(whatsappMessage);
+
+          /* WhatsApp URL */
+
+          const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+          /* Open WhatsApp */
+
+          window.open(whatsappURL, "_blank", "noopener");
+        });
+
+      /* ==========================================
+   FAQ SECTION
+   ========================================== */
+
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const faqItem = button.parentElement;
+
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            if (item !== faqItem) {
+              item.classList.remove("active");
+              item.querySelector(".faq-answer").style.maxHeight = null;
+            }
+          });
+
+          faqItem.classList.toggle("active");
+
+          const answer = faqItem.querySelector(".faq-answer");
+
+          if (faqItem.classList.contains("active")) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          } else {
+            answer.style.maxHeight = null;
+          }
+        });
+      });
+    </script>
+    <script src="site-shell.js"></script>
+</body>
+</html>

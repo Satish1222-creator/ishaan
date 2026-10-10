@@ -1,0 +1,3253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ishaan Interiors | False Ceiling</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --ink: #231b17;
+    --espresso: #39291f;
+    --sand: #f5efe7;
+    --cream: #fcfaf7;
+    --gold: #c49a5a;
+    --gold-light: #e0bd7a;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   TOP BANNER
+===================================================== */
+
+.products-banner {
+
+    width: 100%;
+
+    min-height: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+
+        linear-gradient(
+            rgba(35,27,23,.58),
+            rgba(35,27,23,.58)
+        ),
+
+        url("https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1920&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.products-banner h1 {
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(40px,6vw,75px);
+
+    letter-spacing:
+        2px;
+
+    font-weight:
+        600;
+
+}
+
+
+
+/* =========================================================
+   PRODUCT SECTION
+========================================================= */
+
+.product-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 900px;
+
+    padding:
+        100px
+        20px
+        120px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(196,154,90,0.10),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            var(--cream),
+            var(--sand)
+        );
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.product-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border:
+        1px solid
+        rgba(196,154,90,0.12);
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -45%);
+
+    pointer-events: none;
+}
+
+
+.product-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 900px;
+    height: 900px;
+
+    border:
+        1px solid
+        rgba(196,154,90,0.06);
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -45%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.product-header {
+
+    position: relative;
+
+    z-index: 10;
+
+    max-width: 850px;
+
+    margin:
+        0 auto
+        65px;
+
+    text-align: center;
+}
+
+
+.product-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.product-label::before,
+.product-label::after {
+
+    content: "";
+
+    width: 28px;
+
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+.product-title {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            68px
+        );
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    color: var(--ink);
+}
+
+
+.product-description {
+
+    max-width: 600px;
+
+    margin:
+        20px auto
+        0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(
+            35,
+            27,
+            23,
+            0.65
+        );
+}
+
+
+/* =========================================================
+   SLIDER CONTAINER
+========================================================= */
+
+.slider-container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    /*
+       IMPORTANT:
+       Extra height gives the navigation
+       buttons their own space.
+    */
+
+    height: 590px;
+
+    margin: 0 auto;
+
+    z-index: 5;
+
+    padding-bottom: 80px;
+}
+
+
+/* =========================================================
+   3D SLIDER
+========================================================= */
+
+.slider-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    perspective: 2000px;
+
+    transform-style: preserve-3d;
+
+    user-select: none;
+
+    touch-action: pan-y;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.project-card {
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 465px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 35px 80px
+        rgba(35,27,23,0.18),
+
+        0 10px 30px
+        rgba(35,27,23,0.10);
+
+    transition:
+
+        transform
+        0.8s
+        cubic-bezier(
+            .22,
+            .61,
+            .36,
+            1
+        ),
+
+        opacity
+        0.7s ease,
+
+        filter
+        0.7s ease,
+
+        box-shadow
+        0.7s ease;
+
+    transform-style: preserve-3d;
+
+    cursor: grab;
+}
+
+
+.project-card:active {
+
+    cursor: grabbing;
+}
+
+
+/* =========================================================
+   ACTIVE CARD
+========================================================= */
+
+.project-card.active {
+
+    box-shadow:
+
+        0 40px 90px
+        rgba(35,27,23,0.25),
+
+        0 15px 35px
+        rgba(196,154,90,0.18);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.project-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 335px;
+
+    overflow: hidden;
+}
+
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform
+        0.9s
+        cubic-bezier(
+            .22,
+            .61,
+            .36,
+            1
+        );
+}
+
+
+.project-card.active
+.project-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.project-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(0,0,0,0.25)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.project-content {
+
+    position: relative;
+
+    height: 130px;
+
+    padding:
+        22px;
+    
+    background: #ffffff;
+}
+
+
+.project-category {
+
+    margin-bottom: 5px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.project-name {
+
+    padding-right: 55px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    color: var(--ink);
+}
+
+
+.project-location {
+
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    color:
+        rgba(
+            35,
+            27,
+            23,
+            0.55
+        );
+}
+
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.card-arrow {
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 22px;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(196,154,90,0.4);
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+    transition:
+
+        background
+        0.3s ease,
+
+        color
+        0.3s ease,
+
+        transform
+        0.3s ease;
+}
+
+
+.project-card:hover
+.card-arrow {
+
+    background: var(--gold);
+
+    color: #ffffff;
+
+    transform:
+        rotate(-45deg);
+}
+
+
+/* =========================================================
+   NAVIGATION AREA
+========================================================= */
+
+.slider-navigation {
+
+    position: absolute;
+
+    /*
+       Buttons are now BELOW
+       the card area.
+    */
+
+    left: 50%;
+
+    bottom: 0;
+
+    transform:
+        translateX(-50%);
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    z-index: 50;
+
+    /*
+       Separate space around buttons.
+    */
+
+    padding-top: 20px;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTON
+========================================================= */
+
+.slider-button {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(196,154,90,0.45);
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    backdrop-filter:
+        blur(12px);
+
+    color: var(--ink);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+
+        background
+        0.3s ease,
+
+        color
+        0.3s ease,
+
+        transform
+        0.3s ease,
+
+        border-color
+        0.3s ease;
+}
+
+
+.slider-button:hover {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: #ffffff;
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =========================================================
+   SECTION DIVIDER
+========================================================= */
+
+.section-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(196,154,90,0.35),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .product-section {
+
+        min-height: 820px;
+
+        padding:
+            80px
+            15px
+            100px;
+    }
+
+
+    .product-header {
+
+        margin-bottom: 50px;
+    }
+
+
+    .slider-container {
+
+        height: 550px;
+
+        padding-bottom: 75px;
+    }
+
+
+    .slider-wrapper {
+
+        height: 450px;
+    }
+
+
+    .project-card {
+
+        width: 300px;
+
+        height: 410px;
+    }
+
+
+    .project-image {
+
+        height: 290px;
+    }
+
+
+    .project-content {
+
+        height: 120px;
+    }
+
+
+    .slider-navigation {
+
+        bottom: 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .product-section {
+
+        min-height: 730px;
+
+        padding:
+            65px
+            10px
+            90px;
+    }
+
+
+    .product-section::before {
+
+        width: 400px;
+
+        height: 400px;
+    }
+
+
+    .product-section::after {
+
+        width: 550px;
+
+        height: 550px;
+    }
+
+
+    .product-header {
+
+        margin-bottom: 30px;
+    }
+
+
+    .product-label {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .product-label::before,
+    .product-label::after {
+
+        width: 20px;
+    }
+
+
+    .product-title {
+
+        font-size: 36px;
+    }
+
+
+    .product-description {
+
+        padding:
+            0 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* IMPORTANT MOBILE SPACING */
+
+    .slider-container {
+
+        height: 485px;
+
+        padding-bottom: 75px;
+    }
+
+
+    .slider-wrapper {
+
+        height: 405px;
+    }
+
+
+    .project-card {
+
+        width: 245px;
+
+        height: 365px;
+
+        border-radius: 23px;
+    }
+
+
+    .project-image {
+
+        height: 260px;
+    }
+
+
+    .project-content {
+
+        height: 105px;
+
+        padding: 17px;
+    }
+
+
+    .project-category {
+
+        font-size: 9px;
+    }
+
+
+    .project-name {
+
+        font-size: 18px;
+    }
+
+
+    .project-location {
+
+        font-size: 10px;
+    }
+
+
+    .card-arrow {
+
+        width: 36px;
+
+        height: 36px;
+
+        right: 15px;
+
+        bottom: 16px;
+    }
+
+
+    .slider-navigation {
+
+        bottom: 0;
+
+        padding-top: 15px;
+    }
+
+
+    .slider-button {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .product-title {
+
+        font-size: 31px;
+    }
+
+
+    .slider-container {
+
+        height: 465px;
+    }
+
+
+    .slider-wrapper {
+
+        height: 385px;
+    }
+
+
+    .project-card {
+
+        width: 225px;
+
+        height: 345px;
+    }
+
+
+    .project-image {
+
+        height: 245px;
+    }
+
+}
+
+
+.contact-cta{
+    padding:70px 8%;
+    background:linear-gradient(135deg,#231b17,#39291f);
+    border-radius:24px;
+    margin:40px auto;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-cta::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:radial-gradient(circle,
+        rgba(196,154,90,.25),
+        transparent 70%);
+    top:-100px;
+    right:-80px;
+}
+
+.cta-content{
+    max-width:700px;
+    position:relative;
+    z-index:2;
+}
+
+.cta-tag{
+    display:inline-block;
+    color:#c49a5a;
+    letter-spacing:2px;
+    font-size:.8rem;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.contact-cta h2{
+    color:#fff;
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.2;
+    margin-bottom:15px;
+    font-family:"Playfair Display",serif;
+}
+
+.contact-cta p{
+    color:rgba(255,255,255,.75);
+    line-height:1.7;
+    margin-bottom:25px;
+    max-width:550px;
+}
+
+.cta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 30px;
+    background:#c49a5a;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.cta-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(196,154,90,.35);
+}
+
+.cta-btn span{
+    transition:.35s ease;
+}
+
+.cta-btn:hover span{
+    transform:translateX(4px);
+}
+
+
+</style>
+</head>
+
+
+<body>
+    
+<!-- ===================================================
+     TOP BANNER
+=================================================== -->
+
+<section class="products-banner">
+
+    <h1>
+        False Ceilings
+
+
+
+    </h1>
+
+</section>
+<!-- =====================================================
+     GYPSUM CEILINGS
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Signature Collection
+        </div>
+
+        <h2 class="product-title">
+            GYPSUM CEILINGS
+        </h2>
+
+        <p class="product-description">
+            Elegant gypsum ceiling designs crafted to bring depth,
+            dimension and architectural sophistication to modern interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/15/64/72/1564727f430e6ed8389a22d6cc798a6f.jpg"
+                        alt="Modern Gypsum Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GYPSUM CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern False Ceiling
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/69/1f/93/691f939049495cc58c44472815577028.jpg"
+                        alt="Designer Gypsum Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GYPSUM CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Designer Ceiling Layers
+                    </h3>
+
+                    <div class="project-location">
+                        Master Bedroom
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/3b/a2/f8/3ba2f89528cccc86024843bf7d387c52.jpg"
+                        alt="Luxury Gypsum Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GYPSUM CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Ceiling Design
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/13/73/56/137356dd1b08174c5a32034e4e0fa108.jpg"
+                        alt="Contemporary Gypsum Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GYPSUM CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Ceiling Lines
+                    </h3>
+
+                    <div class="project-location">
+                        Lounge Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/2b/4b/9d/2b4b9dd1e54d6aa3c41d128da53e957f.jpg"
+                        alt="Premium Gypsum Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GYPSUM CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium Architectural Ceiling
+                    </h3>
+
+                    <div class="project-location">
+                        Luxury Interior
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+<!-- =====================================================
+     2X2 CEILING TILES
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Premium Collection
+        </div>
+
+        <h2 class="product-title">
+            2X2 CEILING TILES
+        </h2>
+
+        <p class="product-description">
+            Stylish 2x2 ceiling tiles designed to create clean,
+            elegant and sophisticated ceilings for modern interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/26/80/de/2680de465156b9da7de980567c9c21e1.jpg"
+                        alt="2x2 Ceiling Tiles"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        CEILING TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern Grid Ceiling
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/9f/f9/65/9ff9659919a1780dbee778c3e9fc907a.jpg"
+                        alt="Designer Ceiling Tiles"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        CEILING TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Designer Tile Ceiling
+                    </h3>
+
+                    <div class="project-location">
+                        Office Space
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/88/07/24/88072444b75ac3c62ff0e3bd9d5875bd.jpg"
+                        alt="Decorative Ceiling Tiles"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        CEILING TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Decorative Ceiling Panels
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/26/80/de/2680de465156b9da7de980567c9c21e1.jpg"
+                        alt="Premium 2x2 Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        CEILING TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium Ceiling Grid
+                    </h3>
+
+                    <div class="project-location">
+                        Reception Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/3f/85/d0/3f85d0347fb09aa8fb38b3472d0d51a6.jpg"
+                        alt="Luxury Ceiling Tile Design"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        CEILING TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Ceiling Finish
+                    </h3>
+
+                    <div class="project-location">
+                        Commercial Interior
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+<!-- =====================================================
+     POP (PLASTER OF PARIS) CEILINGS
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Premium Collection
+        </div>
+
+        <h2 class="product-title">
+            POP CEILINGS
+        </h2>
+
+        <p class="product-description">
+            Elegant Plaster of Paris ceiling designs created to bring
+            artistic detail, depth and luxurious character to modern interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/3b/a2/f8/3ba2f89528cccc86024843bf7d387c52.jpg"
+                        alt="Modern POP Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        POP CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern POP Ceiling
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/60/e2/04/60e20414e771cba39ba98cd7328daa30.jpg"
+                        alt="Designer POP Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        POP CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Designer Ceiling Layers
+                    </h3>
+
+                    <div class="project-location">
+                        Master Bedroom
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/cd/71/2f/cd712f36cc82209542e39a9e2cf036db.jpg"
+                        alt="Luxury POP Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        POP CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Ceiling Design
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/4d/7c/4e/4d7c4e959f7c254d90bf96ccd0782ea3.jpg"
+                        alt="Contemporary POP Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        POP CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Ceiling Pattern
+                    </h3>
+
+                    <div class="project-location">
+                        Lounge Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/e0/7e/a1/e07ea164f0b97b87dba5ae8f8ae9ee89.jpg"
+                        alt="Premium POP Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        POP CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium Artistic Ceiling
+                    </h3>
+
+                    <div class="project-location">
+                        Luxury Interior
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+<!-- =====================================================
+     WOODEN CEILINGS
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Premium Collection
+        </div>
+
+        <h2 class="product-title">
+            WOODEN CEILINGS
+        </h2>
+
+        <p class="product-description">
+            Elegant wooden ceiling designs crafted to bring warmth,
+            natural texture and timeless sophistication to modern interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/77/1d/b2/771db2713c734c7a36592470c4f11a31.jpg"
+                        alt="Modern Wooden Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        WOODEN CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern Wood Ceiling
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/44/88/4a/44884ac53d9a38d545bcc67dcd61b24d.jpg"
+                        alt="Luxury Wooden Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        WOODEN CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Timber Finish
+                    </h3>
+
+                    <div class="project-location">
+                        Master Bedroom
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/ed/3d/d0/ed3dd09689ae10d7e7e804306b9ca555.jpg"
+                        alt="Wood Panel Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        WOODEN CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Natural Wood Panels
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/7d/0c/81/7d0c81a65f62ce63c9eabc7b2afd1451.jpg"
+                        alt="Contemporary Wooden Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        WOODEN CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Wood Lines
+                    </h3>
+
+                    <div class="project-location">
+                        Lounge Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/02/d4/67/02d4675459e6c7f48bda4569ef679f60.jpg"
+                        alt="Premium Wooden Ceiling"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        WOODEN CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium Architectural Wood
+                    </h3>
+
+                    <div class="project-location">
+                        Luxury Interior
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+<section id="j974n3" class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">Premium Collection</div>
+
+        <h2 class="product-title">BAFFLE CEILINGS</h2>
+
+        <p class="product-description">
+            Modern baffle ceiling systems designed to add depth, rhythm and architectural elegance to contemporary interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/a7/bc/78/a7bc78e44ab0fd3586835023e1cf65d4.jpg"
+                         alt="Modern Baffle Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        BAFFLE CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern Linear Baffles
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/ae/18/c8/ae18c86375fb24c50de582e605a7fc1f.jpg"
+                         alt="Wooden Baffle Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        BAFFLE CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Wooden Baffle Design
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/1200x/04/25/c6/0425c604a6686978c8c5a46ad7a99f9e.jpg"
+                         alt="Contemporary Baffle Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        BAFFLE CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Baffles
+                    </h3>
+
+                    <div class="project-location">
+                        Lounge Area
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/1200x/d1/f5/39/d1f539bddb9b8a3019d4655ed87e9a1e.jpg"
+                         alt="Luxury Acoustic Baffle Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        BAFFLE CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Acoustic Baffles
+                    </h3>
+
+                    <div class="project-location">
+                        Office Space
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/2c/43/ee/2c43eecbe1edc433e0e58452335aad61.jpg"
+                         alt="Premium Architectural Baffle Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        BAFFLE CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium Architectural Baffles
+                    </h3>
+
+                    <div class="project-location">
+                        Luxury Interior
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button class="slider-button prev" aria-label="Previous">
+                ←
+            </button>
+
+            <button class="slider-button next" aria-label="Next">
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">Premium Collection</div>
+
+        <h2 class="product-title">SOFIT (VOX) CEILINGS</h2>
+
+        <p class="product-description">
+            Premium SOFIT (VOX) ceiling systems crafted with clean linear details, modern textures and architectural elegance for refined interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/9e/28/35/9e28356d993e245914701e45f69ce6e5.jpg"
+                         alt="Modern SOFIT VOX Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        SOFIT (VOX) CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern Linear SOFIT
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/12/a6/fe/12a6fed40777f988165a29e2280f5c97.jpg"
+                         alt="Wood Finish SOFIT VOX Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        SOFIT (VOX) CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Wood Finish SOFIT
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/8f/07/41/8f07412f79bcebc85821755d7b6dbde8.jpg"
+                         alt="Contemporary SOFIT VOX Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        SOFIT (VOX) CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary SOFIT
+                    </h3>
+
+                    <div class="project-location">
+                        Lounge Area
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/02/8d/4b/028d4b5f607c80541fefc56efe4e2e32.jpg"
+                         alt="Premium SOFIT VOX Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        SOFIT (VOX) CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium SOFIT Panels
+                    </h3>
+
+                    <div class="project-location">
+                        Office Space
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/1200x/b7/b5/6e/b7b56e70ec47bafc4d2cf7578e944f8a.jpg"
+                         alt="Architectural SOFIT VOX Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        SOFIT (VOX) CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Architectural SOFIT
+                    </h3>
+
+                    <div class="project-location">
+                        Luxury Interior
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button class="slider-button prev" aria-label="Previous">
+                ←
+            </button>
+
+            <button class="slider-button next" aria-label="Next">
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+<section id="j974n3" class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">Premium Collection</div>
+
+        <h2 class="product-title">PVC CEILINGS</h2>
+
+        <p class="product-description">
+            Stylish PVC ceiling solutions designed with clean finishes, durable materials and modern patterns for elegant contemporary interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/1200x/29/dd/bd/29ddbd365b1ec2748cfb9935ff026f02.jpg"
+                         alt="Modern PVC Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern PVC Panels
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/6a/07/1b/6a071b7001e47d68640f917c737c2568.jpg"
+                         alt="Wood Finish PVC Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Wood Finish PVC
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/f7/be/20/f7be20b4b3ec4f7805cc36d76a859272.jpg"
+                         alt="Designer PVC Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Designer PVC Ceiling
+                    </h3>
+
+                    <div class="project-location">
+                        Bedroom
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/a8/16/aa/a816aacbbdcdabcfa7daa416d1b03754.jpg"
+                         alt="Contemporary PVC Ceiling">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary PVC Lines
+                    </h3>
+
+                    <div class="project-location">
+                        Office Space
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://i.pinimg.com/736x/3a/60/e3/3a60e3b93d94a26a35e672c9ccf17ba6.jpg"
+                         alt="Premium PVC Ceiling Design">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC CEILING COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium PVC Finish
+                    </h3>
+
+                    <div class="project-location">
+                        Luxury Interior
+                    </div>
+
+                    <div class="card-arrow">↗</div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button class="slider-button prev" aria-label="Previous">
+                ←
+            </button>
+
+            <button class="slider-button next" aria-label="Next">
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Luxury Contact CTA Block -->
+<section class="contact-cta">
+    <div class="cta-content">
+        <span class="cta-tag">Let's Design Your Dream Space</span>
+        <h2>Transform Your Interior Into a Timeless Masterpiece</h2>
+        <p>
+            From luxury residences to modern commercial spaces,
+            we create interiors that blend elegance, comfort, and functionality.
+        </p>
+
+        <a href="#contact" class="cta-btn">
+            Contact Us
+            <span>→</span>
+        </a>
+    </div>
+</section>
+
+
+
+
+
+<script>
+
+/* =========================================================
+   REUSABLE CURVED 3D SLIDER
+========================================================= */
+
+class CurvedSlider {
+
+    constructor(section) {
+
+        this.section = section;
+
+        this.slider =
+            section.querySelector(
+                ".slider-wrapper"
+            );
+
+        this.cards =
+            [
+                ...section.querySelectorAll(
+                    ".project-card"
+                )
+            ];
+
+        this.nextButton =
+            section.querySelector(
+                ".next"
+            );
+
+        this.prevButton =
+            section.querySelector(
+                ".prev"
+            );
+
+        this.current = 0;
+
+        this.total =
+            this.cards.length;
+
+        this.autoPlay = null;
+
+        this.startX = 0;
+
+        this.isDragging = false;
+
+        this.init();
+    }
+
+
+    /* =====================================================
+       INIT
+    ===================================================== */
+
+    init() {
+
+        if (!this.total) return;
+
+        this.update();
+
+        this.bindEvents();
+
+        this.startAutoPlay();
+    }
+
+
+    /* =====================================================
+       UPDATE
+    ===================================================== */
+
+    update() {
+
+        const isMobile =
+            window.innerWidth <= 600;
+
+
+        this.cards.forEach(
+            (card, index) => {
+
+                let difference =
+                    index - this.current;
+
+
+                /*
+                 * Infinite circular positioning
+                 */
+
+                if (
+                    difference >
+                    this.total / 2
+                ) {
+
+                    difference -=
+                        this.total;
+                }
+
+
+                if (
+                    difference <
+                    -this.total / 2
+                ) {
+
+                    difference +=
+                        this.total;
+                }
+
+
+                const distance =
+                    Math.abs(
+                        difference
+                    );
+
+
+                /*
+                 * Horizontal distance
+                 */
+
+                const horizontalGap =
+                    isMobile
+                        ? 205
+                        : 280;
+
+
+                /*
+                 * Curve
+                 */
+
+                const curveAmount =
+                    isMobile
+                        ? 18
+                        : 22;
+
+
+                /*
+                 * X
+                 */
+
+                const x =
+                    difference *
+                    horizontalGap;
+
+
+                /*
+                 * Y
+                 */
+
+                const y =
+                    distance *
+                    distance *
+                    curveAmount;
+
+
+                /*
+                 * Z
+                 */
+
+                const z =
+                    -(
+                        distance *
+                        distance *
+                        110
+                    );
+
+
+                /*
+                 * Rotation
+                 */
+
+                const rotateY =
+                    difference * -15;
+
+
+                const rotateZ =
+                    difference * 3;
+
+
+                /*
+                 * Scale
+                 */
+
+                const scale =
+                    Math.max(
+                        1.08 -
+                        distance * 0.14,
+
+                        0.55
+                    );
+
+
+                /*
+                 * Opacity
+                 */
+
+                const opacity =
+                    Math.max(
+                        1 -
+                        distance * 0.20,
+
+                        0
+                    );
+
+
+                /*
+                 * Brightness
+                 */
+
+                const brightness =
+                    Math.max(
+                        1 -
+                        distance * 0.08,
+
+                        0.65
+                    );
+
+
+                /*
+                 * Apply transform
+                 */
+
+                card.style.transform = `
+
+                    translateX(${x}px)
+
+                    translateY(${y - 25}px)
+
+                    translateZ(${z}px)
+
+                    rotateY(${rotateY}deg)
+
+                    rotateZ(${rotateZ}deg)
+
+                    scale(${scale})
+
+                `;
+
+
+                card.style.opacity =
+                    opacity;
+
+
+                card.style.filter =
+                    `brightness(${brightness})`;
+
+
+                card.style.zIndex =
+                    100 - distance;
+
+
+                /*
+                 * Active card
+                 */
+
+                card.classList.toggle(
+                    "active",
+                    difference === 0
+                );
+
+
+                /*
+                 * Disable interaction
+                 * with cards far behind
+                 */
+
+                card.style.pointerEvents =
+                    distance > 3
+                        ? "none"
+                        : "auto";
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       NEXT
+    ===================================================== */
+
+    next() {
+
+        this.current =
+            (
+                this.current + 1
+            ) %
+            this.total;
+
+        this.update();
+    }
+
+
+    /* =====================================================
+       PREVIOUS
+    ===================================================== */
+
+    previous() {
+
+        this.current =
+            (
+                this.current -
+                1 +
+                this.total
+            ) %
+            this.total;
+
+        this.update();
+    }
+
+
+    /* =====================================================
+       EVENTS
+    ===================================================== */
+
+    bindEvents() {
+
+
+        /* NEXT */
+
+        this.nextButton.addEventListener(
+            "click",
+            () => {
+
+                this.next();
+
+                this.restartAutoPlay();
+
+            }
+        );
+
+
+        /* PREVIOUS */
+
+        this.prevButton.addEventListener(
+            "click",
+            () => {
+
+                this.previous();
+
+                this.restartAutoPlay();
+
+            }
+        );
+
+
+        /* =================================================
+           KEYBOARD
+        ================================================= */
+
+        this.section.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    this.next();
+
+                    this.restartAutoPlay();
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    this.previous();
+
+                    this.restartAutoPlay();
+                }
+
+            }
+        );
+
+
+        this.section.setAttribute(
+            "tabindex",
+            "0"
+        );
+
+
+        /* =================================================
+           TOUCH START
+        ================================================= */
+
+        this.slider.addEventListener(
+            "touchstart",
+            (event) => {
+
+                this.startX =
+                    event.touches[0]
+                    .clientX;
+
+                this.stopAutoPlay();
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        /* =================================================
+           TOUCH END
+        ================================================= */
+
+        this.slider.addEventListener(
+            "touchend",
+            (event) => {
+
+                const endX =
+                    event.changedTouches[0]
+                    .clientX;
+
+
+                const difference =
+                    this.startX -
+                    endX;
+
+
+                if (
+                    Math.abs(
+                        difference
+                    ) > 50
+                ) {
+
+                    if (
+                        difference > 0
+                    ) {
+
+                        this.next();
+
+                    } else {
+
+                        this.previous();
+
+                    }
+
+                }
+
+
+                this.startAutoPlay();
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        /* =================================================
+           MOUSE DOWN
+        ================================================= */
+
+        this.slider.addEventListener(
+            "mousedown",
+            (event) => {
+
+                this.isDragging =
+                    true;
+
+                this.startX =
+                    event.clientX;
+
+                this.stopAutoPlay();
+
+            }
+        );
+
+
+        /* =================================================
+           MOUSE UP
+        ================================================= */
+
+        window.addEventListener(
+            "mouseup",
+            (event) => {
+
+                if (
+                    !this.isDragging
+                ) return;
+
+
+                this.isDragging =
+                    false;
+
+
+                const difference =
+                    this.startX -
+                    event.clientX;
+
+
+                if (
+                    Math.abs(
+                        difference
+                    ) > 50
+                ) {
+
+                    if (
+                        difference > 0
+                    ) {
+
+                        this.next();
+
+                    } else {
+
+                        this.previous();
+
+                    }
+
+                }
+
+
+                this.startAutoPlay();
+
+            }
+        );
+
+
+        /* =================================================
+           PAUSE ON HOVER
+        ================================================= */
+
+        this.section.addEventListener(
+            "mouseenter",
+            () => {
+
+                this.stopAutoPlay();
+
+            }
+        );
+
+
+        this.section.addEventListener(
+            "mouseleave",
+            () => {
+
+                this.startAutoPlay();
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       AUTOPLAY
+    ===================================================== */
+
+    startAutoPlay() {
+
+        this.stopAutoPlay();
+
+
+        this.autoPlay =
+            setInterval(
+                () => {
+
+                    this.next();
+
+                },
+
+                5000
+            );
+    }
+
+
+    /* =====================================================
+       STOP AUTOPLAY
+    ===================================================== */
+
+    stopAutoPlay() {
+
+        if (
+            this.autoPlay
+        ) {
+
+            clearInterval(
+                this.autoPlay
+            );
+
+            this.autoPlay =
+                null;
+        }
+    }
+
+
+    /* =====================================================
+       RESTART AUTOPLAY
+    ===================================================== */
+
+    restartAutoPlay() {
+
+        this.stopAutoPlay();
+
+        this.startAutoPlay();
+    }
+
+}
+
+
+/* =========================================================
+   AUTOMATICALLY CREATE ALL SLIDERS
+========================================================= */
+
+const allSliders =
+    document.querySelectorAll(
+        "[data-slider]"
+    );
+
+
+allSliders.forEach(
+    (section) => {
+
+        new CurvedSlider(
+            section
+        );
+
+    }
+);
+
+
+/* =========================================================
+   RESPONSIVE UPDATE
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        allSliders.forEach(
+            (section) => {
+
+                /*
+                 * Recreate the slider's
+                 * visual positions after resize.
+                 */
+
+                const slider =
+                    section.__curvedSlider;
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+  <script src="site-shell.js"></script>
+</body>
+</html>

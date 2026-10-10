@@ -1,0 +1,1561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>Ishaan Interiors | About Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   ISHAAN INTERIORS - UNIQUE ABOUT PAGE
+========================================= */
+
+#ishaan-about *{
+    box-sizing:border-box;
+}
+
+#ishaan-about{
+    --gold:#c99b45;
+    --gold-light:#e6c780;
+    --black:#101014;
+    --dark:#18181d;
+    --cream:#f5f3ee;
+    --white:#ffffff;
+
+    font-family:"DM Sans",sans-serif;
+    overflow:hidden;
+    background:var(--cream);
+    color:#17171b;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.ia-hero{
+    height:100vh;
+    min-height:700px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:#0c0c0e;
+}
+
+.ia-hero-bg{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(90deg,
+    rgba(8,8,10,.88) 0%,
+    rgba(8,8,10,.55) 50%,
+    rgba(8,8,10,.75) 100%),
+
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90")
+    center/cover;
+
+    animation:heroZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.09);
+    }
+
+}
+
+
+/* Decorative lines */
+
+.ia-hero:before,
+.ia-hero:after{
+    content:"";
+    position:absolute;
+    top:0;
+    height:100%;
+    width:1px;
+    background:rgba(255,255,255,.12);
+    z-index:2;
+}
+
+.ia-hero:before{
+    left:15%;
+}
+
+.ia-hero:after{
+    right:15%;
+}
+
+
+/* Hero Content */
+
+.ia-hero-content{
+    position:relative;
+    z-index:4;
+    text-align:center;
+    max-width:1000px;
+    padding:30px;
+}
+
+.ia-small-title{
+    color:var(--gold-light);
+    text-transform:uppercase;
+    letter-spacing:6px;
+    font-size:10px;
+    margin-bottom:25px;
+}
+
+.ia-hero h1{
+    font-family:"Playfair Display",serif;
+    color:white;
+    font-size:clamp(55px,8vw,110px);
+    line-height:.95;
+    font-weight:500;
+}
+
+.ia-hero h1 em{
+    color:var(--gold-light);
+    font-style:italic;
+}
+
+.ia-hero-line{
+    width:70px;
+    height:2px;
+    background:var(--gold);
+    margin:35px auto;
+}
+
+.ia-hero p{
+    color:#d0d0d0;
+    max-width:560px;
+    margin:auto;
+    font-size:14px;
+    line-height:1.9;
+}
+
+.ia-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    margin-top:35px;
+    padding:17px 30px;
+    border:1px solid var(--gold);
+    color:white;
+    text-decoration:none;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.4s;
+}
+
+.ia-btn:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+
+/* Side text */
+
+.ia-side-text{
+    position:absolute;
+    left:35px;
+    top:50%;
+    transform:translateY(-50%) rotate(180deg);
+    writing-mode:vertical-rl;
+    color:white;
+    letter-spacing:5px;
+    font-size:9px;
+    z-index:5;
+}
+
+.ia-scroll-down{
+    position:absolute;
+    right:35px;
+    bottom:50px;
+    color:var(--gold-light);
+    font-size:10px;
+    letter-spacing:3px;
+    writing-mode:vertical-rl;
+    z-index:5;
+}
+
+
+/* =========================================
+   AUTO COUNTING STATS
+========================================= */
+
+.ia-stats{
+    background:white;
+    position:relative;
+    z-index:5;
+}
+
+.ia-stats-wrap{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.ia-stat{
+    text-align:center;
+    padding:48px 20px;
+    position:relative;
+}
+
+.ia-stat:not(:last-child):after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:25%;
+    width:1px;
+    height:50%;
+    background:#e5e1da;
+}
+
+.ia-stat-icon{
+    color:var(--gold);
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.ia-number{
+    font-family:"Playfair Display",serif;
+    font-size:48px;
+    color:#18181d;
+}
+
+.ia-number span{
+    color:var(--gold);
+}
+
+.ia-stat p{
+    margin-top:8px;
+    font-size:9px;
+    color:#777;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+
+/* =========================================
+   AUTO MOVING TEXT STRIP
+========================================= */
+
+.ia-marquee{
+    background:#15151a;
+    padding:19px 0;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.ia-marquee-track{
+    display:inline-flex;
+    animation:marqueeMove 28s linear infinite;
+}
+
+.ia-marquee-item{
+    color:white;
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    margin-right:55px;
+}
+
+.ia-marquee-item i{
+    color:var(--gold);
+    margin-right:25px;
+}
+
+@keyframes marqueeMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+
+/* =========================================
+   STORY SECTION
+========================================= */
+
+.ia-story{
+    padding:130px 7%;
+    background:#f7f6f2;
+}
+
+.ia-story-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:100px;
+    align-items:center;
+}
+
+.ia-image-stage{
+    position:relative;
+    height:600px;
+}
+
+.ia-main-image{
+    position:absolute;
+    width:78%;
+    height:510px;
+    left:0;
+    top:0;
+    object-fit:cover;
+}
+
+.ia-image-small{
+    position:absolute;
+    width:48%;
+    height:260px;
+    right:0;
+    bottom:0;
+    object-fit:cover;
+    border:10px solid #f7f6f2;
+}
+
+.ia-floating-years{
+    position:absolute;
+    left:35px;
+    bottom:45px;
+    width:175px;
+    height:175px;
+    background:#17171c;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    z-index:4;
+}
+
+.ia-floating-years strong{
+    color:var(--gold-light);
+    font-family:"Playfair Display",serif;
+    font-size:55px;
+}
+
+.ia-floating-years span{
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-align:center;
+    line-height:1.7;
+}
+
+.ia-label{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:10px;
+    margin-bottom:15px;
+}
+
+.ia-title{
+    font-family:"Playfair Display",serif;
+    font-size:58px;
+    line-height:1.05;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.ia-title span{
+    color:var(--gold);
+    font-style:italic;
+}
+
+.ia-story-content p{
+    font-size:13px;
+    color:#777;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.ia-feature-list{
+    margin:30px 0;
+}
+
+.ia-feature{
+    padding:15px 0;
+    border-bottom:1px solid #e2ded6;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:12px;
+}
+
+.ia-feature b{
+    color:var(--gold);
+    font-size:17px;
+}
+
+
+/* =========================================
+   UNIQUE BENTO SERVICES
+========================================= */
+
+.ia-bento-section{
+    padding:120px 7%;
+    background:white;
+}
+
+.ia-heading{
+    max-width:700px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.ia-bento{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:260px 260px;
+    gap:15px;
+}
+
+.ia-bento-card{
+    position:relative;
+    overflow:hidden;
+    background:#18181d;
+    color:white;
+    padding:35px;
+}
+
+.ia-bento-card.large{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.ia-bento-card.wide{
+    grid-column:span 2;
+}
+
+.ia-bento-image{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s;
+}
+
+.ia-bento-card:hover .ia-bento-image{
+    transform:scale(1.12);
+}
+
+.ia-bento-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.05)
+    );
+}
+
+.ia-bento-content{
+    position:absolute;
+    left:35px;
+    bottom:30px;
+    z-index:2;
+}
+
+.ia-bento-number{
+    color:var(--gold-light);
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.ia-bento-content h3{
+    font-family:"Playfair Display",serif;
+    font-size:28px;
+    font-weight:500;
+}
+
+.ia-simple-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:#f5f3ee;
+    color:#19191d;
+    transition:.4s;
+}
+
+.ia-simple-card:hover{
+    background:#18181d;
+    color:white;
+}
+
+.ia-simple-icon{
+    font-size:30px;
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+.ia-simple-card h3{
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.ia-simple-card p{
+    color:#888;
+    font-size:11px;
+    line-height:1.7;
+}
+
+.ia-simple-card:hover p{
+    color:#bbb;
+}
+
+
+/* =========================================
+   DARK UNIQUE SECTION
+========================================= */
+
+.ia-experience{
+    padding:130px 7%;
+    background:#111116;
+    color:white;
+    position:relative;
+}
+
+.ia-experience:before{
+    content:"ISHAAN";
+    position:absolute;
+    font-family:"Playfair Display",serif;
+    font-size:18vw;
+    color:rgba(255,255,255,.025);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    white-space:nowrap;
+}
+
+.ia-experience-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:.9fr 1.4fr;
+    gap:90px;
+    position:relative;
+    z-index:2;
+}
+
+.ia-experience .ia-title{
+    color:white;
+}
+
+.ia-dark-text{
+    color:#aaa;
+    line-height:1.9;
+    font-size:13px;
+}
+
+.ia-reasons{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.ia-reason{
+    border:1px solid rgba(201,155,69,.35);
+    padding:35px;
+    min-height:190px;
+    transition:.4s;
+}
+
+.ia-reason:hover{
+    transform:translateY(-8px);
+    background:#1c1c22;
+    border-color:var(--gold);
+}
+
+.ia-reason-number{
+    color:var(--gold);
+    font-family:"Playfair Display",serif;
+    font-size:35px;
+}
+
+.ia-reason h4{
+    margin:15px 0 10px;
+    font-size:14px;
+}
+
+.ia-reason p{
+    color:#999;
+    font-size:11px;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.ia-process{
+    padding:130px 7%;
+    background:#f7f6f2;
+}
+
+.ia-process-grid{
+    max-width:1200px;
+    margin:70px auto 0;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.ia-process-card{
+    text-align:center;
+    position:relative;
+}
+
+.ia-process-number{
+    width:80px;
+    height:80px;
+    margin:0 auto 25px;
+    border:1px solid var(--gold-light);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    color:var(--gold);
+    transition:.4s;
+}
+
+.ia-process-card:hover .ia-process-number{
+    background:var(--gold);
+    color:white;
+    transform:rotate(360deg);
+}
+
+.ia-process-card h4{
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.ia-process-card p{
+    font-size:10px;
+    color:#888;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   TESTIMONIAL
+========================================= */
+
+.ia-testimonial{
+    background:#17171c;
+    color:white;
+    padding:100px 7%;
+}
+
+.ia-testimonial-wrap{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+.ia-quote-mark{
+    color:var(--gold);
+    font-family:"Playfair Display",serif;
+    font-size:80px;
+    height:55px;
+}
+
+.ia-testimonial-text{
+    max-width:850px;
+    margin:20px auto;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(25px,3vw,42px);
+    line-height:1.35;
+}
+
+.ia-client{
+    color:var(--gold-light);
+    font-size:10px;
+    letter-spacing:3px;
+    margin-top:30px;
+}
+
+
+/* =========================================
+   FINAL CTA - NO FOOTER
+========================================= */
+
+.ia-final{
+    padding:70px 7%;
+    background:#f5f3ee;
+}
+
+.ia-final-box{
+    max-width:1250px;
+    min-height:340px;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(15,15,18,.72),
+        rgba(15,15,18,.72)
+    ),
+
+    url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=90")
+    center/cover;
+}
+
+.ia-final-content{
+    position:relative;
+    z-index:2;
+    padding:40px;
+}
+
+.ia-final h2{
+    font-family:"Playfair Display",serif;
+    color:white;
+    font-size:clamp(40px,6vw,75px);
+    font-weight:500;
+}
+
+.ia-final h2 span{
+    color:var(--gold-light);
+}
+
+.ia-final p{
+    color:#ddd;
+    margin:20px auto;
+    font-size:13px;
+}
+
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+.ia-reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s cubic-bezier(.2,.8,.2,1);
+}
+
+.ia-reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:1000px){
+
+    .ia-story-grid,
+    .ia-experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ia-bento{
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:auto;
+    }
+
+    .ia-bento-card.large{
+        grid-column:span 2;
+        grid-row:span 1;
+        height:400px;
+    }
+
+    .ia-process-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:650px){
+
+    .ia-side-text,
+    .ia-scroll-down{
+        display:none;
+    }
+
+    .ia-stats-wrap{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .ia-stat:nth-child(2):after{
+        display:none;
+    }
+
+    .ia-story,
+    .ia-bento-section,
+    .ia-experience,
+    .ia-process{
+        padding:80px 6%;
+    }
+
+    .ia-story-grid{
+        gap:50px;
+    }
+
+    .ia-image-stage{
+        height:470px;
+    }
+
+    .ia-main-image{
+        width:88%;
+        height:390px;
+    }
+
+    .ia-image-small{
+        width:52%;
+        height:190px;
+    }
+
+    .ia-floating-years{
+        width:130px;
+        height:130px;
+        left:15px;
+        bottom:20px;
+    }
+
+    .ia-floating-years strong{
+        font-size:40px;
+    }
+
+    .ia-title{
+        font-size:43px;
+    }
+
+    .ia-bento{
+        grid-template-columns:1fr;
+    }
+
+    .ia-bento-card.large,
+    .ia-bento-card.wide{
+        grid-column:span 1;
+    }
+
+    .ia-bento-card{
+        height:260px;
+    }
+
+    .ia-reasons{
+        grid-template-columns:1fr;
+    }
+
+    .ia-process-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+<div id="ishaan-about">
+
+
+<!-- HERO -->
+
+<section class="ia-hero">
+
+    <div class="ia-hero-bg"></div>
+
+    <div class="ia-side-text">
+        CRAFTING ELEGANCE
+    </div>
+
+    <div class="ia-scroll-down">
+        SCROLL TO DISCOVER ↓
+    </div>
+
+    <div class="ia-hero-content">
+
+        <div class="ia-small-title">
+            ISHAAN INTERIORS • OUR STORY
+        </div>
+
+        <h1>
+            Spaces That Tell<br>
+            Your <em>Story</em>
+        </h1>
+
+        <div class="ia-hero-line"></div>
+
+        <p>
+            We don't simply design interiors. We create meaningful
+            environments where architecture, personality and lifestyle
+            come together beautifully.
+        </p>
+
+        <a href="product.html" class="ia-btn">
+            Discover Our Journey →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- AUTO COUNTING NUMBERS -->
+
+<section class="ia-stats">
+
+    <div class="ia-stats-wrap">
+
+        <div class="ia-stat ia-counter">
+
+            <div class="ia-stat-icon">✦</div>
+
+            <div class="ia-number"
+                 data-target="95"
+                 data-suffix="%">0%</div>
+
+            <p>Client Satisfaction</p>
+
+        </div>
+
+
+        <div class="ia-stat ia-counter">
+
+            <div class="ia-stat-icon">⌂</div>
+
+            <div class="ia-number"
+                 data-target="1210"
+                 data-suffix="+">0+</div>
+
+            <p>Projects Completed</p>
+
+        </div>
+
+
+        <div class="ia-stat ia-counter">
+
+            <div class="ia-stat-icon">▦</div>
+
+            <div class="ia-number"
+                 data-target="505"
+                 data-suffix="+">0+</div>
+
+            <p>Spaces Transformed</p>
+
+        </div>
+
+
+        <div class="ia-stat ia-counter">
+
+            <div class="ia-stat-icon">✧</div>
+
+            <div class="ia-number"
+                 data-target="12"
+                 data-suffix="+">0+</div>
+
+            <p>Years Of Excellence</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- AUTO MOVING STRIP -->
+
+<section class="ia-marquee">
+
+    <div class="ia-marquee-track">
+
+        <div class="ia-marquee-item">
+            <i>✦</i> RESIDENTIAL INTERIORS
+        </div>
+
+        <div class="ia-marquee-item">
+            <i>✦</i> COMMERCIAL SPACES
+        </div>
+
+        <div class="ia-marquee-item">
+            <i>✦</i> LUXURY DESIGN
+        </div>
+
+        <div class="ia-marquee-item">
+            <i>✦</i> CREATIVE INTERIORS
+        </div>
+
+        <div class="ia-marquee-item">
+            <i>✦</i> RESIDENTIAL INTERIORS
+        </div>
+
+        <div class="ia-marquee-item">
+            <i>✦</i> COMMERCIAL SPACES
+        </div>
+
+        <div class="ia-marquee-item">
+            <i>✦</i> LUXURY DESIGN
+        </div>
+
+        <div class="ia-marquee-item">
+            <i>✦</i> CREATIVE INTERIORS
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- OUR STORY -->
+
+<section class="ia-story" id="ia-story">
+
+    <div class="ia-story-grid">
+
+        <div class="ia-image-stage ia-reveal">
+
+            <img class="ia-main-image"
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=90">
+
+            <img class="ia-image-small"
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=90">
+
+            <div class="ia-floating-years">
+
+                <strong>12+</strong>
+
+                <span>
+                    Years Of<br>
+                    Excellence
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="ia-story-content ia-reveal">
+
+            <div class="ia-label">
+                OUR STORY
+            </div>
+
+            <h2 class="ia-title">
+                Design Is Not Just<br>
+                What You See.<br>
+                It's What You <span>Feel.</span>
+            </h2>
+
+            <p>
+                At Ishaan Interiors, every space begins with a story.
+                Your lifestyle, dreams and personality become the
+                foundation of our creative process.
+            </p>
+
+            <p>
+                We combine thoughtful planning, premium materials and
+                exceptional craftsmanship to transform ordinary spaces
+                into unforgettable experiences.
+            </p>
+
+            <div class="ia-feature-list">
+
+                <div class="ia-feature">
+                    <b>01</b>
+                    Personalized Design Solutions
+                </div>
+
+                <div class="ia-feature">
+                    <b>02</b>
+                    Premium Materials & Craftsmanship
+                </div>
+
+                <div class="ia-feature">
+                    <b>03</b>
+                    Complete End-to-End Execution
+                </div>
+
+                <div class="ia-feature">
+                    <b>04</b>
+                    Transparent & Stress-Free Process
+                </div>
+
+            </div>
+
+            <a href="contact.html" class="ia-btn" style="color:#17171b;">
+                CONTACT US →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- UNIQUE BENTO SECTION -->
+
+<section class="ia-bento-section">
+
+    <div class="ia-heading ia-reveal">
+
+        <div class="ia-label">
+            WHAT WE CREATE
+        </div>
+
+        <h2 class="ia-title">
+            Designed Around <span>You.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="ia-bento">
+
+
+        <div class="ia-bento-card large ia-reveal">
+
+            <img class="ia-bento-image"
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90">
+
+            <div class="ia-bento-overlay"></div>
+
+            <div class="ia-bento-content">
+
+                <div class="ia-bento-number">01 / RESIDENTIAL</div>
+
+                <h3>
+                    Homes Made<br>
+                    For Living
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="ia-bento-card ia-simple-card ia-reveal">
+
+            <div class="ia-simple-icon">✦</div>
+
+            <h3>Interior Styling</h3>
+
+            <p>
+                Details and finishes that bring personality into every room.
+            </p>
+
+        </div>
+
+
+        <div class="ia-bento-card ia-reveal">
+
+            <img class="ia-bento-image"
+            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=90">
+
+            <div class="ia-bento-overlay"></div>
+
+            <div class="ia-bento-content">
+
+                <div class="ia-bento-number">02 / COMMERCIAL</div>
+
+                <h3>Spaces That Work</h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="ia-bento-card wide ia-simple-card ia-reveal">
+
+            <div class="ia-simple-icon">◈</div>
+
+            <h3>Renovation & Transformation</h3>
+
+            <p>
+                Giving existing spaces a completely new identity.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY US -->
+
+<section class="ia-experience">
+
+    <div class="ia-experience-grid">
+
+        <div class="ia-reveal">
+
+            <div class="ia-label">
+                WHY ISHAAN INTERIORS
+            </div>
+
+            <h2 class="ia-title">
+                Creating More Than<br>
+                Beautiful <span>Spaces.</span>
+            </h2>
+
+            <p class="ia-dark-text">
+                Great interiors should feel effortless. Our approach
+                combines creativity, functionality and craftsmanship
+                to create spaces that continue to inspire for years.
+            </p>
+
+        </div>
+
+
+        <div class="ia-reasons">
+
+
+            <div class="ia-reason ia-reveal">
+
+                <div class="ia-reason-number">01</div>
+
+                <h4>Creative Vision</h4>
+
+                <p>
+                    Original concepts designed around your personality.
+                </p>
+
+            </div>
+
+
+            <div class="ia-reason ia-reveal">
+
+                <div class="ia-reason-number">02</div>
+
+                <h4>Premium Quality</h4>
+
+                <p>
+                    Exceptional materials and attention to every detail.
+                </p>
+
+            </div>
+
+
+            <div class="ia-reason ia-reveal">
+
+                <div class="ia-reason-number">03</div>
+
+                <h4>Clear Process</h4>
+
+                <p>
+                    Transparent communication from concept to completion.
+                </p>
+
+            </div>
+
+
+            <div class="ia-reason ia-reveal">
+
+                <div class="ia-reason-number">04</div>
+
+                <h4>Perfect Execution</h4>
+
+                <p>
+                    Skilled execution that brings every vision to life.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROCESS -->
+
+<section class="ia-process">
+
+    <div class="ia-heading ia-reveal">
+
+        <div class="ia-label">
+            HOW WE WORK
+        </div>
+
+        <h2 class="ia-title">
+            From Dream To <span>Reality.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="ia-process-grid">
+
+
+        <div class="ia-process-card ia-reveal">
+
+            <div class="ia-process-number">01</div>
+
+            <h4>Discover</h4>
+
+            <p>Understanding your vision and lifestyle.</p>
+
+        </div>
+
+
+        <div class="ia-process-card ia-reveal">
+
+            <div class="ia-process-number">02</div>
+
+            <h4>Imagine</h4>
+
+            <p>Creating the perfect concept and direction.</p>
+
+        </div>
+
+
+        <div class="ia-process-card ia-reveal">
+
+            <div class="ia-process-number">03</div>
+
+            <h4>Design</h4>
+
+            <p>Developing every detail of your space.</p>
+
+        </div>
+
+
+        <div class="ia-process-card ia-reveal">
+
+            <div class="ia-process-number">04</div>
+
+            <h4>Create</h4>
+
+            <p>Transforming the vision into reality.</p>
+
+        </div>
+
+
+        <div class="ia-process-card ia-reveal">
+
+            <div class="ia-process-number">05</div>
+
+            <h4>Celebrate</h4>
+
+            <p>Welcome to your beautifully finished space.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- TESTIMONIAL -->
+
+<section class="ia-testimonial">
+
+    <div class="ia-testimonial-wrap ia-reveal">
+
+        <div class="ia-label">
+            CLIENT EXPERIENCE
+        </div>
+
+        <div class="ia-quote-mark">“</div>
+
+        <div class="ia-testimonial-text">
+
+            Ishaan Interiors didn't just design our home —
+            they understood our lifestyle and transformed it
+            into a space that feels completely ours.
+
+        </div>
+
+        <div class="ia-client">
+            — HAPPY ISHAAN INTERIORS CLIENT
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FINAL CTA - NO FOOTER -->
+
+<section class="ia-final">
+
+    <div class="ia-final-box ia-reveal">
+
+        <div class="ia-final-content">
+
+            <div class="ia-label">
+                START YOUR JOURNEY
+            </div>
+
+            <h2>
+                Let's Create Something<br>
+                <span>Extraordinary.</span>
+            </h2>
+
+            <p>
+                Your dream space is only one conversation away.
+            </p>
+
+            <a href="contact.html" class="ia-btn">
+                LET'S TALK →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
+
+/* =========================================
+   AUTO NUMBER COUNTER
+========================================= */
+
+const counters = document.querySelectorAll(".ia-number");
+
+let counterStarted = false;
+
+function startCounters(){
+
+    if(counterStarted) return;
+
+    const stats = document.querySelector(".ia-stats");
+
+    const position = stats.getBoundingClientRect();
+
+    if(position.top < window.innerHeight - 100){
+
+        counterStarted = true;
+
+        counters.forEach(counter => {
+
+            const target = +counter.getAttribute("data-target");
+
+            const suffix = counter.getAttribute("data-suffix");
+
+            let count = 0;
+
+            const duration = 1800;
+
+            const increment = target / (duration / 16);
+
+            function updateCounter(){
+
+                count += increment;
+
+                if(count < target){
+
+                    counter.innerText =
+                    Math.floor(count).toLocaleString() + suffix;
+
+                    requestAnimationFrame(updateCounter);
+
+                }else{
+
+                    counter.innerText =
+                    target.toLocaleString() + suffix;
+
+                }
+
+            }
+
+            updateCounter();
+
+        });
+
+    }
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const reveals = document.querySelectorAll(".ia-reveal");
+
+function revealElements(){
+
+    reveals.forEach(element => {
+
+        const position =
+        element.getBoundingClientRect().top;
+
+        if(position < window.innerHeight - 100){
+
+            element.classList.add("show");
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener("scroll", () => {
+
+    startCounters();
+
+    revealElements();
+
+});
+
+
+window.addEventListener("load", () => {
+
+    startCounters();
+
+    revealElements();
+
+});
+
+</script>
+<script src="site-shell.js"></script>
+</body>
+</html>
