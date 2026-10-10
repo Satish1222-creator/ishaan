@@ -1,0 +1,3426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ishaan Interiors | Home Decoratives</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --ink: #231b17;
+    --espresso: #39291f;
+    --sand: #f5efe7;
+    --cream: #fcfaf7;
+    --gold: #c49a5a;
+    --gold-light: #e0bd7a;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   TOP BANNER
+===================================================== */
+
+.products-banner {
+
+    width: 100%;
+
+    min-height: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+
+        linear-gradient(
+            rgba(35,27,23,.58),
+            rgba(35,27,23,.58)
+        ),
+
+        url("https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1920&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.products-banner h1 {
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(40px,6vw,75px);
+
+    letter-spacing:
+        2px;
+
+    font-weight:
+        600;
+
+}
+
+
+
+/* =========================================================
+   PRODUCT SECTION
+========================================================= */
+
+.product-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 900px;
+
+    padding:
+        100px
+        20px
+        120px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(196,154,90,0.10),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            var(--cream),
+            var(--sand)
+        );
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.product-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border:
+        1px solid
+        rgba(196,154,90,0.12);
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -45%);
+
+    pointer-events: none;
+}
+
+
+.product-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 900px;
+    height: 900px;
+
+    border:
+        1px solid
+        rgba(196,154,90,0.06);
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -45%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.product-header {
+
+    position: relative;
+
+    z-index: 10;
+
+    max-width: 850px;
+
+    margin:
+        0 auto
+        65px;
+
+    text-align: center;
+}
+
+
+.product-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.product-label::before,
+.product-label::after {
+
+    content: "";
+
+    width: 28px;
+
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+.product-title {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            68px
+        );
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    color: var(--ink);
+}
+
+
+.product-description {
+
+    max-width: 600px;
+
+    margin:
+        20px auto
+        0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(
+            35,
+            27,
+            23,
+            0.65
+        );
+}
+
+
+/* =========================================================
+   SLIDER CONTAINER
+========================================================= */
+
+.slider-container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    /*
+       IMPORTANT:
+       Extra height gives the navigation
+       buttons their own space.
+    */
+
+    height: 590px;
+
+    margin: 0 auto;
+
+    z-index: 5;
+
+    padding-bottom: 80px;
+}
+
+
+/* =========================================================
+   3D SLIDER
+========================================================= */
+
+.slider-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    perspective: 2000px;
+
+    transform-style: preserve-3d;
+
+    user-select: none;
+
+    touch-action: pan-y;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.project-card {
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 465px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 35px 80px
+        rgba(35,27,23,0.18),
+
+        0 10px 30px
+        rgba(35,27,23,0.10);
+
+    transition:
+
+        transform
+        0.8s
+        cubic-bezier(
+            .22,
+            .61,
+            .36,
+            1
+        ),
+
+        opacity
+        0.7s ease,
+
+        filter
+        0.7s ease,
+
+        box-shadow
+        0.7s ease;
+
+    transform-style: preserve-3d;
+
+    cursor: grab;
+}
+
+
+.project-card:active {
+
+    cursor: grabbing;
+}
+
+
+/* =========================================================
+   ACTIVE CARD
+========================================================= */
+
+.project-card.active {
+
+    box-shadow:
+
+        0 40px 90px
+        rgba(35,27,23,0.25),
+
+        0 15px 35px
+        rgba(196,154,90,0.18);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.project-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 335px;
+
+    overflow: hidden;
+}
+
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform
+        0.9s
+        cubic-bezier(
+            .22,
+            .61,
+            .36,
+            1
+        );
+}
+
+
+.project-card.active
+.project-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.project-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(0,0,0,0.25)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.project-content {
+
+    position: relative;
+
+    height: 130px;
+
+    padding:
+        22px;
+    
+    background: #ffffff;
+}
+
+
+.project-category {
+
+    margin-bottom: 5px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.project-name {
+
+    padding-right: 55px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    color: var(--ink);
+}
+
+
+.project-location {
+
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    color:
+        rgba(
+            35,
+            27,
+            23,
+            0.55
+        );
+}
+
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.card-arrow {
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 22px;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(196,154,90,0.4);
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+    transition:
+
+        background
+        0.3s ease,
+
+        color
+        0.3s ease,
+
+        transform
+        0.3s ease;
+}
+
+
+.project-card:hover
+.card-arrow {
+
+    background: var(--gold);
+
+    color: #ffffff;
+
+    transform:
+        rotate(-45deg);
+}
+
+
+/* =========================================================
+   NAVIGATION AREA
+========================================================= */
+
+.slider-navigation {
+
+    position: absolute;
+
+    /*
+       Buttons are now BELOW
+       the card area.
+    */
+
+    left: 50%;
+
+    bottom: 0;
+
+    transform:
+        translateX(-50%);
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    z-index: 50;
+
+    /*
+       Separate space around buttons.
+    */
+
+    padding-top: 20px;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTON
+========================================================= */
+
+.slider-button {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(196,154,90,0.45);
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    backdrop-filter:
+        blur(12px);
+
+    color: var(--ink);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+
+        background
+        0.3s ease,
+
+        color
+        0.3s ease,
+
+        transform
+        0.3s ease,
+
+        border-color
+        0.3s ease;
+}
+
+
+.slider-button:hover {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: #ffffff;
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =========================================================
+   SECTION DIVIDER
+========================================================= */
+
+.section-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(196,154,90,0.35),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .product-section {
+
+        min-height: 820px;
+
+        padding:
+            80px
+            15px
+            100px;
+    }
+
+
+    .product-header {
+
+        margin-bottom: 50px;
+    }
+
+
+    .slider-container {
+
+        height: 550px;
+
+        padding-bottom: 75px;
+    }
+
+
+    .slider-wrapper {
+
+        height: 450px;
+    }
+
+
+    .project-card {
+
+        width: 300px;
+
+        height: 410px;
+    }
+
+
+    .project-image {
+
+        height: 290px;
+    }
+
+
+    .project-content {
+
+        height: 120px;
+    }
+
+
+    .slider-navigation {
+
+        bottom: 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .product-section {
+
+        min-height: 730px;
+
+        padding:
+            65px
+            10px
+            90px;
+    }
+
+
+    .product-section::before {
+
+        width: 400px;
+
+        height: 400px;
+    }
+
+
+    .product-section::after {
+
+        width: 550px;
+
+        height: 550px;
+    }
+
+
+    .product-header {
+
+        margin-bottom: 30px;
+    }
+
+
+    .product-label {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .product-label::before,
+    .product-label::after {
+
+        width: 20px;
+    }
+
+
+    .product-title {
+
+        font-size: 36px;
+    }
+
+
+    .product-description {
+
+        padding:
+            0 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* IMPORTANT MOBILE SPACING */
+
+    .slider-container {
+
+        height: 485px;
+
+        padding-bottom: 75px;
+    }
+
+
+    .slider-wrapper {
+
+        height: 405px;
+    }
+
+
+    .project-card {
+
+        width: 245px;
+
+        height: 365px;
+
+        border-radius: 23px;
+    }
+
+
+    .project-image {
+
+        height: 260px;
+    }
+
+
+    .project-content {
+
+        height: 105px;
+
+        padding: 17px;
+    }
+
+
+    .project-category {
+
+        font-size: 9px;
+    }
+
+
+    .project-name {
+
+        font-size: 18px;
+    }
+
+
+    .project-location {
+
+        font-size: 10px;
+    }
+
+
+    .card-arrow {
+
+        width: 36px;
+
+        height: 36px;
+
+        right: 15px;
+
+        bottom: 16px;
+    }
+
+
+    .slider-navigation {
+
+        bottom: 0;
+
+        padding-top: 15px;
+    }
+
+
+    .slider-button {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .product-title {
+
+        font-size: 31px;
+    }
+
+
+    .slider-container {
+
+        height: 465px;
+    }
+
+
+    .slider-wrapper {
+
+        height: 385px;
+    }
+
+
+    .project-card {
+
+        width: 225px;
+
+        height: 345px;
+    }
+
+
+    .project-image {
+
+        height: 245px;
+    }
+
+}
+
+
+.contact-cta{
+    padding:70px 8%;
+    background:linear-gradient(135deg,#231b17,#39291f);
+    border-radius:24px;
+    margin:40px auto;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-cta::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:radial-gradient(circle,
+        rgba(196,154,90,.25),
+        transparent 70%);
+    top:-100px;
+    right:-80px;
+}
+
+.cta-content{
+    max-width:700px;
+    position:relative;
+    z-index:2;
+}
+
+.cta-tag{
+    display:inline-block;
+    color:#c49a5a;
+    letter-spacing:2px;
+    font-size:.8rem;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.contact-cta h2{
+    color:#fff;
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.2;
+    margin-bottom:15px;
+    font-family:"Playfair Display",serif;
+}
+
+.contact-cta p{
+    color:rgba(255,255,255,.75);
+    line-height:1.7;
+    margin-bottom:25px;
+    max-width:550px;
+}
+
+.cta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 30px;
+    background:#c49a5a;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.cta-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(196,154,90,.35);
+}
+
+.cta-btn span{
+    transition:.35s ease;
+}
+
+.cta-btn:hover span{
+    transform:translateX(4px);
+}
+
+
+</style>
+</head>
+
+
+<body>
+    
+<!-- ===================================================
+     TOP BANNER
+=================================================== -->
+
+<section class="products-banner">
+
+    <h1>
+        Home Decoratives
+
+    </h1>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     3D PANELS
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Premium Collection
+        </div>
+
+        <h2 class="product-title">
+            3D PANELS
+        </h2>
+
+        <p class="product-description">
+            Sculptural 3D wall panels designed to create depth,
+            dimension and striking architectural character in modern interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://mediumpurple-monkey-395194.hostingersite.com/wp-content/uploads/2026/09/Geometric-Dimension.jpg"
+                        alt="3D Wall Panel Living Room"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PANEL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Geometric Dimension
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/6e/d6/69/6ed66988df239b563372111fd0c9c394.jpg"
+                        alt="3D Feature Wall"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PANEL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Sculpted Feature Wall
+                    </h3>
+
+                    <div class="project-location">
+                        Bedroom
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/06/3d/65/063d659b96de75ff1e7e01de25c38f77.jpg"
+                        alt="Modern 3D Interior Panel"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PANEL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Wave Surface Design
+                    </h3>
+
+                    <div class="project-location">
+                        Lounge Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/00/46/31/004631b073d69b4bfe0020bdf6126579.jpg"
+                        alt="Luxury 3D Wall Panel"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PANEL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Architectural Relief
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/1d/7c/d8/1d7cd8099886d10530c6a4eed3f1550c.jpg"
+                        alt="Premium 3D Wall Panel"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PANEL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Depth
+                    </h3>
+
+                    <div class="project-location">
+                        TV Lounge
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="section-divider"></div>
+
+
+<!-- =====================================================
+     MOSAIC TILES
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Signature Collection
+        </div>
+
+        <h2 class="product-title">
+            MOSAIC TILES
+        </h2>
+
+        <p class="product-description">
+            Artistic mosaic surfaces designed to bring colour,
+            texture and distinctive character to contemporary interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/1200x/ee/7b/ef/ee7bef6dbacaeaca541aa18baece4371.jpg"
+                        alt="Mosaic Tiles"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        MOSAIC COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Classic Stone Mosaic
+                    </h3>
+
+                    <div class="project-location">
+                        Living Space
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/4c/d8/62/4cd8620d157fdddb73cd476b23c5f807.jpg"
+                        alt="Luxury Mosaic Tile Interior"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        MOSAIC COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Marble Mosaic Blend
+                    </h3>
+
+                    <div class="project-location">
+                        Living area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/86/e4/ee/86e4eefdc30d111cdf39b4d7b2573782.jpg"
+                        alt="Decorative Mosaic Wall"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        MOSAIC COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Geometric Tile Pattern
+                    </h3>
+
+                    <div class="project-location">
+                        Bathroom
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/2d/cc/b3/2dccb396d2023ad969f8f599a9018edb.jpg"
+                        alt="Modern Mosaic Tiles"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        MOSAIC COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Mosaic
+                    </h3>
+
+                    <div class="project-location">
+                        Kitchen Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/ea/a3/78/eaa37800e5b9443f7b83eb2d9d3eed9c.jpg"
+                        alt="Premium Mosaic Tile Design"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        MOSAIC COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Accent Mosaic
+                    </h3>
+
+                    <div class="project-location">
+                        Reception Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+
+<!-- =====================================================
+     3D PVC Murals
+
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            International Collection
+        </div>
+
+        <h2 class="product-title">
+            3D PVC MURALS
+        </h2>
+
+        <p class="product-description">
+            Immersive 3D PVC mural surfaces designed to create
+            striking visual depth, artistic detail and extraordinary interiors.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/01/4c/ee/014cee863bb5cd00c3d2f0ab086db5fd.jpg"
+                        alt="3D PVC Mural"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PVC MURAL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Botanical Depth Mural
+                    </h3>
+
+                    <div class="project-location">
+                        Living Room
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/fe/e1/ca/fee1ca1fd2a1fc6c84607f4be54f4b08.jpg"
+                        alt="3D PVC Wall Mural"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PVC MURAL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Geometric Illusion
+                    </h3>
+
+                    <div class="project-location">
+                        Feature Wall
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/ae/1e/b6/ae1eb67c00c8ca19b93de7fd0937f031.jpg"
+                        alt="Luxury 3D PVC Mural"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PVC MURAL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Marble Dimension
+                    </h3>
+
+                    <div class="project-location">
+                        Dining Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/11/6e/85/116e851e30e7f7267efb223b894e8896.jpg"
+                        alt="Modern 3D PVC Mural"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PVC MURAL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Abstract Wave Design
+                    </h3>
+
+                    <div class="project-location">
+                        TV Lounge
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/1200x/7a/bd/88/7abd88aa1c78033937900f0193689b1c.jpg"
+                        alt="Premium 3D PVC Mural"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        3D PVC MURAL COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Scenic Mural
+                    </h3>
+
+                    <div class="project-location">
+                        Master Bedroom
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     ARTIFICIAL GRASS & PLANTS
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Signature Collection
+        </div>
+
+        <h2 class="product-title">
+            ARTIFICIAL GRASS &amp; PLANTS
+        </h2>
+
+        <p class="product-description">
+            Premium artificial greenery designed to bring natural beauty,
+            freshness and vibrant character to modern interior spaces.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/c9/53/8a/c9538a9cf384ad04922da446129ffcbf.jpg"
+                        alt="Artificial Green Plants"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GREENERY COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Decorative Green Plants
+                    </h3>
+
+                    <div class="project-location">
+                        Living Space
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/9b/0f/0b/9b0f0b5e00f600682a36021c6571371f.jpg"
+                        alt="Artificial Plants"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GREENERY COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Indoor Plant Collection
+                    </h3>
+
+                    <div class="project-location">
+                        Reception Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/ed/3d/d0/ed3dd09689ae10d7e7e804306b9ca555.jpg"
+                        alt="Artificial Green Wall"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GREENERY COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Vertical Green Wall
+                    </h3>
+
+                    <div class="project-location">
+                        Feature Wall
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/c0/0b/22/c00b228ec4f602c05eff182c870b3e24.jpg"
+                        alt="Artificial Grass Landscape"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        ARTIFICIAL GRASS COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium Artificial Grass
+                    </h3>
+
+                    <div class="project-location">
+                        Balcony Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/b0/44/50/b044508c49c778143c7404e85371a98d.jpg"
+                        alt="Luxury Artificial Plants"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        GREENERY COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Botanical Design
+                    </h3>
+
+                    <div class="project-location">
+                        Office Interior
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+<!-- =====================================================
+     WATER FOUNTAINS
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Signature Collection
+        </div>
+
+        <h2 class="product-title">
+            WATER FOUNTAINS
+        </h2>
+
+        <p class="product-description">
+            Elegant water fountains designed to bring movement,
+            tranquillity and luxurious character to refined interior spaces.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/32/6d/40/326d40ba1754497cc81facd6b4cd1ac6.jpg"
+                        alt="Modern Water Fountain"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        FOUNTAIN COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern Water Feature
+                    </h3>
+
+                    <div class="project-location">
+                        Living Space
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/0c/a9/39/0ca939c61dd8e5af69aedecd5cf641d7.jpg"
+                        alt="Garden Water Fountain"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        FOUNTAIN COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Garden Cascade Fountain
+                    </h3>
+
+                    <div class="project-location">
+                        Outdoor Garden
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/5a/83/5e/5a835e81363bf0b9f1a9444fd092fb66.jpg"
+                        alt="Luxury Indoor Fountain"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        FOUNTAIN COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Indoor Fountain
+                    </h3>
+
+                    <div class="project-location">
+                        Reception Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/c5/cb/ba/c5cbbae073fd8fcbcfabc96843a315dc.jpg"
+                        alt="Contemporary Water Feature"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        FOUNTAIN COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Water Wall
+                    </h3>
+
+                    <div class="project-location">
+                        Feature Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/55/b5/ae/55b5ae8a5bce950ca1333a687288b059.jpg"
+                        alt="Designer Water Fountain"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        FOUNTAIN COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Designer Cascade Fountain
+                    </h3>
+
+                    <div class="project-location">
+                        Luxury Villa
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+<!-- =====================================================
+     DECK TILES
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Premium Collection
+        </div>
+
+        <h2 class="product-title">
+            DECK TILES
+        </h2>
+
+        <p class="product-description">
+            Stylish and durable deck tiles designed to transform
+            balconies, terraces and outdoor spaces with natural elegance.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/bd/6f/6e/bd6f6e88cb1f207da5586eb821d09e6f.jpg"
+                        alt="Wood Deck Tiles"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        DECK TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Natural Wood Deck
+                    </h3>
+
+                    <div class="project-location">
+                        Outdoor Patio
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/61/2b/74/612b745c5f96d63098359baad16eb68c.jpg"
+                        alt="Modern Deck Flooring"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        DECK TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Deck Floor
+                    </h3>
+
+                    <div class="project-location">
+                        Balcony Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/24/8d/13/248d1361c95bb9b100e2c18cc6390f94.jpg"
+                        alt="Outdoor Deck Tiles"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        DECK TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium Outdoor Deck
+                    </h3>
+
+                    <div class="project-location">
+                        Garden Space
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/0b/b1/eb/0bb1ebc689f1b794f7eb52da7b444471.jpg"
+                        alt="Designer Deck Tiles"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        DECK TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Designer Terrace Deck
+                    </h3>
+
+                    <div class="project-location">
+                        Terrace
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/0c/0a/82/0c0a8230c81668ddecc6c058828245c5.jpg"
+                        alt="Luxury Deck Flooring"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        DECK TILE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Luxury Wooden Deck
+                    </h3>
+
+                    <div class="project-location">
+                        Poolside Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="section-divider"></div>
+<!-- =====================================================
+     PVC STATUES
+===================================================== -->
+<section class="product-section" data-slider>
+
+    <div class="product-header">
+
+        <div class="product-label">
+            Premium Collection
+        </div>
+
+        <h2 class="product-title">
+            PVC STATUES
+        </h2>
+
+        <p class="product-description">
+            Decorative PVC statues designed to add artistic character,
+            elegance and distinctive style to modern interior spaces.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-wrapper">
+
+
+            <!-- CARD 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/3e/62/88/3e62887c38a7d1b59df694f3c198dbff.jpg"
+                        alt="Decorative PVC Statue"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC STATUE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Modern Artistic Statue
+                    </h3>
+
+                    <div class="project-location">
+                        Living Space
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/70/60/49/706049c0af3a2fe42fe562a0bdeb1c44.jpg"
+                        alt="Designer PVC Sculpture"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC STATUE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Designer Sculpture
+                    </h3>
+
+                    <div class="project-location">
+                        Reception Area
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/1d/a8/cf/1da8cfcaf7934cfbedbd9d49672bba4f.jpg"
+                        alt="Decorative Interior Statue"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC STATUE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Contemporary Art Form
+                    </h3>
+
+                    <div class="project-location">
+                        Feature Corner
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/49/3e/a9/493ea940d64ec7ed1c87cc749569a7f5.jpg"
+                        alt="Luxury Decorative Statue"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC STATUE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Elegant Decorative Figure
+                    </h3>
+
+                    <div class="project-location">
+                        Luxury Interior
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://i.pinimg.com/736x/97/79/d2/9779d2a16b9b74f06cd85c2759019b5d.jpg"
+                        alt="Premium PVC Statue"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-category">
+                        PVC STATUE COLLECTION
+                    </div>
+
+                    <h3 class="project-name">
+                        Premium Artistic Decor
+                    </h3>
+
+                    <div class="project-location">
+                        Office Interior
+                    </div>
+
+                    <div class="card-arrow">
+                        ↗
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="slider-navigation">
+
+            <button
+                class="slider-button prev"
+                aria-label="Previous"
+            >
+                ←
+            </button>
+
+            <button
+                class="slider-button next"
+                aria-label="Next"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Luxury Contact CTA Block -->
+<section class="contact-cta">
+    <div class="cta-content">
+        <span class="cta-tag">Let's Design Your Dream Space</span>
+        <h2>Transform Your Interior Into a Timeless Masterpiece</h2>
+        <p>
+            From luxury residences to modern commercial spaces,
+            we create interiors that blend elegance, comfort, and functionality.
+        </p>
+
+        <a href="#contact" class="cta-btn">
+            Contact Us
+            <span>→</span>
+        </a>
+    </div>
+</section>
+
+
+
+
+
+<script>
+
+/* =========================================================
+   REUSABLE CURVED 3D SLIDER
+========================================================= */
+
+class CurvedSlider {
+
+    constructor(section) {
+
+        this.section = section;
+
+        this.slider =
+            section.querySelector(
+                ".slider-wrapper"
+            );
+
+        this.cards =
+            [
+                ...section.querySelectorAll(
+                    ".project-card"
+                )
+            ];
+
+        this.nextButton =
+            section.querySelector(
+                ".next"
+            );
+
+        this.prevButton =
+            section.querySelector(
+                ".prev"
+            );
+
+        this.current = 0;
+
+        this.total =
+            this.cards.length;
+
+        this.autoPlay = null;
+
+        this.startX = 0;
+
+        this.isDragging = false;
+
+        this.init();
+    }
+
+
+    /* =====================================================
+       INIT
+    ===================================================== */
+
+    init() {
+
+        if (!this.total) return;
+
+        this.update();
+
+        this.bindEvents();
+
+        this.startAutoPlay();
+    }
+
+
+    /* =====================================================
+       UPDATE
+    ===================================================== */
+
+    update() {
+
+        const isMobile =
+            window.innerWidth <= 600;
+
+
+        this.cards.forEach(
+            (card, index) => {
+
+                let difference =
+                    index - this.current;
+
+
+                /*
+                 * Infinite circular positioning
+                 */
+
+                if (
+                    difference >
+                    this.total / 2
+                ) {
+
+                    difference -=
+                        this.total;
+                }
+
+
+                if (
+                    difference <
+                    -this.total / 2
+                ) {
+
+                    difference +=
+                        this.total;
+                }
+
+
+                const distance =
+                    Math.abs(
+                        difference
+                    );
+
+
+                /*
+                 * Horizontal distance
+                 */
+
+                const horizontalGap =
+                    isMobile
+                        ? 205
+                        : 280;
+
+
+                /*
+                 * Curve
+                 */
+
+                const curveAmount =
+                    isMobile
+                        ? 18
+                        : 22;
+
+
+                /*
+                 * X
+                 */
+
+                const x =
+                    difference *
+                    horizontalGap;
+
+
+                /*
+                 * Y
+                 */
+
+                const y =
+                    distance *
+                    distance *
+                    curveAmount;
+
+
+                /*
+                 * Z
+                 */
+
+                const z =
+                    -(
+                        distance *
+                        distance *
+                        110
+                    );
+
+
+                /*
+                 * Rotation
+                 */
+
+                const rotateY =
+                    difference * -15;
+
+
+                const rotateZ =
+                    difference * 3;
+
+
+                /*
+                 * Scale
+                 */
+
+                const scale =
+                    Math.max(
+                        1.08 -
+                        distance * 0.14,
+
+                        0.55
+                    );
+
+
+                /*
+                 * Opacity
+                 */
+
+                const opacity =
+                    Math.max(
+                        1 -
+                        distance * 0.20,
+
+                        0
+                    );
+
+
+                /*
+                 * Brightness
+                 */
+
+                const brightness =
+                    Math.max(
+                        1 -
+                        distance * 0.08,
+
+                        0.65
+                    );
+
+
+                /*
+                 * Apply transform
+                 */
+
+                card.style.transform = `
+
+                    translateX(${x}px)
+
+                    translateY(${y - 25}px)
+
+                    translateZ(${z}px)
+
+                    rotateY(${rotateY}deg)
+
+                    rotateZ(${rotateZ}deg)
+
+                    scale(${scale})
+
+                `;
+
+
+                card.style.opacity =
+                    opacity;
+
+
+                card.style.filter =
+                    `brightness(${brightness})`;
+
+
+                card.style.zIndex =
+                    100 - distance;
+
+
+                /*
+                 * Active card
+                 */
+
+                card.classList.toggle(
+                    "active",
+                    difference === 0
+                );
+
+
+                /*
+                 * Disable interaction
+                 * with cards far behind
+                 */
+
+                card.style.pointerEvents =
+                    distance > 3
+                        ? "none"
+                        : "auto";
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       NEXT
+    ===================================================== */
+
+    next() {
+
+        this.current =
+            (
+                this.current + 1
+            ) %
+            this.total;
+
+        this.update();
+    }
+
+
+    /* =====================================================
+       PREVIOUS
+    ===================================================== */
+
+    previous() {
+
+        this.current =
+            (
+                this.current -
+                1 +
+                this.total
+            ) %
+            this.total;
+
+        this.update();
+    }
+
+
+    /* =====================================================
+       EVENTS
+    ===================================================== */
+
+    bindEvents() {
+
+
+        /* NEXT */
+
+        this.nextButton.addEventListener(
+            "click",
+            () => {
+
+                this.next();
+
+                this.restartAutoPlay();
+
+            }
+        );
+
+
+        /* PREVIOUS */
+
+        this.prevButton.addEventListener(
+            "click",
+            () => {
+
+                this.previous();
+
+                this.restartAutoPlay();
+
+            }
+        );
+
+
+        /* =================================================
+           KEYBOARD
+        ================================================= */
+
+        this.section.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    this.next();
+
+                    this.restartAutoPlay();
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    this.previous();
+
+                    this.restartAutoPlay();
+                }
+
+            }
+        );
+
+
+        this.section.setAttribute(
+            "tabindex",
+            "0"
+        );
+
+
+        /* =================================================
+           TOUCH START
+        ================================================= */
+
+        this.slider.addEventListener(
+            "touchstart",
+            (event) => {
+
+                this.startX =
+                    event.touches[0]
+                    .clientX;
+
+                this.stopAutoPlay();
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        /* =================================================
+           TOUCH END
+        ================================================= */
+
+        this.slider.addEventListener(
+            "touchend",
+            (event) => {
+
+                const endX =
+                    event.changedTouches[0]
+                    .clientX;
+
+
+                const difference =
+                    this.startX -
+                    endX;
+
+
+                if (
+                    Math.abs(
+                        difference
+                    ) > 50
+                ) {
+
+                    if (
+                        difference > 0
+                    ) {
+
+                        this.next();
+
+                    } else {
+
+                        this.previous();
+
+                    }
+
+                }
+
+
+                this.startAutoPlay();
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        /* =================================================
+           MOUSE DOWN
+        ================================================= */
+
+        this.slider.addEventListener(
+            "mousedown",
+            (event) => {
+
+                this.isDragging =
+                    true;
+
+                this.startX =
+                    event.clientX;
+
+                this.stopAutoPlay();
+
+            }
+        );
+
+
+        /* =================================================
+           MOUSE UP
+        ================================================= */
+
+        window.addEventListener(
+            "mouseup",
+            (event) => {
+
+                if (
+                    !this.isDragging
+                ) return;
+
+
+                this.isDragging =
+                    false;
+
+
+                const difference =
+                    this.startX -
+                    event.clientX;
+
+
+                if (
+                    Math.abs(
+                        difference
+                    ) > 50
+                ) {
+
+                    if (
+                        difference > 0
+                    ) {
+
+                        this.next();
+
+                    } else {
+
+                        this.previous();
+
+                    }
+
+                }
+
+
+                this.startAutoPlay();
+
+            }
+        );
+
+
+        /* =================================================
+           PAUSE ON HOVER
+        ================================================= */
+
+        this.section.addEventListener(
+            "mouseenter",
+            () => {
+
+                this.stopAutoPlay();
+
+            }
+        );
+
+
+        this.section.addEventListener(
+            "mouseleave",
+            () => {
+
+                this.startAutoPlay();
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       AUTOPLAY
+    ===================================================== */
+
+    startAutoPlay() {
+
+        this.stopAutoPlay();
+
+
+        this.autoPlay =
+            setInterval(
+                () => {
+
+                    this.next();
+
+                },
+
+                5000
+            );
+    }
+
+
+    /* =====================================================
+       STOP AUTOPLAY
+    ===================================================== */
+
+    stopAutoPlay() {
+
+        if (
+            this.autoPlay
+        ) {
+
+            clearInterval(
+                this.autoPlay
+            );
+
+            this.autoPlay =
+                null;
+        }
+    }
+
+
+    /* =====================================================
+       RESTART AUTOPLAY
+    ===================================================== */
+
+    restartAutoPlay() {
+
+        this.stopAutoPlay();
+
+        this.startAutoPlay();
+    }
+
+}
+
+
+/* =========================================================
+   AUTOMATICALLY CREATE ALL SLIDERS
+========================================================= */
+
+const allSliders =
+    document.querySelectorAll(
+        "[data-slider]"
+    );
+
+
+allSliders.forEach(
+    (section) => {
+
+        new CurvedSlider(
+            section
+        );
+
+    }
+);
+
+
+/* =========================================================
+   RESPONSIVE UPDATE
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        allSliders.forEach(
+            (section) => {
+
+                /*
+                 * Recreate the slider's
+                 * visual positions after resize.
+                 */
+
+                const slider =
+                    section.__curvedSlider;
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+  <script src="site-shell.js"></script>
+</body>
+</html>
